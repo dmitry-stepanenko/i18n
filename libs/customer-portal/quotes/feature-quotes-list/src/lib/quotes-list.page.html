@@ -1,0 +1,239 @@
+<ng-template
+  [ngIf]="state.quotes"
+  [ngIfElse]="loader"
+  *transloco="let t; read: 'customerPortalQuotes.feature-quotes-list'"
+>
+  <h1 class="header-style-24">{{ t('quotes-title') }}</h1>
+
+  <p class="mb-32">{{ t('quotes-subtitle') }}</p>
+
+  <!--
+    Should be always plural since we're not gonna show this page if there's only 1 quote available.
+    If there's 1 quote available we should navigate the user to the quote details page.
+  -->
+  <h2 class="header-style-14-bold mb-32">
+    {{ state.quoteCount }} {{ t('quotes-title') }}
+  </h2>
+
+  <section class="quote-list">
+    <cos-card *ngFor="let quote of state.quotes">
+      <div class="quote-list-card">
+        <div class="quote-list-card__image">
+          <div>
+            <esp-product-image
+              *ngIf="quote.LineItems[0]"
+              [imgSrc]="fixMeGetLineItem(quote, 0)?.ImageUrl ?? ''"
+              [imgAlt]="fixMeGetLineItem(quote, 0)?.Name ?? ''"
+            ></esp-product-image>
+          </div>
+          <div>
+            <esp-product-image
+              *ngIf="quote.LineItems[1]"
+              [imgSrc]="fixMeGetLineItem(quote, 1)?.ImageUrl ?? ''"
+              [imgAlt]="fixMeGetLineItem(quote, 1)?.Name ?? ''"
+            ></esp-product-image>
+          </div>
+        </div>
+
+        <div class="quote-list-card__number flex flex-col">
+          <h4 class="header-style-18-bold mb-8">
+            {{ t('quote-card-quote') }} #:
+          </h4>
+          <a
+            class="ellipsis"
+            routerLink="/projects/{{ state.projectId }}/quotes/{{ quote.Id }}"
+            [matTooltip]="quote.Number"
+          >
+            {{ quote.Number }}
+          </a>
+        </div>
+
+        <div class="quote-list-card__created-date flex flex-col">
+          <h4 class="header-style-18-bold mb-8">
+            {{ t('quote-card-created-date') }}:
+          </h4>
+          <span class="body-style-14-shark">{{
+            quote.CreateDate | cosDate: 'longDate'
+          }}</span>
+        </div>
+
+        <div class="quote-list-card__in-hands-date flex flex-col">
+          <h4 class="header-style-18-bold mb-8">
+            {{ t('quote-card-in-hands-date') }}:
+          </h4>
+          <span class="body-style-14-shark">
+            {{
+              quote.InHandsDate
+                ? (quote.InHandsDate | cosDate: 'longDate':'UTC')
+                : '-'
+            }}
+          </span>
+        </div>
+
+        <div class="quote-list-card__quote-total flex flex-col">
+          <h4 class="header-style-18-bold mb-8">
+            {{ t('quote-card-quote-total') }}:
+          </h4>
+          <span class="body-style-14-shark">
+            {{
+              quote.Total > 0
+                ? (quote.Total | currency: quote.CurrencySymbol)
+                : '-'
+            }}
+          </span>
+        </div>
+
+        <button cos-flat-button color="primary" (click)="goToQuote(quote)">
+          <i class="fa fa-tag mr-8"></i>
+          {{ t('quote-card-view-quote-button') }}
+        </button>
+      </div>
+    </cos-card>
+  </section>
+
+  <customer-portal-pagination></customer-portal-pagination>
+</ng-template>
+
+<ng-template #loader>
+  <ngx-skeleton-loader
+    class="block"
+    [theme]="{ height: '30px', width: '70px' }"
+    style="margin-bottom: 11px"
+  >
+  </ngx-skeleton-loader>
+
+  <ngx-skeleton-loader
+    class="flex"
+    [theme]="{
+      height: '14px',
+      'min-width': '40%',
+      'max-width': '329px',
+      'margin-bottom': '32px'
+    }"
+  >
+  </ngx-skeleton-loader>
+  <ngx-skeleton-loader
+    [theme]="{
+      height: '14px',
+      width: '60px',
+      'margin-bottom': '32px'
+    }"
+  >
+  </ngx-skeleton-loader>
+
+  <cos-card *ngFor="let i of [0, 1, 2, 3, 4]" class="mb-16">
+    <div class="quote-list-card">
+      <!-- images -->
+      <div class="flex" style="max-width: 214px; gap: 16px">
+        <ngx-skeleton-loader
+          class="mr-2"
+          [theme]="{
+            height: '94px',
+            width: '94px',
+            'margin-bottom': '0'
+          }"
+        >
+        </ngx-skeleton-loader>
+        <ngx-skeleton-loader
+          [theme]="{
+            height: '94px',
+            width: '94px',
+            'margin-bottom': '0',
+            display: 'none'
+          }"
+        >
+        </ngx-skeleton-loader>
+      </div>
+
+      <!-- Quote # -->
+      <div class="flex flex-col">
+        <ngx-skeleton-loader
+          [theme]="{
+            height: '18px',
+            width: '67px'
+          }"
+        >
+        </ngx-skeleton-loader>
+        <ngx-skeleton-loader
+          [theme]="{
+            height: '14px',
+            width: '72px',
+            'margin-bottom': '0'
+          }"
+        >
+        </ngx-skeleton-loader>
+      </div>
+
+      <!-- Created Date -->
+      <div class="flex flex-col">
+        <ngx-skeleton-loader
+          [theme]="{
+            height: '18px',
+            width: '108px'
+          }"
+        >
+        </ngx-skeleton-loader>
+        <ngx-skeleton-loader
+          [theme]="{
+            height: '14px',
+            width: '120px',
+            'margin-bottom': '0'
+          }"
+        >
+        </ngx-skeleton-loader>
+      </div>
+
+      <!-- In-Hands Date -->
+      <div class="flex flex-col">
+        <ngx-skeleton-loader
+          [theme]="{
+            height: '18px',
+            width: '116px'
+          }"
+        >
+        </ngx-skeleton-loader>
+        <ngx-skeleton-loader
+          [theme]="{
+            height: '14px',
+            width: '100px',
+            'margin-bottom': '0'
+          }"
+        >
+        </ngx-skeleton-loader>
+      </div>
+
+      <!-- Quote Total -->
+      <div class="flex flex-col">
+        <ngx-skeleton-loader
+          [theme]="{
+            height: '18px',
+            width: '94px'
+          }"
+        >
+        </ngx-skeleton-loader>
+        <ngx-skeleton-loader
+          [theme]="{
+            height: '14px',
+            width: '48px',
+            'margin-bottom': '0'
+          }"
+        >
+        </ngx-skeleton-loader>
+      </div>
+
+      <!-- View Quote button -->
+      <div class="flex justify-end">
+        <ngx-skeleton-loader
+          class="skeleton-button"
+          [theme]="{
+            height: '32px',
+            'min-width': '125px',
+            'max-width': '100%',
+            'margin-bottom': '0'
+          }"
+        >
+        </ngx-skeleton-loader>
+      </div>
+    </div>
+  </cos-card>
+</ng-template>

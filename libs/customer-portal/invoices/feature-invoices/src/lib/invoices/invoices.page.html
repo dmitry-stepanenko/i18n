@@ -1,0 +1,212 @@
+<ng-template
+  *transloco="let t; read: 'customerPortalInvoices.feature-invoices'"
+  [ngIf]="state.invoices"
+  [ngIfElse]="loader"
+>
+  <h1 class="header-style-24">{{ t('invoices-title') }}</h1>
+  <p class="invoices-page-description mb-32">
+    {{ t('invoices-subtext') }}
+  </p>
+  <!--
+    Should be always plural since we're not gonna show this page if there's only 1 order available.
+    If there's 1 order available we should navigate the user to the order details page.
+  -->
+  <h2 class="header-style-14-bold mb-32">
+    {{ state.invoices.length }} {{ t('invoices-title') }}
+  </h2>
+
+  <section class="invoice-list">
+    <cos-card *ngFor="let invoice of state.invoices">
+      <div class="invoice-list-card">
+        <div class="invoice-details">
+          <h1
+            class="header-style-22 ellipsis mb-8"
+            [matTooltip]="t('invoice-card-invoice') + ' ' + invoice.Number"
+          >
+            {{ t('invoice-card-invoice') }}
+            <a
+              class="invoice-link"
+              [routerLink]="
+                '/projects/' + invoice.ProjectId + '/invoices/' + invoice.Id
+              "
+              >{{ invoice.Number }}</a
+            >
+          </h1>
+          <p *ngIf="invoice.POReference as po" class="body-style-14-shark mb-8">
+            {{ t('invoice-card-customer-po') }} #{{ po }}
+          </p>
+          <div
+            *ngIf="invoice | relatedOrderNumber as orderNumber"
+            class="ellipsis"
+            [matTooltip]="t('invoice-card-order') + ' #: ' + orderNumber"
+          >
+            <span class="header-style-18 mt-0 mb-0">
+              {{ t('invoice-card-order') }} #:
+            </span>
+            <a
+              data-cy="view-order-button"
+              class="body-style-14-mineshaft order-link"
+              [routerLink]="invoice | urlToRelatedOrder"
+              >{{ orderNumber }}</a
+            >
+          </div>
+        </div>
+        <div class="bill-details flex flex-col">
+          <h1 class="header-style-18-bold mb-8">
+            {{ t('invoice-card-bill-to') }}
+          </h1>
+          <p class="body-style-14-shark mb-0">
+            {{ invoice.BillingContact }}
+          </p>
+        </div>
+
+        <div class="issue-details flex flex-col">
+          <p class="header-style-18-bold mb-8">
+            {{ t('invoice-card-issue-date') }}
+          </p>
+          <p class="body-style-14-shark mb-0">
+            {{ invoice.Date | cosDate: 'shortDate':'UTC' }}
+          </p>
+        </div>
+
+        <div class="due-date-details flex flex-col">
+          <p class="header-style-18-bold mb-8">
+            {{ t('invoice-card-due-date') }}
+          </p>
+          <p class="body-style-14-shark mb-0">
+            {{ invoice.DueDate | cosDate: 'longDate':'UTC' }}
+          </p>
+        </div>
+
+        <div class="balance-details flex flex-col">
+          <p class="header-style-18-bold mb-8">
+            {{ t('invoice-card-amount-due') }}
+          </p>
+          <p class="body-style-14-shark mb-0">
+            {{ invoice.AmountDue | currency: invoice.CurrencySymbol }}
+          </p>
+        </div>
+        <button
+          type="button"
+          cos-flat-button
+          color="primary"
+          [routerLink]="
+            '/projects/' + invoice.ProjectId + '/invoices/' + invoice.Id
+          "
+          data-cy="view-invoice-button"
+        >
+          <i class="fa fa-file-invoice-dollar mr-8"></i>
+          {{ t('invoice-card-button') }}
+        </button>
+      </div>
+    </cos-card>
+  </section>
+  <customer-portal-pagination></customer-portal-pagination>
+</ng-template>
+
+<ng-template #loader>
+  <ngx-skeleton-loader
+    class="block"
+    [theme]="{ height: '30px', width: '70px' }"
+    style="margin-bottom: 11px"
+  >
+  </ngx-skeleton-loader>
+
+  <ngx-skeleton-loader
+    class="flex"
+    [theme]="{
+      height: '14px',
+      'min-width': '40%',
+      'max-width': '329px',
+      'margin-bottom': '32px'
+    }"
+  >
+  </ngx-skeleton-loader>
+  <ngx-skeleton-loader
+    [theme]="{
+      height: '14px',
+      width: '60px',
+      'margin-bottom': '32px'
+    }"
+  >
+  </ngx-skeleton-loader>
+
+  <cos-card class="mb-16" *ngFor="let i of [0, 1, 2, 3, 4]">
+    <div
+      class="invoice-card-container flex justify-between"
+      style="align-items: center; padding: 8px; gap: 16px"
+    >
+      <!-- left -->
+      <div class="flex flex-col">
+        <ngx-skeleton-loader [theme]="{ height: '22px', width: '182px' }">
+        </ngx-skeleton-loader>
+        <div class="flex" style="align-items: baseline">
+          <ngx-skeleton-loader
+            [theme]="{ height: '18px', width: '65px', 'margin-bottom': '0' }"
+            class="mr-8"
+          >
+          </ngx-skeleton-loader>
+          <ngx-skeleton-loader
+            [theme]="{ height: '14px', width: '71px', 'margin-bottom': '0' }"
+          >
+          </ngx-skeleton-loader>
+        </div>
+      </div>
+      <!-- center -->
+      <div
+        class="order-detail-table flex justify-between"
+        style="gap: 16px; width: 100%; margin: auto 64px"
+      >
+        <!-- Bill To -->
+        <div class="flex flex-col" style="min-width: 140px; max-width: 140px">
+          <ngx-skeleton-loader [theme]="{ height: '18px', width: '100px' }">
+          </ngx-skeleton-loader>
+          <ngx-skeleton-loader
+            [theme]="{ height: '14px', width: '100px', 'margin-bottom': '0' }"
+          >
+          </ngx-skeleton-loader>
+        </div>
+        <!-- Issue Date -->
+        <div class="flex flex-col" style="min-width: 100px">
+          <ngx-skeleton-loader [theme]="{ height: '18px', width: '100px' }">
+          </ngx-skeleton-loader>
+          <ngx-skeleton-loader
+            [theme]="{ height: '14px', width: '70px', 'margin-bottom': '0' }"
+          >
+          </ngx-skeleton-loader>
+        </div>
+        <!-- Due Date -->
+        <div class="flex flex-col" style="min-width: 140px; max-width: 140px">
+          <ngx-skeleton-loader [theme]="{ height: '18px', width: '100px' }">
+          </ngx-skeleton-loader>
+          <ngx-skeleton-loader
+            [theme]="{ height: '14px', width: '132px', 'margin-bottom': '0' }"
+          >
+          </ngx-skeleton-loader>
+        </div>
+        <!-- Amount Due -->
+        <div class="flex flex-col" style="min-width: 100px">
+          <ngx-skeleton-loader [theme]="{ height: '18px', width: '100px' }">
+          </ngx-skeleton-loader>
+          <ngx-skeleton-loader
+            [theme]="{ height: '14px', width: '50px', 'margin-bottom': '0' }"
+          >
+          </ngx-skeleton-loader>
+        </div>
+      </div>
+
+      <!-- right -->
+      <div>
+        <ngx-skeleton-loader
+          class="skeleton-button"
+          [theme]="{
+            height: '32px',
+            'min-width': '132px',
+            'max-width': '100%'
+          }"
+        >
+        </ngx-skeleton-loader>
+      </div>
+    </div>
+  </cos-card>
+</ng-template>

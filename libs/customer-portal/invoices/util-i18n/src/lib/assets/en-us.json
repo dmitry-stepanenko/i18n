@@ -1,0 +1,20 @@
+{
+  "feature-invoices": {
+    "invoices-title": "Invoices",
+    "invoices-subtext": "This is your invoices page. View all of your invoices below.",
+    "invoice-card-invoice": "Invoice",
+    "invoice-card-customer-po": "Customer PO",
+    "invoice-card-order": "Order",
+    "invoice-card-bill-to": "Bill To",
+    "invoice-card-issue-date": "Issue Date",
+    "invoice-card-due-date": "Due Date",
+    "invoice-card-amount-due": "Amount Due",
+    "invoice-card-button": "View invoice"
+  },
+  "feature-invoice-details": {
+    "back-to-all-invoices": "Back to All Invoices",
+    "invoice-title": "Invoice",
+    "download-invoice-button": "Download Invoice",
+    "print-button": "Print"
+  }
+}

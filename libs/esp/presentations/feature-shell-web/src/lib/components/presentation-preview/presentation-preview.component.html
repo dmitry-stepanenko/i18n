@@ -1,0 +1,32 @@
+<cos-card
+  class="presentation-preview"
+  *transloco="
+    let t;
+    read: 'espPresentations.presentation-settings-page.presentation-preview'
+  "
+>
+  <h3 class="header-style-18">{{ t('presentation-preview-title') }}</h3>
+  <div class="flex justify-center">
+    <cos-button-group
+      *ngIf="previewOptions !== null"
+      [toggleOptions]="previewOptions"
+      [defaultSelection]="previewOptions[0].value"
+      (handleSelection)="updatePreview($event)"
+    ></cos-button-group>
+  </div>
+  <div class="presentation-preview-image mt-16 flex w-full">
+    <div class="iframe-wrapper">
+      <iframe
+        *ngIf="previewUrl; else configure"
+        allowfullscreen="true"
+        allowtransparency="true"
+        [src]="previewUrl"
+      ></iframe>
+    </div>
+    <ng-template #configure>
+      <p class="presentation-preview-placeholder body-style-14 text-shark">
+        {{ t('configure-your-presentation') }}
+      </p>
+    </ng-template>
+  </div>
+</cos-card>

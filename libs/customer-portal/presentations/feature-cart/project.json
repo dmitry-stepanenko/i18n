@@ -1,0 +1,47 @@
+{
+  "name": "customer-portal-presentations-feature-cart",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/customer-portal/presentations/feature-cart/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": [
+        "{workspaceRoot}/dist/libs/customer-portal/presentations/feature-cart"
+      ],
+      "options": {
+        "project": "libs/customer-portal/presentations/feature-cart/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/customer-portal/presentations/feature-cart/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/customer-portal/presentations/feature-cart/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/customer-portal/presentations/feature-cart",
+        "{workspaceRoot}/reports/libs/customer-portal/presentations/feature-cart"
+      ],
+      "options": {
+        "jestConfig": "libs/customer-portal/presentations/feature-cart/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/customer-portal/presentations/feature-cart/**/*.ts",
+          "libs/customer-portal/presentations/feature-cart/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:customer-portal", "type:feature"]
+}

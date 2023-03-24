@@ -1,0 +1,46 @@
+{
+  "name": "esp-presentations-feature-quote",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/esp/presentations/feature-quote/src",
+  "prefix": "asi",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/esp/presentations/feature-quote"],
+      "options": {
+        "project": "libs/esp/presentations/feature-quote/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/esp/presentations/feature-quote/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/esp/presentations/feature-quote/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/esp/presentations/feature-quote",
+        "{workspaceRoot}/reports/libs/esp/presentations/feature-quote"
+      ],
+      "options": {
+        "jestConfig": "libs/esp/presentations/feature-quote/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/esp/presentations/feature-quote/src/**/*.ts",
+          "libs/esp/presentations/feature-quote/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:esp", "type:feature"]
+}

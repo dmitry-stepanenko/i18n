@@ -1,0 +1,65 @@
+{
+  "components": {
+    "image-upload-form": {
+      "upload": "Upload",
+      "choose-type": "Choose {{type}} to Upload",
+      "drag-drop-here": "or drag and drop here.",
+      "error": "Error:",
+      "file-under": "{{allowedTypes}}. File has to be under 5MB.",
+      "must-add-image": "You must add an image.",
+      "allowed-types": "Allowed file types are {{types}}",
+      "upload-type-image": "Image",
+      "upload-type-file": "File",
+      "size-error-msg": "File size exceeds {{maxFileBytes}}",
+      "dimension-error-msg": "Image size should not be less than {{minWidth}}px x {{minHeight}}px",
+      "type-error-msg": "File type not supported"
+    },
+    "form-field": {
+      "encore-errors": {
+        "email": "Please provide a valid email address.",
+        "max-with-label": "Your {{label}} must be less than {{max}}.",
+        "max-no-label": "`You must enter less than {{max}}.",
+        "max-length-with-label": "Your {{label}} can be no longer than {{requiredLength}} characters.",
+        "max-length-no-label": "You must enter at most {{requiredLength}} characters.",
+        "min-length-with-label": "Your {{label}} must be at least {{requiredLength}} characters.",
+        "min-length-no-label": "You must enter at least {{requiredLength}} characters.",
+        "min-with-label": "Your {{label}} must be at least {{min}}.",
+        "min-no-label": "You must enter at least {{min}}.",
+        "required": "You must enter a value."
+      },
+      "customer-portal-errors": {
+        "email": "Please provide a valid email address.",
+        "max-with-label": "Your {{label}} must be less than {{max}}.",
+        "max-no-label": "`You must enter less than {{max}}.",
+        "max-length-with-label": "Your {{label}} can be no longer than {{requiredLength}} characters.",
+        "max-length-no-label": "You must enter at most {{requiredLength}} characters.",
+        "min-length-with-label": "Your {{label}} must be at least {{requiredLength}} characters.",
+        "min-length-no-label": "You must enter at least {{requiredLength}} characters.",
+        "min-with-label": "Your {{label}} must be at least {{min}}.",
+        "min-no-label": "You must enter at least {{min}}.",
+        "required": "You must enter a value."
+      }
+    },
+    "confirmation-dialog": {
+      "default-message": "Do you want to leave without saving?",
+      "confirm": "Yes",
+      "cancel": "No"
+    },
+    "inline-edit": {
+      "required-hint": "Required",
+      "cancel-button": "Cancel",
+      "save-button": "Save",
+      "edit-button": "Edit",
+      "edit-value-required-error": "You must enter a value"
+    },
+    "rating": {
+      "total-reviews": "total reviews",
+      "not-rated": "Not yet rated"
+    }
+  },
+  "pipes": {
+    "calculated-price-range": {
+      "no-price-grids": "No price grids selected."
+    }
+  }
+}

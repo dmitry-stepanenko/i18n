@@ -1,0 +1,235 @@
+<div
+  class="proj-pres"
+  *transloco="let t; read: 'espPresentations.presentation-settings-page'"
+>
+  <ng-template
+    [ngIf]="!state.isLoading && state.hasLoaded && state.presentation"
+    [ngIfElse]="loader"
+  >
+    <div class="project__pg-title flex justify-between">
+      <h1 class="header-style-24 mb-2">{{ t('header-title') }}</h1>
+
+      <div class="hidden lg:block">
+        <esp-presentation-action-bar
+          [presentation]="state.presentation"
+          [project]="state.project!"
+          [status]="state.presentation.Status!"
+          [(editMode)]="isInEditMode"
+        >
+        </esp-presentation-action-bar>
+      </div>
+      <button
+        cos-flat-button
+        color="primary"
+        size="sm"
+        class="block lg:hidden"
+        [matMenuTriggerFor]="menu"
+        click.stop
+      >
+        <i class="fa fa-ellipsis-h"></i>
+        <span class="cos-accessibly-hidden">{{ t('menu') }}</span>
+      </button>
+      <mat-menu
+        #menu="matMenu"
+        class="cos-global-menu-panel"
+        backdropClass="cos-global-menu-backdrop"
+        yPosition="below"
+      >
+        <esp-presentation-action-bar
+          mobile="true"
+          [presentation]="state.presentation"
+          [project]="state.project!"
+          [status]="state.presentation.Status!"
+          [(editMode)]="isInEditMode"
+        >
+        </esp-presentation-action-bar>
+      </mat-menu>
+    </div>
+
+    <main class="proj-pres__main">
+      <esp-presentation-info-card></esp-presentation-info-card>
+
+      <esp-presentation-quotes
+        class="mb-32 block"
+        *ngIf="
+          state.presentation.Status === PresentationStatus.QuoteRequested &&
+          !isInEditMode
+        "
+      >
+      </esp-presentation-quotes>
+
+      <div
+        *ngIf="
+          state.presentation.Status === PresentationStatus.PreShare ||
+          isInEditMode
+        "
+        class="grid-gap-16 mt-16 mb-32 grid grid-cols-1 lg:grid-cols-2"
+        [formGroup]="form"
+      >
+        <div class="proj-pres__settings">
+          <cos-card class="presentation-settings">
+            <div class="flex justify-between">
+              <h3 class="header-style-18 mb-8">
+                {{ t('presentation-settings') }}
+                <button
+                  cos-icon-button
+                  [matTooltip]="t('hiding-product')"
+                  [matTooltipHideDelay]="100"
+                  aria-label="Button that displays a tooltip that hides when scrolled out of the container"
+                  matTooltipClass="presentation-settings-tooltip"
+                  matTooltipPosition="above"
+                >
+                  <i class="fas fa-info-circle cos-text--blue"></i>
+                </button>
+              </h3>
+
+              <button
+                *cosIfFeatureFlags="{ matches: 'canadian_exp' }"
+                class="ml-auto"
+                (click)="changeConversionRate()"
+                cos-button
+                size="sm"
+              >
+                <i class="fa fa-refresh mr-4"></i
+                >{{ t('change-conversion-date') }}
+              </button>
+            </div>
+
+            <p class="text-shark proj-pres__settings-description mt-0">
+              {{ t('hide-product-details') }}
+            </p>
+            <fieldset>
+              <legend>{{ t('product-details') }}</legend>
+
+              <esp-presentation-settings
+                *ngIf="state.presentation.Settings"
+                class="proj-pres__settings"
+              ></esp-presentation-settings>
+            </fieldset>
+
+            <fieldset>
+              <legend>{{ t('sharing-options') }}</legend>
+              <div class="cos-form-field">
+                <cos-toggle
+                  data-cy="toggle-allow-product-variants"
+                  class="mb-16 block w-full"
+                  [checked]="state.presentation.AllowProductVariants"
+                  [disabled]="disabledToggles.AllowProductVariants"
+                  [options]="{ disableToggleValue: true }"
+                  (click)="updateSharingOption('AllowProductVariants')"
+                >
+                  {{ t('allow-customers-to-select') }}
+                </cos-toggle>
+              </div>
+              <cos-form-field class="mb-4" [formGroup]="form">
+                <cos-label>{{ t('personal-note-label') }}</cos-label>
+                <textarea
+                  cos-input
+                  rows="4"
+                  id="sharing-personal-note"
+                  [placeholder]="t('personal-note-placeholder')"
+                  maxlength="250"
+                  formControlName="Note"
+                  #personalNoteRef
+                ></textarea>
+                <cos-hint align="start"
+                  >{{
+                    personalNoteRef.value ? personalNoteRef.value.length : 0
+                  }}/{{ personalNoteRef.maxLength }}</cos-hint
+                >
+                <cos-hint align="end">
+                  <div class="note-actions">
+                    <button
+                      type="button"
+                      cos-flat-button
+                      color="primary"
+                      class="presentation-note-save-btn"
+                      (click)="saveNote()"
+                      [disabled]="
+                        form.controls.Note.value === state.presentation.Note
+                      "
+                    >
+                      <span>{{ t('save') }}</span>
+                    </button>
+                  </div>
+                </cos-hint>
+              </cos-form-field>
+              <div
+                class="cos-form-field presentation-settings-include-signature"
+              >
+                <cos-toggle
+                  data-cy="toggle-include-signature"
+                  class="mb-16 block w-full"
+                  [checked]="state.presentation.ShowSignature"
+                  [disabled]="disabledToggles.ShowSignature"
+                  [options]="{ disableToggleValue: true }"
+                  (click)="updateSharingOption('ShowSignature')"
+                >
+                  {{ t('include-signature') }}
+                </cos-toggle>
+              </div>
+
+              <cos-form-field class="date-picker" [formGroup]="form">
+                <cos-label>
+                  {{ t('expiration-date') }}
+                  <button
+                    cos-icon-button
+                    [attr.aria-label]="t('expiration-date-description')"
+                    [matTooltip]="t('expiration-date-description')"
+                    matTooltipPosition="above"
+                  >
+                    <i class="fas fa-info-circle cos-text--blue"></i>
+                  </button>
+                </cos-label>
+                <div class="cos-date-picker">
+                  <mat-datepicker-toggle
+                    [for]="datePicker"
+                    matSuffix
+                  ></mat-datepicker-toggle>
+                  <mat-datepicker #datePicker></mat-datepicker>
+                  <input
+                    cos-input
+                    data-cy="expiration-date-input"
+                    [placeholder]="t('select-date-placeholder')"
+                    class="cos-input-with-arrow"
+                    formControlName="ExpirationDate"
+                    readonly
+                    [matDatepicker]="datePicker"
+                    [max]="maxExpirationDate"
+                    (dateChange)="updateExpirationDate($event)"
+                    (click)="datePicker.open()"
+                  />
+                </div>
+                <cos-error
+                  [controlErrors]="{
+                    matDatepickerParse: t('invalid-expiration-date')
+                  }"
+                ></cos-error>
+              </cos-form-field>
+            </fieldset>
+          </cos-card>
+        </div>
+
+        <cos-intersection-renderer [component]="presentationPreview">
+          <ng-template cosIntersectionRendererSuspense>
+            <!-- 760 is an exact height to match the left div. -->
+            <ngx-skeleton-loader
+              [theme]="{ height: '760px' }"
+            ></ngx-skeleton-loader>
+          </ng-template>
+        </cos-intersection-renderer>
+      </div>
+
+      <div>
+        <esp-presentation-products
+          [sortDisabled]="!isInEditMode"
+          [isEditMode]="isInEditMode"
+        ></esp-presentation-products>
+      </div>
+    </main>
+  </ng-template>
+
+  <ng-template #loader>
+    <esp-presentation-settings-loader></esp-presentation-settings-loader>
+  </ng-template>
+</div>

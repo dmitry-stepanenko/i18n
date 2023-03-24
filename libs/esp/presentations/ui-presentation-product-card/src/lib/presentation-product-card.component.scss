@@ -1,0 +1,127 @@
+@import 'cosmos/scss/settings/';
+
+.cos-card:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.product-card {
+  width: 100%;
+
+  &-content {
+    display: grid;
+    grid-template-columns: fit-content(309px) 50% auto;
+    grid-template-rows: minmax(35px, auto) auto max-content auto 1fr;
+    grid-template-areas:
+      'a b c'
+      'a d c'
+      'a e e'
+      'a h h'
+      'a f f';
+    grid-column-gap: 16px;
+
+    &-image {
+      grid-area: a;
+
+      > esp-product-image {
+        max-width: 310px;
+        margin: 0 auto;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-name {
+      grid-area: b;
+      margin-bottom: 16px;
+    }
+
+    &-status {
+      grid-area: b;
+      float: left;
+      background: $color-bl-azure-57;
+      color: white;
+      font-size: 11px;
+      font-weight: 600;
+      width: fit-content;
+      height: fit-content;
+      margin-left: 16px;
+    }
+
+    &-attributes {
+      grid-area: d;
+      margin-bottom: 8px;
+    }
+
+    &-actions {
+      margin-bottom: 16px;
+      grid-area: c;
+
+      &:empty {
+        display: none;
+      }
+    }
+
+    &-grid {
+      grid-area: e;
+      margin-bottom: 24px;
+    }
+
+    &-request-changes {
+      grid-area: h;
+    }
+
+    &-comments {
+      grid-area: f;
+    }
+
+    esp-presentation-product-card-grid-with-charge {
+      display: block;
+      min-width: 340px;
+    }
+  }
+}
+
+@include narrower-than($bp-large) {
+  .product-card {
+    &-content {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 16px;
+
+      &-grid {
+        margin-bottom: 8px;
+      }
+
+      &-name,
+      &-attributes {
+        margin-bottom: 0;
+      }
+
+      &-status {
+        float: none;
+        margin-left: 0px;
+        margin-top: 10px;
+      }
+
+      .cart-actions {
+        width: 100%;
+      }
+    }
+  }
+}
+
+a {
+  color: $color-bl-atoll-75;
+}
+
+.no-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-g-pearl-03;
+  color: $color-g-shark-54;
+  padding: 4px;
+  font-size: $font-size-14;
+}

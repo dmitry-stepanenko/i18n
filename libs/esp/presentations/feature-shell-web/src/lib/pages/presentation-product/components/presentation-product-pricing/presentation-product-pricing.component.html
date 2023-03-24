@@ -1,0 +1,97 @@
+<ng-container *ngIf="!state.isLoading && state.hasLoaded && state.product">
+  <ng-container
+    *transloco="
+      let t;
+      read: 'espPresentations.presentation-product.presentation-product-pricing'
+    "
+  >
+    <cos-toggle
+      class="mb-16 block w-full"
+      data-cy="show-product-pricing-checkbox"
+      [checked]="state.product.Settings.ShowProductPricing"
+      (toggleChange)="togglePricing()"
+    >
+      <span class="toggle-label">{{ t('toggle-label') }}</span>
+    </cos-toggle>
+    <p>{{ t('all-price-grids') }}</p>
+
+    <ng-template [ngIf]="state.product.Settings.ShowProductPricing">
+      <cos-card class="mb-24">
+        <div class="flex flex-col gap-x-4 lg:flex-row lg:items-end">
+          <cos-form-field>
+            <cos-label>{{ t('pricing-calc-adjustment-label') }}</cos-label>
+            <select
+              data-cy="pricing-adjustment-select"
+              matNativeControl
+              [ngModel]="priceAdjustment"
+              (ngModelChange)="updatePriceAdjustment($event)"
+            >
+              <option
+                *ngFor="let priceAdjustment of priceAdjustments"
+                [ngValue]="priceAdjustment"
+              >
+                {{ t('price-adjustments-labels.' + priceAdjustment.label) }}
+              </option>
+            </select>
+          </cos-form-field>
+          <cos-form-field class="pricing-calc-amount">
+            <cos-label class="cos-accessibly-hidden">{{
+              t('amount-label')
+            }}</cos-label>
+            <input
+              id="priceAdjustmentValue"
+              data-cy="price-adjustment-value"
+              cos-input
+              type="text"
+              name="priceAdjustmentValue"
+              [placeholder]="
+                shouldRenderPercentageMask
+                  ? t('enter-percent-placeholder')
+                  : t('enter-amount-placeholder')
+              "
+              autocomplete="off"
+              [formControl]="priceAdjustmentValueControl"
+              [inputMask]="
+                shouldRenderPercentageMask ? percentageMask : numericMask
+              "
+            />
+          </cos-form-field>
+          <div class="pricing-calc-button mb-16">
+            <button
+              data-cy="apply-price-adjustment-button"
+              type="button"
+              cos-flat-button
+              color="primary"
+              (click.silent)="applyPriceAdjustment()"
+              [disabled]="
+                !priceAdjustmentValueControl.value?.toString()?.length
+              "
+            >
+              {{ t('apply') }}
+            </button>
+          </div>
+        </div>
+
+        <cos-checkbox
+          class="checkbox-products"
+          id="checkbox-products"
+          name="checkbox-products"
+          data-cy="round-prices-to-two-decimal"
+          [checked]="state.product.RoundPricesToTwoDecimal"
+          (change)="toggleRoundPricesToTwoDecimal()"
+        >
+          {{ t('round-up-checkbox') }}
+        </cos-checkbox>
+      </cos-card>
+
+      <esp-presentation-product-price-grids
+        *ngIf="state.presentation && state.product"
+        [presentation]="state.presentation"
+        [product]="state.product"
+        [currencyConversion]="state.currencyConversion"
+        [visiblePriceGrids]="state.visiblePriceGrids"
+        [invisiblePriceGrids]="state.invisiblePriceGrids"
+      ></esp-presentation-product-price-grids>
+    </ng-template>
+  </ng-container>
+</ng-container>

@@ -1,0 +1,37 @@
+{
+  "name": "esp-presentations-mocks-presentations",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/esp/presentations/mocks-presentations/src",
+  "prefix": "esp",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": [
+        "{workspaceRoot}/dist/libs/esp/presentations/mocks-presentations"
+      ],
+      "options": {
+        "project": "libs/esp/presentations/mocks-presentations/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/esp/presentations/mocks-presentations/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/esp/presentations/mocks-presentations/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/esp/presentations/mocks-presentations/**/*.ts",
+          "libs/esp/presentations/mocks-presentations/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:esp", "type:mocks"]
+}

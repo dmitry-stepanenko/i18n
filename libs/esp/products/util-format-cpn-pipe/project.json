@@ -1,0 +1,48 @@
+{
+  "name": "esp-products-util-format-cpn-pipe",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/esp/products/util-format-cpn-pipe/src",
+  "prefix": "esp",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": [
+        "{workspaceRoot}/dist/libs/esp/products/util-format-cpn-pipe"
+      ],
+      "options": {
+        "project": "libs/esp/products/util-format-cpn-pipe/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/esp/products/util-format-cpn-pipe/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/esp/products/util-format-cpn-pipe/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/esp/products/util-format-cpn-pipe",
+        "{workspaceRoot}/reports/libs/esp/products/util-format-cpn-pipe"
+      ],
+      "options": {
+        "jestConfig": "libs/esp/products/util-format-cpn-pipe/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/esp/products/util-format-cpn-pipe/**/*.ts",
+          "libs/esp/products/util-format-cpn-pipe/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:esp", "type:util"]
+}

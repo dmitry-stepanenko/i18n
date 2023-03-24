@@ -1,0 +1,49 @@
+{
+  "feature-quotes-list": {
+    "quotes-title": "Quotes",
+    "quotes-subtitle": "This is your quotes page. View all of your quotes below.",
+    "quote-card-quote": "Quote",
+    "quote-card-created-date": "Created Date",
+    "quote-card-in-hands-date": "In-Hands Date",
+    "quote-card-quote-total": "Quote Total",
+    "quote-card-view-quote-button": "View Quote"
+  },
+  "feature-quote-details": {
+    "back-to-all-quotes": "Back to All Quotes",
+    "quote-title-if-approved": "You Have Approved Your Quote",
+    "quote-title-if-not-approved": "Your Custom Quote",
+    "quote-subtitle-if-approved": "Your quote approval has been sent to",
+    "quote-subtitle-if-not-approved": "This quote has been created specifically for you. From this site you can request changes to this quote, as well as add additional files and a message to",
+    "total-quantity": "Total Quantity",
+    "quote-total": "Quote Total",
+    "number-of-products": "Number of Products",
+    "quote-expires": "Quote Expires",
+    "request-changes-to-products": "Request Changes to Products",
+    "request-change-info": "Common change requests include artwork size, artwork positioning, product quantities, and product variants. Please summarize the changes you'd like to see in an updated quote.",
+    "request-change-additional-info": "Change To In-Hands Date or shipping location could impact pricing and estimated delivery dates.",
+    "products": "Products",
+    "quote-card-edit-changes-button": "Edit Changes",
+    "quote-card-request-changes-button": "Request Changes",
+    "subtotal": "Subtotal",
+    "discount": "Discount",
+    "sales-tax": "Sales Tax",
+    "additional-files": "Additional Files",
+    "contact-information": "Contact Information",
+    "prices-subject-to-change": "Prices are subject to change.",
+    "send-requested-changes-button": "Send Requested Changes",
+    "approve-quote-button": "Approve Quote"
+  },
+  "request-changes-dialog": {
+    "title": "Request Changes",
+    "sub-title": "Please detail the requested changes.",
+    "image-disclaimer": "*Example image may not represent the exact configuration selected.",
+    "imprint-method": "Imprint Method",
+    "artwork": "Artwork",
+    "request-changes-label": "Request Changes",
+    "request-changes-placeholder": "Type in your requested changes.",
+    "name-label": "Name",
+    "name-placeholder": "Enter Name",
+    "cancel-button": "Cancel",
+    "save-button": "Save"
+  }
+}

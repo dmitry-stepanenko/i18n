@@ -1,0 +1,255 @@
+@import 'cosmos/scss/settings';
+
+.presentation-product {
+  display: flex;
+  flex-direction: column;
+
+  &-header {
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: $border-light;
+    background-color: $color-g-pearl-03;
+  }
+
+  &__prev-next,
+  &__back-to-presentation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+
+    > a {
+      padding: 0;
+      text-decoration: none;
+      color: $color-bl-atoll-75;
+    }
+
+    .disabled {
+      color: $color-g-stone-41;
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+
+  &__back-to-presentation {
+    margin-bottom: -10px;
+    margin-top: 30px;
+  }
+
+  &__pg-content {
+    width: 100%;
+    margin: 0 auto;
+
+    //padding: 0 16px;
+    // @include wider-than($bp-medium) {
+    //   padding: 0 48px;
+    // }
+
+    .cos-form-field-wrapper,
+    select {
+      width: 100%;
+      max-width: 100% !important;
+    }
+
+    .proj-product-detail-btn {
+      margin-bottom: $spacing-stack-16;
+      padding: 0;
+    }
+  }
+
+  &__back {
+    font-family: $font-stack-sans;
+    font-weight: bold;
+    font-size: $font-size-14;
+  }
+
+  &__pg-content-body {
+    @include wider-than($bp-medium) {
+      display: flex;
+      gap: 16px;
+
+      > div {
+        width: 50%;
+      }
+    }
+  }
+
+  &__virtual-sample {
+    width: 100%;
+  }
+
+  &__mobile-menu {
+    @include wider-than($bp-medium) {
+      display: none;
+    }
+  }
+
+  &__mobile-controls {
+    display: flex;
+    flex-direction: column;
+    @include spacing-inset-8();
+
+    .cos-stroked-button {
+      margin: 0 0 $spacing-stack-8;
+    }
+  }
+
+  &__desktop-controls {
+    > .btn-cancel {
+      padding: 0 !important;
+      border: 0 !important;
+      background: transparent !important;
+      color: $color-rd-macaw-52 !important;
+    }
+
+    @include narrower-than($bp-medium) {
+      display: none;
+    }
+  }
+
+  .supplier-info {
+    .caption {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .fa-eye-slash {
+      font-size: 18px;
+    }
+
+    .cos-supplier-body {
+      padding: 0;
+      margin-top: -8px;
+
+      .cos-supplier-name {
+        @include type-style-header-16;
+      }
+    }
+  }
+
+  .cos-card.proj-product-card-disabled {
+    background: $color-g-pearl-03;
+  }
+
+  esp-visible-grid-prices {
+    .cos-table--wrapper .cos-table {
+      .cos-row {
+        height: auto;
+        align-items: stretch;
+
+        &:last-of-type {
+          border: 0;
+        }
+      }
+    }
+  }
+
+  .cos-table--wrapper .cos-table {
+    text-align: left;
+    min-width: 480px;
+    display: block;
+
+    th,
+    .cos-header-cell,
+    td,
+    .cos-cell {
+      padding-left: 4px;
+      padding-right: 4px;
+
+      &:first-child {
+        padding-left: 8px;
+      }
+
+      &:last-child {
+        padding-right: 8px;
+      }
+    }
+
+    td,
+    .cos-cell {
+      padding: 8px 4px;
+      border-bottom: $border-light;
+      height: auto;
+      font-size: inherit;
+
+      > cos-form-field {
+        margin-bottom: 0;
+      }
+    }
+
+    .cos-row {
+      height: auto;
+      align-items: stretch;
+
+      &:last-of-type {
+        td,
+        .cos-cell {
+          border: 0;
+        }
+      }
+    }
+
+    .cos-column-minprice {
+      flex: 0;
+      min-width: 100px;
+    }
+
+    .cos-column-action,
+    .cos-column-IsVisible {
+      flex: 0;
+      min-width: 70px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      .cos-icon-button {
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .cos-table--wrapper {
+    margin-bottom: $spacing-stack-16;
+    background: none;
+    background-color: transparent;
+  }
+
+  cos-row,
+  cos-table.cos-table tbody,
+  table.cos-table tbody {
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.product-variants {
+  esp-presentation-product-variant {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .separator {
+    border-bottom: 1px solid $color-g-pebble-09;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+@include narrower-than($bp-medium) {
+  .cos-table {
+    overflow-x: scroll;
+  }
+
+  .cos-header-row,
+  .cos-row,
+  .cos-footer-row {
+    min-width: 460px;
+  }
+}

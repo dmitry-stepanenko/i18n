@@ -1,0 +1,83 @@
+@import 'cosmos/scss/settings';
+
+.presentation {
+  &-search {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-filters {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-header {
+    grid-area: 1 / 1 / auto / span 2;
+    width: 50%;
+  }
+
+  &-search-keywords {
+    grid-area: c;
+    flex: 0 0 100%;
+    margin-bottom: 30px;
+  }
+
+  &-actions {
+    grid-area: d;
+    flex: 1 0 50%;
+    text-align: right;
+  }
+
+  &-tabs {
+    grid-area: e;
+    flex: 0 0 100%;
+    margin-bottom: 12px;
+    max-width: 100%;
+  }
+
+  &-sort {
+    grid-area: f;
+    text-align: right;
+    flex: 0 0 100%;
+    margin-bottom: 12px;
+  }
+
+  &-results {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(284px, 1fr));
+    justify-content: space-between;
+  }
+}
+
+@include wider-than($bp-large) {
+  .presentation {
+    &-search {
+      flex: 1 0 25%;
+      flex-grow: 0;
+    }
+
+    &-filters {
+      display: grid;
+      grid-template-areas:
+        'a b'
+        'c d'
+        'e e'
+        'f f';
+
+      .presentation-header {
+        margin-bottom: 8px;
+      }
+
+      .presentation-search-keywords {
+        margin-bottom: 30px;
+
+        > esp-search-box {
+          > .cos-search-field {
+            max-width: 380px;
+          }
+        }
+      }
+    }
+  }
+}

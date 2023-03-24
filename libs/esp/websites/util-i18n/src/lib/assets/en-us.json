@@ -1,0 +1,152 @@
+{
+  "websites-pages": {
+    "feature-shell-web": {
+      "website-pages": {
+        "header": "Pages and Navigation",
+        "add-content-library-cta": "Add Content Library",
+        "add-custom-page-cta": "Add Custom Page",
+        "add-custom-collection-page-cta": "Add Product Collection Page"
+      }
+    }
+  },
+  "websites-overview": {
+    "feature-overview": {
+      "page": {
+        "header": "Websites Overview"
+      },
+      "template-overview-card": {
+        "header": "Template",
+        "edit-cta": "Edit Template",
+        "color-palette-header": "Color Palette"
+      },
+      "site-summary-card": {
+        "header": "Site Summary",
+        "edit-cta": "Edit Site Settings",
+        "site-title": "Site Title",
+        "domain": "Domain",
+        "new-domain": "Select new Domain",
+        "analytics": "Analytics",
+        "setup-analytics": "Setup Analytics",
+        "status": "Status",
+        "last-updated": "Last Updated"
+      },
+      "products-overview-card": {
+        "header": "Products",
+        "manage-cta": "Manage Products"
+      },
+      "pages-overview-card": {
+        "header": "Pages",
+        "add-cta": "Add Pages",
+        "no-pages": "There are no pages created yet",
+        "loading": "Loading",
+        "delete-collection": "Delete Product Collection",
+        "delete-page": "Delete Page",
+        "edit": "Edit"
+      }
+    }
+  },
+  "websites-products": {
+    "feature-global-product-configuration": {
+      "global-product-configuration-card": {
+        "product-description": "Product description",
+        "product-size-variants": "Product size variants",
+        "available-imprint-methods": "Available imprint methods",
+        "prices-and-upcharges": "Prices and upcharges",
+        "product-options": "Product options",
+        "shipping-options": "Shipping options",
+        "packaging-options": "Packaging options",
+        "customer-comment": "Customer comment box",
+        "upload-additional-details": "Upload additional details",
+        "product-color-variants": "Product color variants",
+        "upload-instructions": {
+          "label": "Upload instructions",
+          "placeholder": "Enter upload instructions"
+        },
+        "default-sort-option": {
+          "label": "Default sort option"
+        }
+      }
+    }
+  },
+  "websites-settings": {
+    "feature-shell-web": {
+      "page": {
+        "header": "Settings"
+      }
+    },
+    "feature-site-information": {
+      "site-information": {
+        "header": "Site Information",
+        "site-title": {
+          "title": "Site Title",
+          "label": "Site Title",
+          "placeholder": "Enter Site Title",
+          "empty-text": "No site title currently added"
+        },
+        "site-description": {
+          "title": "Site Description",
+          "label": "Site Description",
+          "placeholder": "Enter Site Description",
+          "empty-text": "No description currently added"
+        },
+        "site-keywords": {
+          "title": "Site Keywords",
+          "label": "Site Keywords",
+          "placeholder": "Enter Site Keywords",
+          "empty-text": "No keywords currently added",
+          "validation-messages": {
+            "maxlength": "You must enter no more than {{max}} keywords"
+          }
+        },
+        "media-panel": {
+          "header": "Media",
+          "social-media-social-images": "Social Media Sharing Images",
+          "social-media-social-images-edit-cta": "Social Media Sharing Images"
+        },
+        "enable-progressive-web-app-panel": {
+          "header": "Enable Progressive Web App",
+          "activate": "Activate Progressive Web App",
+          "enable-mobile": "Enable mobile browsers to install the site as an app"
+        }
+      },
+      "company-information": {
+        "header": "Company Information"
+      }
+    },
+    "feature-seo-and-analytics": {
+      "header": "SEO and Analytics",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "analytics": {
+        "title": "Google Analytics",
+        "label": "Account ID",
+        "placeholder": "Enter your account ID here 'G-XXXXXXX"
+      },
+      "tag-manager": {
+        "title": "Google Tag Manager",
+        "label": "Container ID",
+        "placeholder": "Enter your container ID here 'GTM-XXXXXXX"
+      }
+    }
+  },
+  "websites-templates": {
+    "feature-template": {
+      "template-page": {
+        "header": "Template",
+        "save-cta": "Save",
+        "cancel-cta": "Cancel"
+      },
+      "selected-template-card": {
+        "header": "Selected Template"
+      },
+      "color-palette-card": {
+        "header": "Color Palette",
+        "reset-color-cta": "Reset Color",
+        "primary-color": "Primary Color",
+        "secondary-color": "Secondary Color",
+        "tertiary-color": "Tertiary Color",
+        "highlight-color": "Highlight Color"
+      }
+    }
+  }
+}

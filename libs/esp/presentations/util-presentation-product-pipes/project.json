@@ -1,0 +1,48 @@
+{
+  "name": "esp-presentations-util-presentation-product-pipes",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/esp/presentations/util-presentation-product-pipes/src",
+  "prefix": "cos",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": [
+        "{workspaceRoot}/dist/libs/esp/presentations/util-presentation-product-pipes"
+      ],
+      "options": {
+        "project": "libs/esp/presentations/util-presentation-product-pipes/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/esp/presentations/util-presentation-product-pipes/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/esp/presentations/util-presentation-product-pipes/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/esp/presentations/util-presentation-product-pipes",
+        "{workspaceRoot}/reports/libs/esp/presentations/util-presentation-product-pipes"
+      ],
+      "options": {
+        "jestConfig": "libs/esp/presentations/util-presentation-product-pipes/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/esp/presentations/util-presentation-product-pipes/**/*.ts",
+          "libs/esp/presentations/util-presentation-product-pipes/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:esp", "type:util"]
+}

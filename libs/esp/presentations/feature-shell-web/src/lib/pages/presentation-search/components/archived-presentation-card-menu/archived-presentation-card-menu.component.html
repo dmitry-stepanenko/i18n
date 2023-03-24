@@ -1,0 +1,26 @@
+<button
+  mat-menu-item
+  class="cos-menu-item"
+  data-cy="presentation-card-menu__download-pdf-button"
+  (click)="downloadPdf()"
+>
+  <i class="fas fa-download"></i> Download PDF
+</button>
+<button
+  mat-menu-item
+  class="cos-menu-item"
+  [disabled]="!presentation.ProductCount"
+  (click)="createPresentation()"
+  data-cy="presentation-card-menu__create-presentation-button"
+>
+  <i class="fas fa-images"></i> Create Presentation
+</button>
+<button
+  mat-menu-item
+  class="cos-menu-item"
+  [disabled]="!presentation.ProductCount"
+  (click)="createCollection()"
+  data-cy="presentation-card-menu__create-collection-button"
+>
+  <i class="fa fa-archive"></i> Create Collection
+</button>

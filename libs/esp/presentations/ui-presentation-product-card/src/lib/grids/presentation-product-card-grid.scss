@@ -1,0 +1,17 @@
+@import 'cosmos/scss/settings/';
+
+.footer-row {
+  border: 1px solid $color-g-pebble-09;
+  border-top: 0;
+}
+
+cos-row {
+  height: unset;
+  min-height: 24px;
+}
+
+@include narrower-than($bp-large) {
+  .cos-column-quantity {
+    text-align: right;
+  }
+}

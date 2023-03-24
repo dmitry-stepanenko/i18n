@@ -1,0 +1,170 @@
+<cos-table
+  *ngIf="originalPrices$ | async as originalPrices"
+  [dataSource]="priceGrid?.Prices || []"
+  class="mb-16"
+>
+  <ng-container
+    *transloco="
+      let t;
+      read: 'espPresentations.presentation-product.presentation-product-pricing.' +
+        'presentation-product-price-visible-price-grids.presentation-product-visible-price-grid-prices'
+    "
+  >
+    <ng-container cosColumnDef="Quantity">
+      <cos-header-cell *cosHeaderCellDef>{{
+        t('quantity-header-cell')
+      }}</cos-header-cell>
+      <cos-cell *cosCellDef="let price">
+        <esp-grid-cell-quantity-input
+          data-cy="price-grid-price-row-quantity"
+          [ngModel]="price.Quantity?.From || 1"
+          (ngModelChange)="updateQuantity(priceGrid!, price, $event)"
+        ></esp-grid-cell-quantity-input>
+      </cos-cell>
+    </ng-container>
+
+    <ng-container cosColumnDef="Cost">
+      <cos-header-cell *cosHeaderCellDef>{{
+        t('net-cost-header-cell')
+      }}</cos-header-cell>
+      <cos-cell *cosCellDef="let price">
+        <!-- TODO-ARTUR: the truncateValue isn't working because it returns a string... -->
+        <esp-grid-cell-net-cost-input
+          data-cy="price-grid-price-row-net-cost"
+          [currencyCode]="price.CurrencyCode"
+          [ngModel]="price.Cost | truncateValueToNumber: 3"
+          (ngModelChange)="updateNetCost(priceGrid!, price, $event)"
+        ></esp-grid-cell-net-cost-input>
+      </cos-cell>
+    </ng-container>
+
+    <ng-container cosColumnDef="CostPerUnit">
+      <cos-header-cell *cosHeaderCellDef class="justify-center">
+        {{ t('original-header-cell') }}
+      </cos-header-cell>
+      <cos-cell *cosCellDef="let price; let index = index">
+        <div class="original-price text-right">
+          <ng-template
+            [ngIf]="originalPrices[index]"
+            [ngIfElse]="noOriginalPrice"
+          >
+            <span>
+              {{ originalPrices[index] | formatPrice: 'Price' }}
+            </span>
+            <span
+              class="original-price--converted"
+              *ngIf="
+                price.CurrencyCode === state.currencyConversion?.CurrencyCode
+              "
+            >
+              ({{
+                originalPrices[index].Price! *
+                  (state.currencyConversion?.ConversionRate || 1)
+                  | formatPrice
+                    : undefined
+                    : undefined
+                    : undefined
+                    : state.presentation?.CurrencyCode
+              }})
+            </span>
+          </ng-template>
+          <ng-template #noOriginalPrice>
+            <mat-divider class="w-full"></mat-divider>
+          </ng-template>
+        </div>
+      </cos-cell>
+    </ng-container>
+
+    <ng-container cosColumnDef="DiscountPercent">
+      <cos-header-cell *cosHeaderCellDef>{{
+        t('margin-header-cell')
+      }}</cos-header-cell>
+      <cos-cell *cosCellDef="let price">
+        <esp-grid-cell-margin-input
+          data-cy="price-grid-price-row-margin"
+          [ngModel]="price.DiscountPercent"
+          (ngModelChange)="updateMargin(priceGrid!, price, $event)"
+        ></esp-grid-cell-margin-input>
+      </cos-cell>
+    </ng-container>
+
+    <ng-container cosColumnDef="Price">
+      <cos-header-cell *cosHeaderCellDef>{{
+        t('price-header-cell')
+      }}</cos-header-cell>
+      <cos-cell *cosCellDef="let price">
+        <esp-grid-cell-price-input
+          data-cy="price-grid-price-row-list-price"
+          [currencyCode]="price.CurrencyCode"
+          [ngModel]="price.Price | truncateValueToNumber: 3"
+          (ngModelChange)="updatePrice(priceGrid!, price, $event)"
+        ></esp-grid-cell-price-input>
+      </cos-cell>
+    </ng-container>
+
+    <ng-container *ngIf="state.currencyConversion" cosColumnDef="ClientPrice">
+      <cos-header-cell *cosHeaderCellDef class="justify-center">
+        Client Price
+      </cos-header-cell>
+      <cos-cell *cosCellDef="let price">
+        <div class="client-price text-right">
+          <!-- TODO-ARTUR: this will have to be converted using the calculation from the presentation, plase look at what Pegasus did with a pipe... -->
+          {{
+            price
+              | calculateClientPrice
+                : state.presentation!
+                : state.currencyConversion
+          }}
+        </div>
+      </cos-cell>
+    </ng-container>
+
+    <ng-container cosColumnDef="IsVisible">
+      <cos-header-cell *cosHeaderCellDef>
+        {{ t('visible-header-cell') }}
+        <cos-checkbox
+          class="ml-8"
+          size="small"
+          [checked]="allSupplierPricesAreVisible"
+          (change)="toggleVisibilityOfAllPrices(priceGrid!)"
+        >
+        </cos-checkbox>
+      </cos-header-cell>
+
+      <cos-cell *cosCellDef="let price; let index = index">
+        <button
+          *ngIf="index + 1 > originalPrices.length; else eyeButton"
+          cos-icon-button
+          (click.silent)="removePrice(priceGrid!, price)"
+          color="warn"
+        >
+          <i class="fa fa-trash-alt text-lg"></i>
+          <span class="cos-accessibly-hidden">{{
+            t('remove-header-cell')
+          }}</span>
+        </button>
+
+        <ng-template #eyeButton>
+          <button
+            cos-icon-button
+            (click.silent)="togglePriceVisibility(priceGrid!, price)"
+          >
+            <i
+              class="text-lg"
+              [ngClass]="{
+                'fa fa-eye cos-text--blue': price.IsVisible,
+                'far fa-eye-slash cos-text--lightgray': !price.IsVisible
+              }"
+            ></i>
+            <span class="cos-accessibly-hidden">{{
+              t('view-header-cell')
+            }}</span>
+          </button>
+        </ng-template>
+      </cos-cell>
+    </ng-container>
+
+    <cos-header-row *cosHeaderRowDef="priceGridColumns"></cos-header-row>
+    <cos-row *cosRowDef="let row; columns: priceGridColumns"></cos-row>
+  </ng-container>
+</cos-table>

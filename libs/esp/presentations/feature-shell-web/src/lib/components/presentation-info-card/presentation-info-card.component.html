@@ -1,0 +1,171 @@
+<cos-card
+  class="presentation-info mt-16 mb-16"
+  *transloco="
+    let t;
+    read: 'espPresentations.presentation-settings-page.presentation-info-card'
+  "
+>
+  <div class="flex">
+    <h4 class="header-style-14-bold mr-16">
+      {{ t('presentation-info-title') }}
+    </h4>
+    <span
+      class="cos-pill-label mb-8"
+      data-cos-color="error"
+      *ngIf="state.presentationExpired"
+      >{{ t('presentation-expired') }}</span
+    >
+  </div>
+  <p
+    class="body-style-14-mineshaft"
+    *ngIf="state.presentation?.Status !== PresentationStatus.PreShare"
+    data-cy="share-details-section"
+  >
+    <ng-template
+      [ngIf]="state.presentation?.Customer && state.presentation?.SharedDate"
+    >
+      {{
+        t('shared-with', {
+          name: state.presentation?.Customer?.Name,
+          sharedDate: state.presentation?.SharedDate | cosDate: 'longDate',
+          sharedTime:
+            state.presentation?.SharedDate | cosDate: 'shortTime' | lowercase
+        })
+      }}
+      <br />
+    </ng-template>
+
+    <ng-template [ngIf]="!state.presentation?.LastViewDate"
+      ><span>{{ t('presentation-not-viewed') }}</span></ng-template
+    >
+    <ng-template [ngIf]="state.presentation?.ExpirationDate">
+      <span *ngIf="state.presentationExpired; else expires">
+        {{
+          t('link-expired', {
+            date: state.presentation?.ExpirationDate | cosDate: 'longDate':'UTC'
+          })
+        }}
+      </span>
+      <ng-template #expires>{{
+        t('link-expires', {
+          date: state.presentation?.ExpirationDate | cosDate: 'longDate':'UTC'
+        })
+      }}</ng-template>
+    </ng-template>
+  </p>
+  <h3
+    class="header-style-16"
+    *ngIf="state.presentation?.Status === PresentationStatus.PreShare"
+  >
+    {{ t('link-not-shared-yet') }}
+  </h3>
+  <h4
+    class="header-style-14-bold mt-16 mb-8"
+    data-cy="customer-engagement-title"
+  >
+    {{ t('customer-engagement-title') }}
+  </h4>
+  <div class="proj-pres__metrics flex justify-between self-end">
+    <div>
+      <h5 class="header-style-12 mb-8">{{ t('last-viewed') }}</h5>
+      <span class="header-style-14-bold">{{
+        state.presentation?.LastViewDate
+          ? (state.presentation?.LastViewDate | cosDate: 'longDate')
+          : t('not-viewed')
+      }}</span>
+    </div>
+    <div>
+      <h5 class="header-style-12 mb-8" data-cy="products-requested-title">
+        {{ t('products-requested-title') }}
+      </h5>
+      <span class="proj-pres__metric">{{
+        state.presentation?.NumberOfProductsQuoted
+      }}</span>
+    </div>
+    <div>
+      <h5 class="header-style-12 mb-8">{{ t('products-disliked') }}</h5>
+      <span class="proj-pres__metric">{{
+        state.presentation?.NumberOfProductsDisliked
+      }}</span>
+    </div>
+  </div>
+  <div cos-card-sidebar>
+    <div class="flex items-start justify-between">
+      <h3 class="header-style-14-bold w-full">{{ t('project-details') }}</h3>
+      <button
+        *ngIf="state.project?.IsEditable"
+        (click)="openEditDialog()"
+        [matTooltip]="t('edit-tooltip')"
+        cos-icon-button
+        size="sm"
+        type="button"
+        class="edit-project-button"
+        data-cy="edit-project-button"
+      >
+        <i class="fa fa-pen"></i>
+      </button>
+    </div>
+    <ul class="project-info-grid">
+      <li>
+        <i class="fa fa-pen-alt"></i>
+        {{
+          t('project-created', {
+            date: state.project?.CreateDate | cosDate: 'longDate'
+          })
+        }}
+      </li>
+      <li>
+        <i class="fa fa-hand-paper"></i>
+        {{
+          t('in-hands-date', {
+            date: state.project?.InHandsDate
+              ? (state.project?.InHandsDate | cosDate: 'longDate':'UTC')
+              : '-'
+          })
+        }}
+      </li>
+      <li>
+        <i class="fa fa-calendar-alt"></i>
+        {{
+          t('event-date', {
+            date: state.project?.EventDate
+              ? (state.project?.EventDate | cosDate: 'longDate':'UTC')
+              : '-'
+          })
+        }}
+      </li>
+      <li>
+        <i class="fa fa-calendar-week"></i>
+        {{
+          t('event-type', {
+            type: state.project?.EventType ?? '-'
+          })
+        }}
+      </li>
+      <li>
+        <i class="fa fa-money-check-alt"></i>
+        {{
+          t('budget', {
+            value:
+              state.project?.Budget && state.project!.Budget! > 0
+                ? (state.project!.Budget!
+                  | currency: state.project?.CurrencyTypeCode)
+                : '-'
+          })
+        }}
+      </li>
+      <li>
+        <i class="fa fa-users"></i>
+        {{
+          t('attendees', {
+            value:
+              state.project?.NumberOfAssignees &&
+              state.project!.NumberOfAssignees! > 0
+                ? (state.project?.NumberOfAssignees | number)
+                : '-'
+          })
+        }}
+      </li>
+    </ul>
+  </div>
+</cos-card>

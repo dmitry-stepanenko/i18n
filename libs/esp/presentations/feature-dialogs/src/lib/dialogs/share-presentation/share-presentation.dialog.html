@@ -1,0 +1,192 @@
+<ng-container
+  *transloco="let t; read: 'espPresentations.share-presentation-dialog'"
+>
+  <header>
+    <div>
+      <button
+        class="cos-modal-close"
+        data-cy="dialog-close-button"
+        mat-dialog-close
+      >
+        <i class="fas fa-times"></i>
+        <span class="cos-accessibly-hidden">{{ t('close') }}</span>
+      </button>
+    </div>
+    <h2 mat-dialog-title>{{ t('share-with-customer') }}</h2>
+    <p>{{ t('send-email') }}</p>
+  </header>
+
+  <mat-dialog-content>
+    <div class="flex justify-center">
+      <cos-button-group
+        class="my-24"
+        [toggleOptions]="(shareOptions | async) ?? []"
+        [defaultSelection]="selectedView"
+        (handleSelection)="toggleView($event)"
+      ></cos-button-group>
+    </div>
+
+    <div class="content-wrapper project-info-dialog-content">
+      <ng-template [ngIf]="selectedView === 'email'">
+        <ng-template [ngIf]="state.ready" [ngIfElse]="loader">
+          <form [formGroup]="shareForm">
+            <asi-email-autocomplete
+              formControlName="To"
+              [autoCompleteFilters]="autoCompleteFilters"
+              [excludeSelected]="true"
+            ></asi-email-autocomplete>
+            <cos-form-field class="w-full">
+              <cos-label>{{ t('subject-line-label') }}</cos-label>
+              <input
+                cos-input
+                [placeholder]="t('enter-subject-placeholder')"
+                maxlength="255"
+                formControlName="Subject"
+                data-cy="subject-line-input"
+                required
+              />
+              <cos-error></cos-error>
+            </cos-form-field>
+
+            <cos-form-field class="mb-0">
+              <cos-label>{{ t('message-label') }}</cos-label>
+              <textarea
+                cos-input
+                [placeholder]="t('enter-personal-message-placeholder')"
+                maxlength="250"
+                formControlName="PersonalNote"
+                data-cy="email-note-input"
+                rows="4"
+              ></textarea>
+            </cos-form-field>
+          </form>
+        </ng-template>
+        <hr class="divider" />
+      </ng-template>
+      <form [formGroup]="settingsForm">
+        <div class="cos-form-field presentation-settings-include-signature">
+          <label class="cos-form-field-label mb-8">{{
+            t('presentation-settings')
+          }}</label>
+          <p>{{ t('signature-and-expiration-date') }}</p>
+          <cos-toggle
+            data-cy="toggle-include-signature"
+            class="mb-16 block w-full"
+            [checked]="settingsForm.get('ShowSignature')!.value"
+            [options]="{ disableToggleValue: true }"
+            (click)="updateSharingOption()"
+          >
+            {{ t('include-signature') }}
+          </cos-toggle>
+        </div>
+
+        <cos-form-field class="date-picker">
+          <cos-label>{{ t('expiration-date') }}</cos-label>
+          <div class="cos-date-picker">
+            <mat-datepicker-toggle
+              [for]="datePicker"
+              matSuffix
+            ></mat-datepicker-toggle>
+            <mat-datepicker #datePicker></mat-datepicker>
+            <input
+              cos-input
+              data-cy="expiration-date-input"
+              [placeholder]="t('select-date-placeholder')"
+              class="cos-input-with-arrow"
+              formControlName="ExpirationDate"
+              readonly
+              [matDatepicker]="datePicker"
+              [max]="maxExpirationDate"
+              (click)="datePicker.open()"
+            />
+          </div>
+          <cos-error
+            data-cy="expiration-date-error"
+            [controlErrors]="{
+              matDatepickerParse: t('mat-datepicker-parse'),
+              invalidExpirationDate: t('invalid-expiration-date')
+            }"
+          ></cos-error>
+
+          <!--
+            This hint is shown only once when the share dialog is opened and the expiration datepicker
+            is not touched yet. But the presentation expiration date is already set.
+            Which means the share button will be in disabled state, but the user might be unaware why.
+          -->
+          <cos-hint
+            data-cy="expiration-date-hint"
+            class="cos-error text-warning"
+            *ngIf="
+              expirationDateControl!.invalid && expirationDateControl!.pristine
+            "
+            >{{ t('invalid-expiration-date') }}</cos-hint
+          >
+          <mat-datepicker #picker></mat-datepicker>
+        </cos-form-field>
+      </form>
+    </div>
+
+    <ng-template #loader>
+      <ngx-skeleton-loader
+        [theme]="{ width: '70px', height: '18px', 'margin-bottom': '8px' }"
+      ></ngx-skeleton-loader>
+      <ngx-skeleton-loader
+        [theme]="{ height: '34px', 'margin-bottom': '16px' }"
+      ></ngx-skeleton-loader>
+      <ngx-skeleton-loader
+        [theme]="{ width: '78px', height: '18px', 'margin-bottom': '8px' }"
+      ></ngx-skeleton-loader>
+      <ngx-skeleton-loader
+        [theme]="{ height: '34px', 'margin-bottom': '16px' }"
+      ></ngx-skeleton-loader>
+      <ngx-skeleton-loader
+        [theme]="{ width: '55px', height: '18px', 'margin-bottom': '8px' }"
+      ></ngx-skeleton-loader>
+      <ngx-skeleton-loader
+        [theme]="{ height: '82px', 'margin-bottom': '16px' }"
+      ></ngx-skeleton-loader>
+    </ng-template>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <div class="dialog-actions">
+      <button
+        cos-stroked-button
+        data-cy="preview-presentation-button"
+        color="primary"
+        (click)="previewPresentation()"
+      >
+        <i class="fa fa-eye mr-8"></i> {{ t('preview-presentation') }}
+      </button>
+
+      <ng-template
+        [ngIf]="selectedView === 'email'"
+        [ngIfElse]="shareActionsTemplate"
+      >
+        <button
+          cos-flat-button
+          color="primary"
+          (click)="sendEmail()"
+          [loading]="isSending"
+          [disabled]="shareForm.invalid || isSending || settingsForm.invalid"
+          data-cy="share-presentation-btn"
+        >
+          <i class="fa fa-share mr-8"></i> {{ t('share-with-customer') }}
+        </button>
+      </ng-template>
+
+      <ng-template #shareActionsTemplate>
+        <button
+          cos-flat-button
+          color="primary"
+          (click)="copyPreviewLink()"
+          [loading]="isCopying"
+          [disabled]="isCopying || settingsForm.invalid"
+          data-cy="share-link-copy-btn"
+        >
+          <i class="fa fa-copy mr-8"></i> {{ t('copy-link') }}
+        </button>
+      </ng-template>
+    </div>
+  </mat-dialog-actions>
+</ng-container>

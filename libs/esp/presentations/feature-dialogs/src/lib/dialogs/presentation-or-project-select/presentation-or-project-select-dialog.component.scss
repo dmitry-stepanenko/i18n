@@ -1,0 +1,20 @@
+@import 'cosmos/scss/settings';
+
+.details-card-wrapper {
+  position: relative;
+}
+
+.current-project-overlay {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 4px);
+  border: solid $color-bl-azure-57;
+  border-width: 4px 2px 2px 2px;
+  border-radius: 2px;
+
+  span {
+    color: $color-bl-azure-57;
+    position: absolute;
+    top: -20px;
+  }
+}

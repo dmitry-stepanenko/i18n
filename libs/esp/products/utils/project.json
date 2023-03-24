@@ -1,0 +1,52 @@
+{
+  "name": "esp-products-utils",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/esp/products/utils/src",
+  "prefix": "esp",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/esp/products/utils"],
+      "options": {
+        "project": "libs/esp/products/utils/ng-package.json",
+        "main": "libs/esp/products/utils/src/index.ts",
+        "assets": ["libs/esp/products/utils/*.md"]
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/esp/products/utils/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/esp/products/utils/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/esp/products/utils",
+        "{workspaceRoot}/reports/libs/esp/products/utils"
+      ],
+      "options": {
+        "jestConfig": "libs/esp/products/utils/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/esp/products/utils/**/*.ts"]
+      }
+    }
+  },
+  "tags": ["scope:esp", "type:util"]
+}

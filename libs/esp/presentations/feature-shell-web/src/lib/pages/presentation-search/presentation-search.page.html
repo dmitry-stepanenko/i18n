@@ -1,0 +1,97 @@
+<div class="page-container">
+  <div class="presentation-search grid-layout-1">
+    <div class="presentation-filters search-header">
+      <h1 class="header-style-24 presentation-header">Presentations</h1>
+      <div class="presentation-actions">
+        <button
+          type="button"
+          cos-flat-button
+          color="primary"
+          (click)="createPresentation()"
+          data-cy="create-presentation-button"
+        >
+          <span class="mr-12"><i class="fa fa-images"></i></span>
+          <span class="hidden lg:inline-block">Create New Presentation</span>
+          <span class="lg:hidden">Create New</span>
+        </button>
+      </div>
+
+      <div class="presentation-search-keywords">
+        <esp-search-box placeholder="Search Presentations"></esp-search-box>
+      </div>
+
+      <div class="presentation-tabs mb-8">
+        <esp-search-tab-group
+          [tabs]="tabs"
+          (changeTab)="updateSortMenuOptions($event)"
+        ></esp-search-tab-group>
+      </div>
+      <esp-search-sort
+        class="presentation-sort mb-8"
+        [options]="sortMenuOptions"
+      ></esp-search-sort>
+    </div>
+    <ng-template
+      [ngIf]="!state.isLoading && state.hasLoaded && state.presentations"
+      [ngIfElse]="loader"
+    >
+      <ng-template
+        [ngIf]="state.presentations.length"
+        [ngIfElse]="noPresentations"
+      >
+        <div class="presentation-results">
+          <cos-presentation-card
+            [disabled]="state.isArchivedPresentationsTab"
+            [products]="presentation.Products"
+            [productCount]="presentation.ProductCount!"
+            [title]="(presentation.Project && presentation.Project.Name) || ''"
+            [subtitle]="presentation.Customer.Name ?? ''"
+            [showMenu]="true"
+            [createdDate]="presentation.CreateDate ?? ''"
+            [lastUpdatedDate]="
+              presentation.UpdateDate || presentation.CreateDate || ''
+            "
+            [imgUrl]="presentation.Customer.IconImageUrl ?? ''"
+            [imgAlt]="presentation.Customer.Name ?? ''"
+            [topBorderColor]="presentation.Customer.PrimaryBrandColor ?? ''"
+            (handleClick)="navigateToPresentation(presentation)"
+            *ngFor="let presentation of state.presentations"
+          >
+            <esp-active-presentation-card-menu
+              *ngIf="state.tabIndex === 0"
+              [presentation]="presentation"
+            >
+            </esp-active-presentation-card-menu>
+
+            <esp-expired-presentation-card-menu
+              *ngIf="state.tabIndex === 1"
+              [presentation]="presentation"
+            >
+            </esp-expired-presentation-card-menu>
+
+            <esp-archived-presentation-card-menu
+              *ngIf="state.isArchivedPresentationsTab"
+              [presentation]="presentation"
+            >
+            </esp-archived-presentation-card-menu>
+          </cos-presentation-card>
+        </div>
+        <div>
+          <esp-search-pagination
+            data-cy="presentation-search-page__pagination"
+          ></esp-search-pagination>
+        </div>
+      </ng-template>
+    </ng-template>
+    <ng-template #loader>
+      <esp-presentation-search-loader
+        class="presentation-results"
+      ></esp-presentation-search-loader>
+    </ng-template>
+    <ng-template #noPresentations>
+      <div class="empty-results-msg">
+        <p class="body-style-14-shark">No presentations found.</p>
+      </div>
+    </ng-template>
+  </div>
+</div>

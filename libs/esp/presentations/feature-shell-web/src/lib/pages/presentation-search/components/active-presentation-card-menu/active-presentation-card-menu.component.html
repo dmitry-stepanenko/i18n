@@ -1,0 +1,35 @@
+<button
+  mat-menu-item
+  class="cos-menu-item"
+  (click)="sharePresentation()"
+  data-cy="presentation-card-menu__share-button"
+>
+  <i class="fas fa-share"></i> Share Presentation
+</button>
+<button
+  mat-menu-item
+  class="cos-menu-item"
+  (click)="previewPresentation()"
+  [disabled]="!presentation.ProductCount"
+  data-cy="presentation-card-menu__preview-button"
+>
+  <i class="fas fa-eye"></i> Preview Presentation
+</button>
+<button
+  mat-menu-item
+  class="cos-menu-item"
+  (click)="createPresentation()"
+  [disabled]="!presentation.ProductCount"
+  data-cy="presentation-card-menu__create-presentation-button"
+>
+  <i class="fa fa-images"></i> Create Presentation
+</button>
+<button
+  mat-menu-item
+  class="cos-menu-item"
+  (click)="createCollection()"
+  [disabled]="!presentation.ProductCount"
+  data-cy="presentation-card-menu__create-collection-button"
+>
+  <i class="fa fa-archive"></i> Create Collection
+</button>

@@ -1,0 +1,176 @@
+{
+  "project-proofs-page": {
+    "title": "Proofs",
+    "add-proof": "Add Proof",
+    "select-all": "Select All",
+    "send-proofs": "Send Proofs",
+    "proofs-selected": "Proofs Selected",
+    "proof-selected": "Proof Selected",
+    "empty-state": {
+      "main-text": "You Don't Have Any Proofs Yet",
+      "second-text": "There are no proofs yet. You can add a proof that is associated with an order, or you can add a proof that is not associated with an order."
+    },
+    "list": {
+      "other-proofs": "Other Proofs",
+      "order": "Order #{{itemKey}}",
+      "approved-by-date": "\"Approved By\" Date",
+      "proof-name": "Proof Name: {{name}}",
+      "order-number": "Order Number:",
+      "product": "Product:",
+      "imprint-location": "Imprint Location:",
+      "invalid-approval-date": "Invalid approval date.",
+      "send-proof": "Send Proof",
+      "item": "Item",
+      "change-request-note": "Change Request Note:",
+      "approve-by-date": "Approve by {{date}} to remain on schedule",
+      "proof-sent-on": "Proof Sent on {{date}} by {{senderName}}",
+      "proof-approved": "Proof Approved: Approved on {{date}} by {{approvedBy}}",
+      "changes-requested": "Changes Requested: {{date}} by {{customerName}}",
+      "confirmation-dialog": {
+        "message": "Are you sure you want to delete this proof?",
+        "confirm": "Yes, Delete",
+        "cancel": "No, Cancel"
+      }
+    },
+    "menu": {
+      "edit-proof": "Edit Proof",
+      "mark-approved": "Mark as Approved",
+      "delete-proof": "Delete Proof",
+      "toast-messages": {
+        "proof-updated": {
+          "title": "Success",
+          "body": "1 proof has been updated."
+        },
+        "proof-not-updated": {
+          "title": "Error",
+          "body": "1 proof failed to update."
+        },
+        "proof-deleted": {
+          "title": "Success",
+          "body": "1 proof has been deleted from {{projectName}}."
+        },
+        "proof-not-deleted": {
+          "title": "Error",
+          "body": "1 proof failed to delete."
+        },
+        "proof-marked-as-approved": {
+          "title": "Success",
+          "body": "1 proof has marked as approved."
+        },
+        "proof-not-marked-as-approved": {
+          "title": "Error",
+          "body": "1 proof could not be marked as approved."
+        }
+      }
+    }
+  },
+  "add-edit-proof-dialog": {
+    "add-proof-to-order": "Add Proof to Order",
+    "edit-proof": "Edit Proof",
+    "edit-proofs-here": "Edit proofs here",
+    "add-new-or-previously": "Add a new or previously uploaded proof",
+    "add-proof-image": {
+      "uploaded-image": "Uploaded Image",
+      "no-images-selected": "No Images Selected",
+      "img-expandable": {
+        "size": "Size: {{fileSize}}"
+      },
+      "image-upload-form": {
+        "file-under": "{{allowedTypes}}. File has to be under 5MB.",
+        "must-add-image": "You must add an image."
+      }
+    },
+    "proof-name": "Proof Name",
+    "proof-name-placeholder": "Enter a Proof Name",
+    "proof-name-error": "You must enter a proof name",
+    "order-number": {
+      "label": "Order Number",
+      "placeholder": "Select by Order Number",
+      "total-price": "Total Price: {{symbol}} {{total}}",
+      "date": "Date: {{date}}"
+    },
+    "product-name": {
+      "label": "Product",
+      "placeholder": "Select by Product",
+      "product": "Product #: {{number}}",
+      "totals": "{{amount}} for {{units}} units"
+    },
+    "imprint-location": {
+      "label": "Imprint Location",
+      "placeholder": "Select an Imprint Location"
+    },
+    "select-variant": {
+      "label": "Select Variant",
+      "placeholder": "Select an Item by SKU or Variant Attribute",
+      "sku": "- SKU: {{sku}}"
+    },
+    "approval-required": {
+      "label": "Approval Required?",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "approve-by-date": {
+      "label": "\"Approve By\" Date",
+      "placeholder": "Select a Date",
+      "invalid-date-error": "Invalid date."
+    },
+    "cancel": "cancel",
+    "save": "Save",
+    "add-proof": "Add Proof",
+    "confirmation-dialog": {
+      "message": "You have unsaved changes. Are you sure you want to cancel?",
+      "confirm": "Yes, Cancel",
+      "cancel": "No, Don't Cancel"
+    },
+    "toast-messages": {
+      "proof-added": {
+        "title": "Proof Added Successfully",
+        "body": "1 proof has been added to {{projectName}}."
+      },
+      "proof-not-added": {
+        "title": "Proof Failed to Add",
+        "body": "1 proof has not been added to {{projectName}}."
+      },
+      "proof-updated": {
+        "title": "Success",
+        "body": "1 proof has been saved."
+      },
+      "proof-not-updated": {
+        "title": "Error",
+        "body": "1 proof failed to save."
+      }
+    }
+  },
+  "share-proof-dialog": {
+    "send-proofs-to-customer": "Send Proofs to Customer",
+    "send-email": "Send email or copy link to share on your own.",
+    "share-via-email": "Share via Email",
+    "share-via-link": "Share via Link",
+    "subject-label": "Subject Line",
+    "subject-placeholder": "Enter Subject",
+    "message-label": "Message:",
+    "message-placeholder": "Enter a personal message that you would like to appear in your email.",
+    "copy-the-proof-link": "Copy the proof link to share with your customer.",
+    "cancel": "Cancel",
+    "send-to-customer": "Send to Customer",
+    "copy-link": "Copy Link",
+    "toast-messages": {
+      "proof-shared-by-email": {
+        "title": "Success",
+        "body": "Your proof has been sent to the customer."
+      },
+      "proof-shared-by-link": {
+        "title": "Success",
+        "body": "Your proof link has been copied to your clipboard."
+      },
+      "proof-shared-by-email-error": {
+        "title": "Error",
+        "body": "Your proof failed to be sent to the customer."
+      },
+      "proof-shared-by-link-error": {
+        "title": "Error",
+        "body": "Your proof link failed to be copied to your clipboard."
+      }
+    }
+  }
+}

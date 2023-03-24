@@ -1,0 +1,18 @@
+<h2 class="header-style-22" data-cy="presentation-quote-attachments__title">
+  {{ title }}
+</h2>
+
+<div
+  *ngIf="state.quote?.MediaLinks"
+  class="presentation-quote-attachments grid-gap-16 mb-24 flex flex-row flex-wrap"
+>
+  <div
+    class="media-item"
+    *ngFor="let media of state.quote!.MediaLinks; trackBy: trackById"
+  >
+    <asi-img-expandable
+      [artwork]="media"
+      data-cy="presentation-quote-attachment__image"
+    ></asi-img-expandable>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+@import 'cosmos/scss/settings/';
+
+.invoice-wrapper {
+  background-color: white;
+  padding: 24px 42px;
+}
+
+.iframe-wrapper {
+  height: 800px;
+
+  iframe {
+    border: none;
+    width: 100%;
+    min-height: 768px;
+  }
+}

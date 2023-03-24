@@ -1,0 +1,35 @@
+@import 'cosmos/scss/settings/';
+
+.presentation-cart {
+  &__pg-section {
+    box-shadow: 0px 1px 10px 0px rgb(0 0 0 / 5%);
+    background-color: #f7f8f9;
+  }
+}
+
+.action-container {
+  align-items: flex-end;
+
+  .action-button {
+    margin: 0;
+    width: 110px;
+  }
+}
+
+@include narrower-than($bp-large) {
+  .grid-cols-2 {
+    grid-template-columns: auto;
+  }
+
+  .review-button {
+    width: 100%;
+  }
+
+  .action-container {
+    align-items: center;
+
+    .action-button {
+      width: 100%;
+    }
+  }
+}

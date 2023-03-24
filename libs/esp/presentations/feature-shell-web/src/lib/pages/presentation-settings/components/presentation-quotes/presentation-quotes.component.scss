@@ -1,0 +1,83 @@
+@import 'cosmos/scss/settings';
+.proj-quote-request {
+  &-product-body {
+    @include wider-than($bp-medium) {
+      display: flex;
+    }
+
+    color: $color-g-shark-54;
+    font-size: $font-size-14;
+  }
+
+  &-product-col1 {
+    display: flex;
+    align-items: flex-start;
+
+    @include wider-than($bp-large) {
+      width: 50%;
+    }
+
+    img {
+      width: 120px;
+      margin-right: $spacing-inline-16;
+    }
+
+    ul {
+      margin-top: 0;
+      font-size: $font-size-14;
+      padding: 0;
+      margin-right: $spacing-inline-16;
+      li {
+        margin-bottom: $spacing-stack-8;
+      }
+    }
+  }
+
+  &-product-comments {
+    max-width: 420px;
+  }
+
+  &-address {
+    font-size: $font-size-14;
+    span {
+      display: block;
+      margin-bottom: $spacing-stack-4;
+      color: $color-g-shark-54;
+      font-size: $font-size-12;
+    }
+  }
+
+  &-preview {
+    position: relative;
+    &.cos-card {
+      display: inline-block;
+      span {
+        display: block;
+      }
+    }
+    i {
+      color: $color-bl-atoll-75;
+    }
+
+    .proj-quote-request-preview-icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 3px;
+      background: $color-g-white-00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &-customer-message {
+    display: flex;
+  }
+
+  &-customer-message-body {
+    width: 100%;
+  }
+}

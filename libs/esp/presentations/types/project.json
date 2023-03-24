@@ -1,0 +1,37 @@
+{
+  "name": "esp-presentations-types",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/esp/presentations/types/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/esp/presentations/types",
+        "main": "libs/esp/presentations/types/src/index.ts",
+        "tsConfig": "libs/esp/presentations/types/tsconfig.lib.json",
+        "assets": ["libs/esp/presentations/types/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/esp/presentations/types/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/esp/presentations/types",
+        "{workspaceRoot}/reports/libs/esp/presentations/types"
+      ],
+      "options": {
+        "jestConfig": "libs/esp/presentations/types/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:esp", "type:types"]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "storefront-util-i18n",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/storefront/util-i18n/src",
+  "prefix": "storefront",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/storefront/util-i18n/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/storefront/util-i18n/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/storefront/util-i18n/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/storefront/util-i18n",
+        "{workspaceRoot}/reports/libs/storefront/util-i18n"
+      ],
+      "options": {
+        "jestConfig": "libs/storefront/util-i18n/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/storefront/util-i18n/**/*.ts",
+          "libs/storefront/util-i18n/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:storefront", "type:util"]
+}

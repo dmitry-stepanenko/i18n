@@ -1,0 +1,85 @@
+<asi-cards-selection-dialog
+  (create)="onCreateNewPresentation()"
+  (search)="onSearch($event)"
+  [createButtonText]="
+    showProjects ? 'Create a New Project' : 'Create a New Presentation'
+  "
+  [header]="
+    title
+      ? title
+      : showProjects
+      ? 'Create a New Project or Select an Existing One'
+      : 'Create a New Presentation or Select an Existing One'
+  "
+  [searchPlaceholder]="
+    showProjects
+      ? 'Search for a Project or Customer'
+      : 'Search for a Presentation or Customer'
+  "
+  [subheader]="subheader"
+>
+  <ng-container asiCardsSelectionContent>
+    <ng-template
+      [ngIf]="!state.loading.inProgress && state.loading.success"
+      [ngIfElse]="loader"
+    >
+      <ng-container
+        *ngFor="let presentation of state.presentations; trackBy: trackById"
+      >
+        <div class="details-card-wrapper">
+          <div
+            *ngIf="presentation.Id === state.selectedPresentationId"
+            class="current-project-overlay"
+          >
+            <span class="body-style-12 flex items-center">
+              <i class="fa-solid fa-check mr-8"></i>
+              Current Project</span
+            >
+          </div>
+
+          <asi-details-card
+            (cardClick)="onSelectPresentation(presentation)"
+            [selected]="presentation.Id === state.selectedPresentationId"
+            [title]="presentation.Project.Name || ''"
+            [showTitleTooltip]="true"
+            [subtitleFirstLine]="presentation.Customer.Name || ''"
+            [showSubtitleTooltip]="true"
+            [firstLineDetails]="
+              'Created ' + (presentation.CreateDate | date: 'longDate')
+            "
+            [showFirstLineTooltip]="false"
+            [secondLineDetails]="
+              'Last Updated ' +
+              (presentation?.UpdateDate || presentation?.CreateDate
+                | date: 'longDate')
+            "
+            [showSecondLineTooltip]="false"
+            [topBorderColor]="presentation.Customer.PrimaryBrandColor || ''"
+          >
+            <asi-company-avatar
+              [customer]="presentation.Customer"
+              [showAvatarIcon]="true"
+              [iconSize]="20"
+              asiUiDetailsCardAvatar
+            ></asi-company-avatar>
+          </asi-details-card>
+        </div>
+      </ng-container>
+    </ng-template>
+    <ng-template #loader>
+      <asi-details-card-loader
+        *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]"
+      ></asi-details-card-loader>
+    </ng-template>
+  </ng-container>
+  <div asiCardsSelectionActions class="w-full">
+    <button
+      (click)="onPreviousStep()"
+      data-cy="cancel-button"
+      cos-button
+      type="button"
+    >
+      <i class="fa fa-arrow-left mr-8"></i> Back
+    </button>
+  </div>
+</asi-cards-selection-dialog>

@@ -1,0 +1,85 @@
+<ng-container *ngIf="state.hasLoaded && state.quote">
+  <div
+    class="cos-card-wrapper proj-quote-request"
+    *transloco="
+      let t;
+      read: 'espPresentations.presentation-settings-page.presentation-quotes'
+    "
+  >
+    <div class="align-center mb-16 flex justify-between">
+      <h2 class="header-style-22 mb-0">{{ t('quote-request-received') }}</h2>
+      <button
+        cos-flat-button
+        color="primary"
+        [routerLink]="['../../orders', state.quote.Id]"
+      >
+        <i class="fa fa-eye mr-8"></i>
+        {{ t('view-quote') }}
+      </button>
+    </div>
+
+    <!-- product cards -->
+    <ng-template [ngIf]="isArray(state.productCards)">
+      <esp-presentation-product-card
+        *ngFor="let lineItem of state.productCards"
+        [product]="lineItem"
+      >
+      </esp-presentation-product-card>
+    </ng-template>
+
+    <!-- quote details -->
+    <section class="mb-32">
+      <asi-order-details
+        *ngIf="state.quote"
+        [order]="$any(state.quote)"
+        [title]="t('quote-details')"
+      >
+        <span cosAttributeTag>
+          <i class="fa fa-sync"></i> {{ t('changes-updated') }}
+        </span>
+      </asi-order-details>
+    </section>
+    <!-- // quote details -->
+
+    <!-- attachments -->
+    <cos-intersection-renderer
+      class="mb-32"
+      *ngIf="state.quote.MediaLinks && state.quote.MediaLinks.length > 0"
+      [component]="presentationQuoteAttachments"
+    >
+      <ng-template cosIntersectionRendererSuspense>
+        <ngx-skeleton-loader
+          [theme]="{ height: '156px' }"
+        ></ngx-skeleton-loader>
+      </ng-template>
+    </cos-intersection-renderer>
+    <!-- attachments // -->
+
+    <!-- TODO: needs story and backend support
+      <section class="mb-32">
+      <div class="mb-16 flex items-center">
+        <h2 class="header-style-22 mb-0 mr-16">Customer Message</h2>
+        <span class="body-style-11">Sent November 25, 2020 at 10:17 ame</span>
+      </div>
+      <cos-card class="bg-grey mb-16">
+        <p class="body-style-14 mb-0">
+          Please ensure that our historic logo is printed in official City of
+          Pawnee colors. We also need artwork for the shirt. Thanks!
+        </p>
+      </cos-card>
+    </section>
+    -->
+
+    <div class="flex justify-end">
+      <button
+        cos-flat-button
+        color="primary"
+        class="float-right"
+        [routerLink]="['../../orders', state.quote.Id]"
+      >
+        <i class="fa fa-eye mr-8"></i>
+        {{ t('view-quote') }}
+      </button>
+    </div>
+  </div>
+</ng-container>

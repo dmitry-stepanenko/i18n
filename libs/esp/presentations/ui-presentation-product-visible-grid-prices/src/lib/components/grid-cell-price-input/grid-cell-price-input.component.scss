@@ -1,0 +1,22 @@
+@import 'cosmos/scss/settings';
+
+:host {
+  position: relative;
+
+  span {
+    position: absolute;
+    top: calc(50% - 9px);
+    left: 8px;
+    color: $color-g-stone-41;
+    user-select: none;
+  }
+
+  input {
+    &.CAD {
+      padding-left: 25px;
+    }
+    &.USD {
+      padding-left: 16px;
+    }
+  }
+}

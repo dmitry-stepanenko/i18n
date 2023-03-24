@@ -1,0 +1,26 @@
+{
+  "features-orders-list": {
+    "orders-title": "Orders",
+    "orders-subtitle": "This is your orders page. View all of your orders below.",
+    "order-card-order": "Order",
+    "order-card-created-date": "Created Date",
+    "order-card-in-hands-date": "In-Hands Date",
+    "order-card-order-total": "Order Total",
+    "order-card-view-order-button": "View Order"
+  },
+  "feature-order-details": {
+    "back-to-all-orders": "Back to All Orders",
+    "order-title": "Order",
+    "order-subtitle": "Below you can check your order status, track shipments, and view proofs.",
+    "total-quantity": "Total Quantity",
+    "order-total": "Order Total",
+    "number-of-products": "Number of Products",
+    "order-status": "Order Status",
+    "updated": "Updated",
+    "ship-to": "Ship To",
+    "shipping-method": "Shipping Method",
+    "subtotal": "Subtotal",
+    "discount": "Discount",
+    "sales-tax": "Sales Tax"
+  }
+}

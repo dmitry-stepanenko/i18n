@@ -1,0 +1,52 @@
+<cos-card>
+  <div class="product-card-content mt-0 mb-16">
+    <div class="product-card-content__image-container">
+      <esp-product-image
+        class="product-card-content__image pr-16"
+        [imgSrc]="product.ImageUrl ?? ''"
+        [imgAlt]="product.Name"
+      ></esp-product-image>
+    </div>
+
+    <div class="product-card-content__header-container">
+      <h2
+        class="header-style-18-bold"
+        data-cy="presentation-quote-product-card__product-name"
+      >
+        {{ product.Name }}
+      </h2>
+    </div>
+
+    <div class="product-card-content__action-button-container">
+      <ng-content select="[actionButton]"></ng-content>
+    </div>
+
+    <div class="product-card-content__variants">
+      <div class="body-style-14-shark mb-12">
+        <label>Imprint Methods: </label>
+        <span data-cy="presentation-quote-product-card__imprint-method"
+          >Imprint Value</span
+        >
+      </div>
+
+      <div class="body-style-14-shark mb-24">
+        <label>Artwork: </label>
+        <span data-cy="presentation-quote-product-card__artwork"
+          >Artwork Value</span
+        >
+      </div>
+
+      <ng-content select="[variantsTable]"></ng-content>
+    </div>
+
+    <div class="product-card-content__customization-comment-container">
+      <h2 class="header-style-16-bold">Customization Comment:</h2>
+      <p
+        class="product-card-content__customization-comment-content"
+        data-cy="presentation-quote-product-card__customization-comment"
+      >
+        Customization Comment Value
+      </p>
+    </div>
+  </div>
+</cos-card>

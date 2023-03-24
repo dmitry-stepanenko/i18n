@@ -1,0 +1,100 @@
+@import 'cosmos/scss/settings';
+
+.text-shark {
+  color: $color-g-shark-54;
+}
+
+.proj-pres {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.bg-grey.cos-card {
+  padding: 0;
+  background: $color-g-pearl-03;
+
+  .cos-card-main {
+    @include spacing-inset-8();
+  }
+}
+
+.proj-pres__products {
+  margin-top: $spacing-stack-32;
+  line-height: 1.4;
+
+  &-grid {
+    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+    .cos-card.cos-product-card .cos-card-main {
+      max-width: 210px !important;
+    }
+  }
+}
+
+.proj-pres__ads {
+  display: flex;
+  .product-recos-card {
+    &:first-child {
+      margin-right: $spacing-inline-16;
+    }
+  }
+}
+
+.presentation-settings {
+  fieldset {
+    border-bottom: $border-light;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:not(:first-child) {
+      margin-top: $spacing-stack-16;
+    }
+
+    legend {
+      @include type-style-header-12-shark();
+      color: $color-g-shark-54;
+      margin-bottom: $spacing-stack-12;
+    }
+  }
+
+  &-include-signature {
+    margin-top: -8px;
+  }
+  // .cos-slide-toggle-label {
+  //   align-items: start;
+  // }
+  // .cos-slide-toggle-content {
+  //   white-space: break-spaces !important;
+  // }
+
+  &-note-actions {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 500px;
+  }
+}
+
+@include narrower-than($bp-medium) {
+  :host ::ng-deep {
+    .cos-form-field-hint-wrapper {
+      flex-direction: column;
+
+      .cos-form-field-hint-spacer {
+        display: none;
+      }
+    }
+  }
+
+  .note-actions {
+    flex-direction: column-reverse;
+    gap: 16px;
+    display: flex;
+    margin-bottom: 16px;
+
+    .cos-stroked-button ~ .cos-flat-button {
+      margin-left: 0;
+    }
+  }
+}

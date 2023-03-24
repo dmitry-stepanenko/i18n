@@ -1,0 +1,109 @@
+{
+  "project-product-details": {
+    "product-variants.colors-toggle": "Colors",
+    "imprint-options.imprint-colors-header": "Imprint Colors"
+  },
+  "project-edit-dialog": {
+    "edit-project-info": "Edit Project Information",
+    "cancel": "Cancel",
+    "save": "Save",
+    "project-form": {
+      "project-label": "Project Name",
+      "presentation-label": "Presentation Name",
+      "project-placeholder": "Enter a Project Name",
+      "presentation-placeholder": "Enter a Presentation Name",
+      "event-info": "Event Information",
+      "event-type-label": "Event Type",
+      "select-event-type-placeholder": "Select an Event Type",
+      "event-date-label": "Event Date",
+      "select-date-placeholder": "Select a Date",
+      "attendees-label": "Attendees",
+      "attendees-placeholder": "Number of Attendees",
+      "budget-max-value-error": "You must enter less than 99,999,999.99",
+      "assignees-mx-value-error": "You must enter less than 99,999,999",
+      "in-hands-date-label": "In-Hands Date",
+      "flexible": "Flexible",
+      "firm": "Firm",
+      "budget": "Budget",
+      "event-types": {
+        "advertising": "Advertising",
+        "awards-recognition": "Awards & Recognition",
+        "party": "Party",
+        "charity-non-profits": "Charity/Non Profits",
+        "customer-appreciation": "Customer Appreciation",
+        "self-promotions": "Self Promotions",
+        "corporate-event": "Corporate Event",
+        "festival": "Festival",
+        "fitness": "Fitness",
+        "fundraiser": "Fundraiser",
+        "gifts": "Gifts",
+        "government": "Government",
+        "graduation": "Graduation",
+        "mailer": "Mailer",
+        "pharmaceutical": "Pharmaceutical",
+        "product-launch": "Product Launch",
+        "other": "Other",
+        "retreat": "Retreat",
+        "team-building": "Team Building",
+        "tradeshows": "Tradeshows",
+        "religious": "Religious",
+        "sporting-event": "Sporting Event",
+        "technology": "Technology"
+      }
+    }
+  },
+  "toast-messages": {
+    "company-not-created": {
+      "title": "Failure: Company not created!",
+      "body": "Unable to create the company."
+    },
+    "contact-not-created": {
+      "title": "Failure: Contact cannot be created!",
+      "body": "Unable to create the contact."
+    },
+    "project-not-created": {
+      "title": "Failure: Project cannot be created!",
+      "body": "Unable to create the project."
+    },
+    "project-for-company-updated": {
+      "title": "Project updated successfully",
+      "body": "The {{projectName}} project has been updated for {{companyName}}."
+    },
+    "project-updated": {
+      "title": "Project updated successfully",
+      "body": "The {{projectName}} project has been updated."
+    },
+    "project-not-updated": {
+      "title": "Project cannot be updated",
+      "body": "Unable to update the project."
+    },
+    "project-transferred": {
+      "title": "Ownership Transferred!",
+      "body": "Ownership has been transferred to {{name}}"
+    },
+    "project-not-transferred": {
+      "title": "Error: Ownership Not Transferred!",
+      "body": "Ownership of {{name}} was unable to be transferred!"
+    },
+    "project-closed": {
+      "title": "Project {{name}} is Closed!",
+      "body": "{{name}} has been closed."
+    },
+    "project-not-closed": {
+      "title": "Project {{name}} cannot be updated to Closed!",
+      "body": "{{name}} cannot be closed."
+    },
+    "project-reopened": {
+      "title": "Project {{name}} is Reopened!",
+      "body": "{{name}} has been reopened."
+    },
+    "project-not-reopened": {
+      "title": "Project {{name}} cannot be updated to Reopened!",
+      "body": "{{name}} cannot be reopened."
+    },
+    "alert-not-dismissed": {
+      "title": "Error!",
+      "body": "Cannot Delete Alert"
+    }
+  }
+}

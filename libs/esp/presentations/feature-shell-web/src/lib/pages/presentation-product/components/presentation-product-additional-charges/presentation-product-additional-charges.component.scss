@@ -1,0 +1,10 @@
+@import 'cosmos/scss/settings';
+
+.toggle-label {
+  @include type-style-header-18;
+  line-height: 16px;
+}
+
+.usage-level-select {
+  max-width: 184px !important;
+}

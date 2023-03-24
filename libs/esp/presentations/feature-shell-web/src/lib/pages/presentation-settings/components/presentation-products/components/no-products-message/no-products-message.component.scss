@@ -1,0 +1,13 @@
+@import 'cosmos/scss/settings';
+
+$hostClass: '.esp-no-products-message';
+
+#{$hostClass} {
+  .no-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    padding: 200px 0;
+  }
+}

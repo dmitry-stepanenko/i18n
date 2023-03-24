@@ -1,0 +1,22 @@
+<div class="container my-64 flex flex-col items-center">
+  <h2 class="header-style-24 text-center" [innerHtml]="template.title"></h2>
+  <p class="body-style-14-shark text-center" [innerHtml]="template.body"></p>
+  <div>
+    <a routerLink="../" cos-flat-button color="primary">
+      <i
+        *ngIf="
+          !template.actionIconPosition ||
+          template.actionIconPosition === 'before'
+        "
+        class="mr-8"
+        [ngClass]="template.actionIcon"
+      ></i>
+      {{ template.actionText }}
+      <i
+        *ngIf="template.actionIconPosition === 'after'"
+        class="ml-8"
+        [ngClass]="template.actionIcon"
+      ></i>
+    </a>
+  </div>
+</div>

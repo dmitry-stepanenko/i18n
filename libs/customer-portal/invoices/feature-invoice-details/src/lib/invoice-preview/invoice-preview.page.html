@@ -1,0 +1,65 @@
+<ng-container *ngIf="state.invoice as invoice">
+  <ng-container
+    *transloco="let t; read: 'customerPortalInvoices.feature-invoice-details'"
+  >
+    <div class="presentation-invoice__pg-wrapper mb-16">
+      <div>
+        <!-- Back Button is hidden for distributor preview
+          and when there is only one invoice available -->
+        <button
+          *ngIf="state.accessCode && state.invoiceCount > 1"
+          cos-button
+          class="pl-0"
+          [routerLink]="'../'"
+        >
+          <i class="fa fa-arrow-left mr-8"></i>{{ t('back-to-all-invoices') }}
+        </button>
+        <h1 class="header-style-24">
+          {{ t('invoice-title') }} #{{ invoice.Number }}
+        </h1>
+      </div>
+    </div>
+    <div *ngIf="state.invoiceSafeUrl; else loader" class="invoice-wrapper">
+      <div class="grid-gap-8 mb-32 flex flex-wrap justify-end">
+        <button
+          (click)="onDownload()"
+          cos-stroked-button
+          color="primary"
+          [loading]="state.downloadingPdf"
+        >
+          <i class="fa fa-download mr-8"></i> {{ t('download-invoice-button') }}
+        </button>
+        <button (click)="print()" cos-flat-button color="primary">
+          <i class="fa fa-print mr-8"></i> {{ t('print-button') }}
+        </button>
+      </div>
+      <div class="iframe-wrapper">
+        <iframe #iframe title="Invoice" [src]="state.invoiceSafeUrl"></iframe>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #loader>
+    <cos-card>
+      <div
+        class="grid-gap-8 mb-8 flex flex-col flex-wrap justify-end lg:flex-row"
+      >
+        <ngx-skeleton-loader
+          class="mr-8"
+          [theme]="{ height: '32px', width: '165px' }"
+        >
+        </ngx-skeleton-loader>
+        <ngx-skeleton-loader
+          class="mr-8"
+          [theme]="{ height: '32px', width: '88px' }"
+        >
+        </ngx-skeleton-loader>
+      </div>
+      <div class="iframe-wrapper flex justify-center" style="width: 100%">
+        <ngx-skeleton-loader
+          [theme]="{ width: '192mm', height: '700px' }"
+        ></ngx-skeleton-loader>
+      </div>
+    </cos-card>
+  </ng-template>
+</ng-container>

@@ -1,0 +1,47 @@
+{
+  "name": "customer-portal-quotes-feature-quotes-list",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/customer-portal/quotes/feature-quotes-list/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": [
+        "{workspaceRoot}/dist/libs/customer-portal/quotes/feature-quotes-list"
+      ],
+      "options": {
+        "project": "libs/customer-portal/quotes/feature-quotes-list/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/customer-portal/quotes/feature-quotes-list/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/customer-portal/quotes/feature-quotes-list/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/customer-portal/quotes/feature-quotes-list",
+        "{workspaceRoot}/reports/libs/customer-portal/quotes/feature-quotes-list"
+      ],
+      "options": {
+        "jestConfig": "libs/customer-portal/quotes/feature-quotes-list/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/customer-portal/quotes/feature-quotes-list/**/*.ts",
+          "libs/customer-portal/quotes/feature-quotes-list/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:customer-portal", "type:feature"]
+}

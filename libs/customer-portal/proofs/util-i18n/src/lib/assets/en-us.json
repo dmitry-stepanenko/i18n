@@ -1,0 +1,43 @@
+{
+  "feature-proofs": {
+    "presentation-proofs": {
+      "all-proofs-title": "All Proofs",
+      "all-proofs-desc": "Review your proofs for the following: size of your design, colors used, placement of your design on your items, grammar and spelling.",
+      "pending-approval-title": "Pending Approval",
+      "pending-approval-desc": "Review your proofs for the following: size of your design, colors used, placement of your design on your items, grammar and spelling.",
+      "requested-changes-title": "Requested Changes",
+      "requested-changes-desc": "View the proofs that you have requested changes for here.",
+      "approved-title": "Approved",
+      "approved-desc": "View your approved proofs here."
+    },
+    "presentation-proof-card": {
+      "proof-name-label": "Proof Name",
+      "order-number-label": "Order Number",
+      "product-label": "Product",
+      "imprint-location-label": "Imprint Location",
+      "change-request-note-label": "Your Change Request Note for Distributor",
+      "approve-proof-button-label": "Approve Proof",
+      "request-changes-button-label": "Request Changes"
+    },
+    "request-proof-change": {
+      "dialog-title": "Request Changes",
+      "dialog-subtext": "Please detail the requested changes",
+      "image-helper-text": "*Example image may not represent the exact configuration selected.",
+      "proof-name-label": "Proof Name",
+      "order-number-label": "Order Number",
+      "product-label": "Product",
+      "imprint-location-label": "Imprint Location",
+      "request-changes-label": "Request Changes",
+      "request-changes-helper-text": "Please detail the requested changes.",
+      "request-changes-placeholder": "Request Changes",
+      "request-changes-send-distributor": "Request Changes and Send to Distributor",
+      "request-changes-send-distributor-helper-text": "Please enter your name. We’ll use this to keep track of change requests and to ensure that only allowed parties are requesting changes.",
+      "name-label": "Name",
+      "name-placeholder": "Enter Name",
+      "cancel-button-label": "Cancel",
+      "request-changes-button-label": "Request Changes",
+      "change-request-validation": "You must enter your change requests",
+      "name-validation": "You must enter your name"
+    }
+  }
+}

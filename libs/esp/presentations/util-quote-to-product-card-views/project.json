@@ -1,0 +1,48 @@
+{
+  "name": "esp-presentations-util-quote-to-product-card-views",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/esp/presentations/util-quote-to-product-card-views/src",
+  "prefix": "nx-esp-angular",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": [
+        "{workspaceRoot}/dist/libs/esp/presentations/util-quote-to-product-card-views"
+      ],
+      "options": {
+        "project": "libs/esp/presentations/util-quote-to-product-card-views/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/esp/presentations/util-quote-to-product-card-views/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/esp/presentations/util-quote-to-product-card-views/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/esp/presentations/util-quote-to-product-card-views",
+        "{workspaceRoot}/reports/libs/esp/presentations/util-quote-to-product-card-views"
+      ],
+      "options": {
+        "jestConfig": "libs/esp/presentations/util-quote-to-product-card-views/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/esp/presentations/util-quote-to-product-card-views/**/*.ts",
+          "libs/esp/presentations/util-quote-to-product-card-views/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:util", "scope:esp"]
+}

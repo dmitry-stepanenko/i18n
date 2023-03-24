@@ -1,0 +1,23 @@
+@import 'cosmos/scss/settings';
+
+.custom-price-range {
+  display: flex;
+  align-items: center;
+
+  cos-form-field {
+    max-width: 250px;
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.currency {
+  cos-form-field {
+    width: auto;
+  }
+}
+
+.toggle-label {
+  @include type-style-header-18;
+  line-height: 16px;
+}

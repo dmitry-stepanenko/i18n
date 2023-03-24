@@ -1,0 +1,7 @@
+{
+  "$schema": "../../../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../../../dist/libs/customer-portal/presentations/util-i18n",
+  "lib": {
+    "entryFile": "src/index.ts"
+  }
+}

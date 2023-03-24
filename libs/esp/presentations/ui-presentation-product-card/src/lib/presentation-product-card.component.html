@@ -1,0 +1,87 @@
+<cos-card
+  *ngIf="product"
+  [prompt]="headerText"
+  promptType="error"
+  class="product-card mb-16"
+>
+  <div
+    class="product-card-content"
+    *transloco="let t; read: 'espPresentations.presentation-product-card'"
+  >
+    <div
+      class="product-card-content-image"
+      *ngIf="product.Type === LineItemType.Product"
+    >
+      <esp-product-image
+        [imgSrc]="product.ImageUrl | thumbnailToOriginal"
+        [imgAlt]="product.Name ?? ''"
+        data-cy="presentation-product-card__image"
+      ></esp-product-image>
+    </div>
+    <h3
+      data-cy="product-card-content-name"
+      class="product-card-content-name header-style-18"
+    >
+      {{ product.Name }}
+    </h3>
+    <div
+      class="product-card-content-status"
+      *ngIf="product.Status"
+      cosPill
+      data-cy="presentation-product-card__status"
+    >
+      {{ product.Status }}
+    </div>
+    <div class="product-card-content-attributes">
+      <p
+        *ngIf="product?.ImprintMethod?.Value"
+        class="body-style-14-shark mb-8"
+        data-cy="presentation-product-card__imprint-method"
+      >
+        {{ t('imprint-method', { value: product.ImprintMethod?.Value }) }}
+      </p>
+      <p
+        *ngIf="product?.Media?.length"
+        class="body-style-14-shark mb-8 break-all"
+        data-cy="presentation-product-card__artworks"
+      >
+        {{ t('artwork') }}
+        <a
+          *ngFor="let art of product.Media"
+          [href]="art.ImageUrl"
+          class="mr-16"
+          target="_blank"
+          >{{ art.FileName }}
+        </a>
+      </p>
+    </div>
+    <div class="product-card-content-actions">
+      <ng-content></ng-content>
+    </div>
+    <div class="product-card-content-grid cos-table--wrapper">
+      <esp-presentation-product-card-grid-with-charge
+        [lineItem]="product"
+        [columns]="gridColumns"
+        [showCharges]="gridType === ProductCardGridType.WithCharge"
+        [showTotals]="gridType === ProductCardGridType.WithCharge"
+        data-cy="presentation-product-card__grid-with-charge"
+      ></esp-presentation-product-card-grid-with-charge>
+    </div>
+    <div
+      *ngIf="requestChanges && requestChanges.RequestChanges"
+      class="product-card-content-request-changes"
+      data-cy="presentation-product-card__request-changes"
+    >
+      <h4 class="header-style-16 mb-8">{{ t('requested-changes') }}</h4>
+      <p class="body-style-14-shark">{{ requestChanges.RequestChanges }}</p>
+    </div>
+    <div
+      *ngIf="product.Comment"
+      class="product-card-content-comments"
+      data-cy="presentation-product-card__comment"
+    >
+      <h4 class="header-style-16 mb-8">{{ t('customization-comments') }}</h4>
+      <p class="body-style-14-shark">{{ product.Comment }}</p>
+    </div>
+  </div>
+</cos-card>

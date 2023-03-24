@@ -1,0 +1,19 @@
+<ng-container
+  *transloco="let t; read: 'espPresentations.presentation-settings-component'"
+>
+  <div class="cos-form-field" *ngFor="let toggle of toggles">
+    <!--
+      `options` are provided since we want the `cos-toggle` to behave NOT as a control value accessor.
+    -->
+    <cos-toggle
+      class="mb-16 block w-full"
+      [attr.data-cy]="toggle.settingName"
+      [checked]="toggle.value"
+      [disabled]="toggle.disabled"
+      (click)="updateSetting(toggle)"
+      [options]="{ disableToggleValue: true }"
+    >
+      {{ t(toggle.label) }}
+    </cos-toggle>
+  </div>
+</ng-container>

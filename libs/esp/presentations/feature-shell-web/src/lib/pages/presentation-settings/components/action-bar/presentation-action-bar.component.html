@@ -1,0 +1,114 @@
+<!--
+  Note: double `ngIf` binding. The `*` binding will produce another top-level
+  `ng-template`. This is a valid template.
+  This will look as follows after the compilation:
+  <ng-template [ngIf]="mobile" [ngIfElse]="desktop">
+    <ng-template [ngIf]="status === PresentationStatus.PreShare || editMode" ...>
+-->
+<ng-container
+  *transloco="
+    let t;
+    read: 'espPresentations.presentation-settings-page.presentation-action-bar'
+  "
+>
+  <ng-template
+    *ngIf="mobile; else desktop"
+    [ngIf]="status === PresentationStatus.PreShare || editMode"
+    [ngIfElse]="sharedActionsTemplate"
+  >
+    <button
+      mat-menu-item
+      class="cos-menu-item"
+      size="sm"
+      [disabled]="!presentation.Products.length"
+      (click)="previewPresentation()"
+    >
+      <i class="fa fa-eye mr-8"></i><span>{{ t('preview') }}</span>
+    </button>
+    <button
+      mat-menu-item
+      class="cos-menu-item"
+      size="sm"
+      (click)="sharePresentation()"
+    >
+      <i class="fa fa-share mr-8"></i>
+      <span>{{ t('share-with-customer') }}</span>
+    </button>
+  </ng-template>
+
+  <ng-template #sharedActionsTemplate>
+    <button
+      mat-menu-item
+      data-cy="edit-button"
+      class="cos-menu-item"
+      size="sm"
+      (click)="onEdit()"
+    >
+      <i class="fa fa-pen mr-8"></i><span>{{ t('edit') }}</span>
+    </button>
+    <button
+      mat-menu-item
+      class="cos-menu-item"
+      size="sm"
+      [disabled]="!presentation.Products.length"
+      (click)="previewPresentation()"
+    >
+      <i class="fa fa-eye mr-8"></i><span>{{ t('preview') }}</span>
+    </button>
+    <button
+      mat-menu-item
+      class="cos-menu-item"
+      size="sm"
+      (click)="sharePresentation()"
+    >
+      <i class="fa fa-share mr-8"></i><span>{{ t('share') }}</span>
+    </button>
+  </ng-template>
+
+  <ng-template #desktop>
+    <ng-template
+      [ngIf]="status === PresentationStatus.PreShare || editMode"
+      [ngIfElse]="sharedActionsTemplate"
+    >
+      <button
+        cos-stroked-button
+        color="primary"
+        [disabled]="!presentation.Products.length"
+        (click)="previewPresentation()"
+      >
+        <i class="fa fa-eye mr-8"></i><span>{{ t('preview') }}</span>
+      </button>
+      <button cos-flat-button color="primary" (click)="sharePresentation()">
+        <i class="fa fa-share mr-8"></i
+        ><span>{{ t('share-with-customer') }}</span>
+      </button>
+    </ng-template>
+
+    <ng-template #sharedActionsTemplate>
+      <button
+        cos-stroked-button
+        data-cy="edit-button"
+        color="primary"
+        (click)="onEdit()"
+      >
+        <i class="fa fa-pen mr-8"></i><span>{{ t('edit') }}</span>
+      </button>
+      <button
+        cos-stroked-button
+        color="primary"
+        [disabled]="!presentation.Products.length"
+        (click)="previewPresentation()"
+      >
+        <i class="fa fa-eye mr-8"></i><span>{{ t('preview') }}</span>
+      </button>
+      <button
+        cos-flat-button
+        data-cy="share-presentation-button"
+        color="primary"
+        (click)="sharePresentation()"
+      >
+        <i class="fa fa-share mr-8"></i><span>{{ t('share') }}</span>
+      </button>
+    </ng-template>
+  </ng-template>
+</ng-container>

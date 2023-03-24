@@ -1,0 +1,31 @@
+@import 'cosmos/scss/settings';
+
+.pricing-calc-amount {
+  width: 190px;
+}
+
+@include narrower-than($bp-large) {
+  .pricing-calc {
+    &-amount {
+      width: 100%;
+
+      label {
+        margin-bottom: 0;
+      }
+    }
+
+    &-button {
+      text-align: right;
+      width: 100%;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.toggle-label {
+  @include type-style-header-18;
+  line-height: 16px;
+}

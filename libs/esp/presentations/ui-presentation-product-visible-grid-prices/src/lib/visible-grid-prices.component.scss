@@ -1,0 +1,18 @@
+@import 'cosmos/scss/settings';
+
+:host {
+  .original-price,
+  .client-price {
+    @apply flex w-1/2 flex-col items-center;
+    margin: 0 auto;
+  }
+
+  .original-price--converted {
+    color: $color-g-stone-41;
+    font-style: italic;
+  }
+
+  ::ng-deep .cos-input.ng-invalid {
+    border-color: $color-rd-macaw-49;
+  }
+}

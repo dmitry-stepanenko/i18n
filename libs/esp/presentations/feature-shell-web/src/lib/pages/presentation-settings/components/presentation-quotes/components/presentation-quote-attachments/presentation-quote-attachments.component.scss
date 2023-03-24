@@ -1,0 +1,13 @@
+@import 'cosmos/scss/settings';
+
+$imgSize: 140px;
+$imgMinSize: 100px;
+
+.media-item {
+  max-width: $imgSize;
+  min-width: $imgMinSize;
+
+  .file-name {
+    overflow-wrap: break-word;
+  }
+}

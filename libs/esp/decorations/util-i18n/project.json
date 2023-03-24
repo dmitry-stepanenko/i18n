@@ -1,0 +1,53 @@
+{
+  "name": "esp-decorations-util-i18n",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/esp/decorations/util-i18n/src",
+  "prefix": "esp",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/esp/decorations/util-i18n"],
+      "options": {
+        "project": "libs/esp/decorations/util-i18n/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/esp/decorations/util-i18n/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/esp/decorations/util-i18n/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/esp/decorations/util-i18n",
+        "{workspaceRoot}/reports/libs/esp/decorations/util-i18n"
+      ],
+      "options": {
+        "jestConfig": "libs/esp/decorations/util-i18n/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/esp/decorations/util-i18n/**/*.ts",
+          "libs/esp/decorations/util-i18n/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:esp", "type:util"]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "esp-presentations-ui-presentation-product-imprint",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/esp/presentations/ui-presentation-product-imprint/src",
+  "prefix": "esp",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/esp/presentations/ui-presentation-product-imprint/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/esp/presentations/ui-presentation-product-imprint/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/esp/presentations/ui-presentation-product-imprint/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/esp/presentations/ui-presentation-product-imprint",
+        "{workspaceRoot}/reports/libs/esp/presentations/ui-presentation-product-imprint"
+      ],
+      "options": {
+        "jestConfig": "libs/esp/presentations/ui-presentation-product-imprint/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/esp/presentations/ui-presentation-product-imprint/**/*.ts",
+          "libs/esp/presentations/ui-presentation-product-imprint/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:esp", "type:ui"]
+}

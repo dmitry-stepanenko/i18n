@@ -1,0 +1,318 @@
+{
+  "presentation-product": {
+    "presentation-product-imprint": {
+      "imprint-colors-label": "Imprint Colors",
+      "imprint-colors-placeholder": "Enter colors",
+      "imprint-options-label": "Imprint Options",
+      "vendor-imprint-methods-label": "Vendor Imprint Methods",
+      "other-imprint-methods-label": "Other Imprint Methods",
+      "show-less": "Show Less",
+      "show-more": "Show More",
+      "imprint-sizes-label": "Imprint Sizes",
+      "imprint-sizes-placeholder": "Enter sizes",
+      "imprint-locations-label": "Imprint Locations",
+      "imprint-locations-placeholder": "Enter locations"
+    },
+    "presentation-product-page": {
+      "back-to-presentation": "Back to Presentation",
+      "edit-product-details-title": "Edit Product Details",
+      "product-detail-menu": "Product Detail Menu",
+      "cancel-button": "Cancel",
+      "preview-button": "Preview",
+      "save-button": "Save",
+      "previous-product": "Previous Product",
+      "next-product": "Next Product",
+      "create-virtual-sample": "Create Virtual Sample",
+      "all-supplier-info": "All supplier information is hidden from the customer presentation.",
+      "product-details-title": "Product Details",
+      "product-name-label": "Product Name",
+      "enter-product-name-placeholder": "Enter a Product Name",
+      "summary-label": "Summary",
+      "enter-summary-placeholder": "Enter a Summary",
+      "note-to-customer-label": "Note to Customer",
+      "note-to-customer-placeholder": "Enter a Note to Customer",
+      "product-variants-title": "Product Variants",
+      "product-variants-colors-toggle-label": "Colors",
+      "product-variants-sizes-label": "Sizes",
+      "product-variants-shapes-label": "Shapes",
+      "product-variants-materials-label": "Materials",
+      "presentation-product-variant": {
+        "select-deselect-all": "Select/Deselect All",
+        "show-less": "Show Less",
+        "show-more": "Show More"
+      },
+      "confirmation-dialog-can-deactivate": {
+        "unload-message": "Would you like to save your changes before leaving this page?",
+        "discard-changes": "Discard Changes",
+        "save-changes": "Save Changes"
+      },
+      "confirmation-dialog-remove-image": {
+        "message": "Confirm removal. This image will be removed from your presentation. This image can always be added back to the presentation.",
+        "cancel": "No, Do Not Remove",
+        "confirm": "Remove Image"
+      },
+      "confirmation-dialog-save-click": {
+        "title": "Attribute Hidden",
+        "message": "You have included an attribute in the price grid that has been hidden in your presentation, which means it won't show to your customer. {{tag}} Would you like to change your settings and display this attribute on the presentation or continue saving?",
+        "cancel": "No, I Want to Update",
+        "confirm": "Continue Save"
+      },
+      "confirmation-dialog-cancel": {
+        "message": "You have made changes to this product. Are you sure you do not want to save your work?",
+        "cancel": "No",
+        "confirm": "Yes"
+      },
+      "confirmation-dialog-delete": {
+        "message": "Are you sure you want to delete this product?",
+        "cancel": "No, Do Not Delete",
+        "confirm": "Yes, Remove this Product"
+      },
+      "confirmation-dialog-open-dialog": {
+        "message": "Would you like to save your changes before opening the preview?",
+        "cancel": "Cancel",
+        "confirm": "Save Changes"
+      },
+      "toast-messages": {
+        "product-save": {
+          "title": "Product {{name}} saved!",
+          "body": "{{name}} has been saved!"
+        },
+        "product-update": {
+          "title": "Product {{name}} updated!",
+          "body": "{{name}} has been updated!"
+        },
+        "product-not-save": {
+          "title": "Error!",
+          "body": "Product failed to save."
+        }
+      }
+    },
+    "product-details-image": {
+      "delete-button": "Delete",
+      "no-images-selected": "No images selected",
+      "image-upload-requirements": "Images should be over 110px x 110px and under 2 MB in size."
+    },
+    "product-details-images-selector": {
+      "product-image-title": "Product Images",
+      "show-hide": "Show/Hide All",
+      "drag-to-reorder": "Drag to reorder",
+      "supplier-provided-image": "{{imageUrl]} - Supplier provided image",
+      "hide": "Hide",
+      "unhide": "Unhide",
+      "show-all": "Show all {{imagesLength}}",
+      "show-less": "Show less",
+      "adjust-order-of-images": "To adjust the order of your images, click Show all, then drag and drop the images in your preferred order.",
+      "upload-helper-text": "Images should be over 110px x 110px resolution and under 2MB in size. Allowed file types are .jpeg, .jpg, .png, .gif."
+    },
+    "presentation-product-pricing": {
+      "toggle-label": "Pricing",
+      "all-price-grids": "Below you'll find all price grids for this product. We recommend adding based on the attributes you've selected above.",
+      "pricing-calc-adjustment-label": "Adjust All Prices Based On",
+      "price-adjustments-labels": {
+        "profit-margin": "Profit Margin",
+        "add-fixed-amount-to-price": "Add Fixed Amount To The List Price",
+        "add-fixed-amount-to-net-cost": "Add Fixed Amount To The Net Cost",
+        "add-fixed-amount-to-price-from-net-cost": "Add Fixed Amount To The List Price From The Net Cost",
+        "subtract-fixed-amount-to-price": "Subtract Fixed Amount To The List Price",
+        "subtract-fixed-amount-to-net-cost": "Subtract Fixed Amount To The Net Cost",
+        "subtract-fixed-amount-to-price-from-net-cost": "Subtract Fixed Amount To The List Price From The Net Cost",
+        "add-percentage-to-price-form-net-cost": "Add Percentage Of The Net Cost To The List Price",
+        "add-percentage-to-price-from-price": "Add Percentage Of The List Price To The List Price",
+        "add-percentage-to-net-cost": "Add Percentage Of The Net Cost From The Net Cost",
+        "subtract-percentage-to-net-cost": "Subtract Percentage Of The Net Cost From The Net Cost",
+        "subtract-percentage-to-price-from-net-cost": "Subtract Percentage Of The Net Cost From The List Price",
+        "subtract-percentage-to-price": "Subtract Percentage Of The List Price From The List Price"
+      },
+      "amount-label": "Amount",
+      "enter-percent-placeholder": "Enter Percent",
+      "enter-amount-placeholder": "Enter Amount",
+      "apply": "Apply",
+      "round-up-checkbox": "Round Up to 2 Decimal Places",
+      "presentation-product-price-visible-price-grids": {
+        "confirmation-dialog-restore-to-default": {
+          "message": "Are you sure you want to restore prices?",
+          "confirm": "Yes, Restore To Default",
+          "cancel": "No, Do Not Restore"
+        },
+        "add-price-grid": "Add a price grid or customize your price range.",
+        "price-grid": "Price Grid",
+        "add-custom-quantity": "Add a Custom Quantity",
+        "price-includes": "Price Includes",
+        "reset-price-grid": "Reset Price Grid",
+        "remove-price-grid": "Remove Price Grid",
+        "presentation-product-visible-price-grid-prices": {
+          "quantity-header-cell": "Quantity",
+          "net-cost-header-cell": "Net Cost",
+          "original-header-cell": "Original",
+          "margin-header-cell": "Margin",
+          "price-header-cell": "Price",
+          "visible-header-cell": "Visible",
+          "remove-header-cell": "Remove",
+          "view-header-cell": "View"
+        }
+      },
+      "presentation-product-price-invisible-price-grids": {
+        "add-price-grids": "Add Price Grids",
+        "available-price-grids": "Available price grids are hidden from the customer presentation until they are added.",
+        "all-price-grids": "All Price Grids",
+        "description-header-cell": "Description",
+        "min-price-header-cell": "Min Price",
+        "add-button": "Add",
+        "add-all-price-grids-button": "Add All Price Grids"
+      }
+    },
+    "presentation-product-price-range": {
+      "price-range-label": "Price Range",
+      "determined-by-price": "Determined by the price grid(s) selected above or you can choose to customize.",
+      "displayed-price-range": "Displayed Price Range",
+      "price-from": "Price From {{minMax}}",
+      "use-custom-price-range": "Use Custom Price Range"
+    },
+    "presentation-product-client-discount": {
+      "client-discount-label": "Client Discount",
+      "display-indicator": "Displays an indicator to the customer that the product is discounted for them."
+    }
+  },
+  "presentation-settings-component": {
+    "presentation-settings-toggle": {
+      "product-cpn": "Product CPN",
+      "product-color": "Product Color",
+      "product-size": "Product Size",
+      "product-shape": "Product Shape",
+      "product-material": "Product Material",
+      "price-range": "Price Range",
+      "pricing": "Pricing",
+      "client-discount": "Client Discount",
+      "imprint-options": "Imprint Options"
+    }
+  },
+  "util-presentation-product-pipe": {
+    "quote-requested-tooltip": "Quote Requested",
+    "quote-requested-wrapper-label": "Quote Requested!",
+    "added-to-cart-tooltip": "Added to Cart",
+    "disliked-tooltip": "Disliked"
+  },
+  "presentation-settings-page": {
+    "header-title": "Presentation",
+    "menu": "Menu",
+    "presentation-action-bar": {
+      "preview": "Preview",
+      "share-with-customer": "Share with Customer",
+      "edit": "Edit",
+      "share": "Share"
+    },
+    "presentation-info-card": {
+      "presentation-info-title": "Presentation Information",
+      "presentation-expired": "Expired",
+      "shared-with": "Shared with {{name}} on {{sharedDate}} at {{sharedTime}}.",
+      "presentation-not-viewed": "Presentation has not been viewed yet.",
+      "link-expired": "Link expired {{date}}",
+      "link-expires": "Link expires {{date}}",
+      "link-not-shared-yet": "This presentation has not been shared with the Customer yet.",
+      "customer-engagement-title": "Customer Engagement",
+      "last-viewed": "Last Viewed",
+      "not-viewed": "Not Viewed",
+      "products-requested-title": "Products Requested",
+      "products-disliked": "Products Disliked",
+      "project-details": "Project Details",
+      "edit-tooltip": "Edit",
+      "project-created": "Project Created: {{date}}",
+      "in-hands-date": "In-Hands Date: {{date}}",
+      "event-date": "Event Date: {{date}}",
+      "event-type": "Event Type: {{type}}",
+      "budget": "Budget: {{value}}",
+      "attendees": "Attendees: {{value}}"
+    },
+    "presentation-quotes": {
+      "quote-request-received": "Quote Request Received",
+      "view-quote": "View Quote",
+      "changes-updated": "Changes Automatically Updated in Project Details",
+      "quote-details": "Quote Details"
+    },
+    "presentation-settings": "Presentation Settings",
+    "hiding-product": "Hiding a product detail here will apply to all products in the presentation. You can choose to display the hidden information for specific items by editing the individual product and turning the option on.",
+    "change-conversion-date": "Change Conversion Rate",
+    "hide-product-details": "Hide these product details on all items in your presentation.",
+    "product-details": "Product Details",
+    "sharing-options": "Sharing Options",
+    "allow-customers-to-select": "Allow customers to select product variants when requesting a quote",
+    "personal-note-label": "Personal Note",
+    "personal-note-placeholder": "Here are some products that I think you might be interested in!",
+    "save": "Save",
+    "include-signature": "Include Signature",
+    "expiration-date": "Expiration Date",
+    "expiration-date-description": "You can pick a presentation expiration date up to 90 days out. The default is set to 30 days.",
+    "select-date-placeholder": "Select a date",
+    "invalid-expiration-date": "Invalid expiration date.",
+    "presentation-preview": {
+      "presentation-preview-title": "Presentation preview",
+      "product-page": "Product Page",
+      "landing-page": "Landing Page",
+      "configure-your-presentation": "Configure your Presentation and add products to see a preview."
+    },
+    "presentation-products": {
+      "edit-products": "Edit Products",
+      "click-on-product-to-edit": "These products will be presented with the details above. Click on a product to edit its specific information.",
+      "sort-by": "Sort By",
+      "all-products-tab": "All Products",
+      "added-to-cart-tab": "Added to Cart",
+      "disliked-products-tab": "Disliked Products",
+      "seen-products-tab": "Seen Products",
+      "unseen-products-tab": "Unseen Products",
+      "hidden-tab": "Hidden",
+      "drag-to-reorder": "Drag to reorder",
+      "no-products-message": {
+        "no-products": "There are no products in this presentation. Add products by starting a search."
+      },
+      "hide-from-presentation": "Hide from Presentation",
+      "show-in-presentation": "Show in Presentation",
+      "delete-from-presentation": "Delete from Presentation",
+      "sort": "Sort",
+      "newest-to-oldest": "Newest to Oldest",
+      "oldest-to-newest": "Oldest to Newest",
+      "product-name": "Product Name",
+      "product-number": "Product Number",
+      "profit": "Profit",
+      "price-high-to-low": "Price (High to Low)",
+      "price-low-to-high": "Price (Low to High)",
+      "cost-high-to-low": "Cost (High to Low)",
+      "cost-low-to-high": "Cost (Low to High)",
+      "supplier-name": "Supplier Name",
+      "category": "Category"
+    }
+  },
+  "share-presentation-dialog": {
+    "close": "Close",
+    "share-with-customer": "Share with Customer",
+    "send-email": "Send email or copy link to share on your own.",
+    "subject-line-label": "Subject Line",
+    "enter-subject-placeholder": "Enter Subject",
+    "message-label": "Message",
+    "enter-personal-message-placeholder": "Enter a personal message that you would like to appear in your email.",
+    "presentation-settings": "Presentation Settings:",
+    "signature-and-expiration-date": "Signature and Expiration Date only apply to your presentation settings and not your email.",
+    "include-signature": "Include Signature",
+    "expiration-date": "Expiration date",
+    "select-date-placeholder": "Select a date",
+    "mat-datepicker-parse": "Invalid expiration date.",
+    "invalid-expiration-date": "Expiration date is in the past. You must enter a future date.",
+    "preview-presentation": "Preview Presentation",
+    "copy-link": "Copy Link",
+    "share-via-email": "Share via Email",
+    "share-via-link": "Share via Link"
+  },
+  "presentation-product-card": {
+    "imprint-method": "Imprint Method: {{value}}",
+    "artwork": "Artwork:",
+    "requested-changes": "Requested Changes:",
+    "customization-comments": "Customization Comments:",
+    "presentation-product-card-grid-with-charge": {
+      "item-header": "Item",
+      "quantity-header": "Quantity",
+      "price-header": "Price",
+      "total-price-header": "Total Price",
+      "total-units-footer": "Total Units",
+      "total-footer": "Total"
+    }
+  }
+}

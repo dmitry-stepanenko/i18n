@@ -1,0 +1,90 @@
+<ng-container *ngIf="data.length">
+  <table
+    *transloco="
+      let t;
+      read: 'espPresentations.presentation-product-card.presentation-product-card-grid-with-charge'
+    "
+    [dataSource]="data"
+    class="w-full"
+    cos-table
+  >
+    <ng-container cosColumnDef="item">
+      <th *cosHeaderCellDef cos-header-cell>{{ t('item-header') }}</th>
+      <td
+        *cosCellDef="let element"
+        cos-cell
+        data-cy="presentation-product-card-grid-with-charge__description"
+      >
+        <ng-template [ngIf]="element.Type === 'totals'">
+          <strong>{{ t('total-units-footer') }}</strong>
+        </ng-template>
+        {{ element.Description }}
+      </td>
+      <td *cosFooterCellDef cos-footer-cell>
+        <strong *ngIf="showTotals">{{ t('total-footer') }}</strong>
+      </td>
+    </ng-container>
+
+    <ng-container cosColumnDef="quantity">
+      <th *cosHeaderCellDef class="w-1/5" cos-header-cell>
+        {{ t('quantity-header') }}
+      </th>
+      <td
+        *cosCellDef="let element"
+        cos-cell
+        data-cy="presentation-product-card-grid-with-charge__quantity"
+      >
+        <strong *ngIf="element.Type === 'totals'">{{
+          element.Value | number
+        }}</strong>
+        {{ element.Quantity | number }}
+      </td>
+      <td *cosFooterCellDef cos-footer-cell></td>
+    </ng-container>
+
+    <ng-container cosColumnDef="price">
+      <th *cosHeaderCellDef class="w-1/5" cos-header-cell>
+        {{ t('price-header') }}
+      </th>
+      <td
+        *cosCellDef="let element"
+        cos-cell
+        data-cy="presentation-product-card-grid-with-charge__price"
+      >
+        <ng-template [ngIf]="element.Type !== 'totals'">
+          {{ element.Price || 0 | currency: lineItem.CurrencyCode }}
+        </ng-template>
+      </td>
+      <td *cosFooterCellDef cos-footer-cell></td>
+    </ng-container>
+
+    <ng-container cosColumnDef="totalPrice">
+      <th *cosHeaderCellDef class="w-1/5" cos-header-cell>
+        {{ t('total-price-header') }}
+      </th>
+      <td
+        *cosCellDef="let element"
+        cos-cell
+        data-cy="presentation-product-card-grid-with-charge__total-price"
+      >
+        <ng-template [ngIf]="element.Type !== 'totals'">
+          {{
+            element.Quantity * (element.Price || 0)
+              | currency: lineItem.CurrencyCode
+          }}
+        </ng-template>
+      </td>
+      <td *cosFooterCellDef cos-footer-cell>
+        <strong *ngIf="showTotals">{{
+          lineItem.TotalPrice | currency: lineItem.CurrencyCode
+        }}</strong>
+      </td>
+    </ng-container>
+
+    <tr *cosHeaderRowDef="columns" class="w-full" cos-header-row></tr>
+    <tr *cosRowDef="let row; columns: columns" class="w-full" cos-row></tr>
+    <ng-template [ngIf]="showTotals">
+      <tr *cosFooterRowDef="columns" class="footer-row" cos-footer-row></tr>
+    </ng-template>
+  </table>
+</ng-container>

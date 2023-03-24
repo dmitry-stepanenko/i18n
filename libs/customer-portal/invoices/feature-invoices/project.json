@@ -1,0 +1,48 @@
+{
+  "name": "customer-portal-invoices-feature-invoices",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/customer-portal/invoices/feature-invoices/src",
+  "prefix": "customer-portal",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": [
+        "{workspaceRoot}/dist/libs/customer-portal/invoices/feature-invoices"
+      ],
+      "options": {
+        "project": "libs/customer-portal/invoices/feature-invoices/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/customer-portal/invoices/feature-invoices/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/customer-portal/invoices/feature-invoices/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/customer-portal/invoices/feature-invoices",
+        "{workspaceRoot}/reports/libs/customer-portal/invoices/feature-invoices"
+      ],
+      "options": {
+        "jestConfig": "libs/customer-portal/invoices/feature-invoices/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/customer-portal/invoices/feature-invoices/**/*.ts",
+          "libs/customer-portal/invoices/feature-invoices/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:customer-portal", "type:feature"]
+}

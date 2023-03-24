@@ -1,0 +1,73 @@
+{
+  "feature-presentations": {
+    "presentation-products": {
+      "presentation-products-info": {
+        "reply-label": "Reply",
+        "presentation-expires-label": "Presentation Expires"
+      }
+    },
+    "presentation-product": {
+      "back-to-all-products": "Back To All Products",
+      "additional-note": "Additional Note",
+      "discount-applied": "Discount Applied",
+      "dislike-tooltip": "Dislike",
+      "disabled-in-preview-tooltip": "This feature is disabled in preview",
+      "add-to-cart-button": "Add to cart",
+      "quote-requested-tag": "Quote Requested",
+      "pricing-and-charges": "Pricing and Charges",
+      "pricing-grid-header-quantity": "Quantity",
+      "pricing-grid-header-price-per-unit": "Price Per Unit",
+      "price-includes": "Price Includes",
+      "colors": "Colors",
+      "show-more": "Show more",
+      "show-less": "Show less",
+      "sizes": "Sizes",
+      "shapes": "Shapes",
+      "materials": "Materials",
+      "imprint-methods": "Imprint Methods",
+      "imprint-sizes": "Imprint Sizes",
+      "imprint-colors": "Imprint Color(s)",
+      "imprint-locations": "Imprint Location(s)",
+      "price-from": "Price From {{minMax}}"
+    }
+  },
+  "pending-quote": {
+    "title": "Your Quote Request Has Been Sent!",
+    "sub-text": "Your quote request has been sent to {{ distributorName }}. They will adjust the pricing accordingly and send it back to you.",
+    "contact-information": "Contact Information",
+    "additional-files": "Additional Files"
+  },
+  "feature-customize-product-dialog": {
+    "subtext": "Describe how you would like your product to be customized or add from available options.",
+    "image-disclaimer": "*Example image may not represent the exact configuration selected.",
+    "no-image-text": "No Image Available",
+    "advanced-options": "Advanced Options",
+    "imprint-method": "Imprint Method",
+    "imprint-select-text": "Select From Available Imprint Methods",
+    "customization-comments": "Customization Comments",
+    "customization-placeholder": "Comments can include sizes, colors, or anything else you'd like to customize.",
+    "cancel-button": "Cancel",
+    "save-button": "Save",
+    "form-components": {
+      "products-artworks": {
+        "upload-artwork-text": "Upload Artwork or Customization Files",
+        "show-less": "Show Less",
+        "show-all": "Show All ( {{length}} )",
+        "image-size-limit": "Upload a maximum of 10 files and each file has to be under 1MB.",
+        "image-type-limit": "Allowed file types are png, tif, tiff, jpg, dst, eps, ai, doc, docx, txt, csv, pdf, svg, xls, and/or xlsx."
+      },
+      "product-details": {
+        "add-optional-product-config": "Add Optional Product Configuration",
+        "color": "Color",
+        "size": "Size",
+        "material": "Material",
+        "shape": "Shape",
+        "select-a-property": "Select a {{property}}",
+        "quantity": "Quantity",
+        "quantity-placeholder": "Enter a Quantity",
+        "save-selection-button": "Save Selection",
+        "item": "Item"
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+<div
+  class="product-variant mb-24"
+  *transloco="
+    let t;
+    read: 'espPresentations.presentation-product.presentation-product-page.presentation-product-variant'
+  "
+>
+  <div class="product-variant-header mb-16 w-full">
+    <cos-toggle [checked]="showVariant" (toggleChange)="toggleVariant()">
+      <span class="toggle-label">{{ label }}</span>
+    </cos-toggle>
+    <cos-checkbox
+      class="select-all"
+      name="select-all"
+      *ngIf="showVariant && variant"
+      (change)="toggleSelectAll($event)"
+      [checked]="allChecked"
+      [indeterminate]="isIndeterminate"
+    >
+      <span class="select-all-label">{{ t('select-deselect-all') }}</span>
+    </cos-checkbox>
+  </div>
+  <cos-card *ngIf="showVariant && variant">
+    <ul class="product-variant-list">
+      <ng-container
+        *ngFor="let value of variant.Values; let i = index; trackBy: trackById"
+      >
+        <li class="product-variant-list-item" *ngIf="i < limit">
+          <cos-checkbox
+            class="checkbox-products"
+            name="variant-value"
+            [checked]="isChecked(value)"
+            (change)="toggleSelect($event, value)"
+          >
+            <div class="flex items-center">
+              <img
+                *ngIf="value?.Media?.length"
+                class="mr-8"
+                [src]="value?.Media?.[0]?.Url"
+                alt=""
+              />
+              <span>{{ value.Value }}</span>
+            </div>
+          </cos-checkbox>
+        </li>
+      </ng-container>
+    </ul>
+    <div class="show-more" *ngIf="isShowMoreEnabled">
+      <button cos-button (click)="toggleShowMore()">
+        <i class="fa fa-{{ showMore ? 'minus' : 'plus' }} mr-8"></i
+        >{{ showMore ? t('show-less') : t('show-more') }}
+      </button>
+    </div>
+  </cos-card>
+</div>

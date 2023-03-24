@@ -1,0 +1,92 @@
+<ng-container
+  *transloco="
+    let t;
+    read: 'espPresentations.presentation-product.presentation-product-price-range'
+  "
+>
+  <cos-toggle
+    class="mb-16 block w-full"
+    [checked]="state.product!.Settings.ShowProductPriceRanges"
+    (toggleChange)="togglePriceRange()"
+  >
+    <span class="toggle-label">{{ t('price-range-label') }}</span>
+  </cos-toggle>
+
+  <cos-card
+    class="mb-24"
+    *ngIf="state.product!.Settings.ShowProductPriceRanges"
+    data-cy="product-price-range-settings"
+  >
+    <p class="body-style-12">{{ t('determined-by-price') }}</p>
+
+    <!--
+    <div class="mb-24">
+      <div class="header-style-14-bold mb-8">Calculated Price Range</div>
+      <p data-cy="product-calculated-price-range">
+        {{ presentationProductState.visiblePriceGrids | calculatedPriceRange | async }}
+      </p>
+    </div>
+    -->
+
+    <div class="custom-price-range">
+      <cos-form-field>
+        <cos-label>{{ t('displayed-price-range') }}</cos-label>
+        <input
+          cos-input
+          data-cy="custom-price-range-input"
+          maxlength="150"
+          [value]="
+            state.product!.PriceRange
+              ? state.product!.PriceRange
+              : presentationProductState.visiblePriceGrids.length! > 0
+              ? (presentationProductState.visiblePriceGrids
+                | calculatedPriceRange
+                  : 'espPresentations.presentation-product.presentation-product-price-range.price-from'
+                  : [LanguageScope.EspPresentations]
+                | async)
+              : ''
+          "
+          (blur.silent)="setupCustomPriceRange($event)"
+          [attr.disabled]="state.product?.IsCustomPriceRange ? null : true"
+        />
+      </cos-form-field>
+      <div class="mt-24">
+        <cos-checkbox
+          class="use-custom-range"
+          name="useCustomRange"
+          data-cy="custom-price-range-checkbox"
+          [checked]="!!state.product?.IsCustomPriceRange"
+          (change)="toggleCustomPriceRange($event)"
+        >
+          <span class="cos-checkbox-label">{{
+            t('use-custom-price-range')
+          }}</span>
+        </cos-checkbox>
+      </div>
+    </div>
+    <!--
+    <div class="currency">
+      <cos-form-field>
+        <cos-label>Currency</cos-label>
+        <select matNativeControl>
+          <option class="empty-option"></option>
+          <option>USD</option>
+          <option>CAD</option>
+        </select>
+      </cos-form-field>
+    </div>
+    -->
+    <!--
+    <cos-form-field>
+      <span cosLabel>Price Includes</span>
+      <input
+        id="price-includes"
+        cos-input
+        type="text"
+        name="priceIncludes"
+        placeholder="Enter Description"
+      />
+    </cos-form-field>
+    -->
+  </cos-card>
+</ng-container>

@@ -1,0 +1,99 @@
+<div>
+  <cos-toggle
+    class="mb-16 block w-full"
+    [checked]="state.product.Settings.ShowProductAdditionalCharges"
+    (toggleChange)="toggleAdditionalCharges()"
+  >
+    <span class="header-style-18">Additional Charges</span>
+  </cos-toggle>
+
+  <ng-container *ngIf="state.product.Settings.ShowProductAdditionalCharges">
+    <ng-template [ngIf]="state.visibleVendorCharges?.length">
+      <h2 class="header-style-18">Vendor Charges</h2>
+      <cos-card class="accordion-card mb-24">
+        <cos-accordion
+          *ngFor="let priceGrid of state.visibleVendorCharges"
+          data-cy="price-grid-accordion"
+          #cosAccordion="cosAccordion"
+        >
+          <cos-accordion-header>
+            <cos-inline-edit
+              role="heading"
+              aria-level="1"
+              inputType="text"
+              [readonly]="!cosAccordion.expanded"
+              [required]="false"
+              [maxLength]="100"
+              >{{ priceGrid.Description || 'Vendor Charge' }}</cos-inline-edit
+            >
+          </cos-accordion-header>
+          <p class="body-style-14-shark">
+            {{ priceGrid.Name }}
+          </p>
+          <div class="cos-form-row">
+            <select
+              matNativeControl
+              [(ngModel)]="priceGrid.UsageLevel"
+              class="usage-level-select"
+            >
+              <option
+                [value]="level.Code"
+                *ngFor="let level of chargeUsageLevels"
+              >
+                {{ level.Value }}
+              </option>
+            </select>
+          </div>
+
+          <esp-visible-grid-prices
+            [priceGrid]="$any(priceGrid)"
+          ></esp-visible-grid-prices>
+
+          <button cos-button (click)="addCustomQuantity(priceGrid)">
+            <span class="mr-4">
+              <i class="fa fa-plus"></i>
+            </span>
+            Add a Custom Quantity
+          </button>
+
+          <hr />
+
+          <div class="flex flex-wrap justify-end">
+            <button cos-button>
+              <span class="mr-4">
+                <i class="fa fa-sync"></i>
+              </span>
+              Reset Vendor Charge
+            </button>
+
+            <button cos-button color="warn" (click)="toggleVisible(priceGrid)">
+              <span class="mr-4">
+                <i class="fa fa-trash-alt"></i>
+              </span>
+              Remove Vendor Charge
+            </button>
+          </div>
+        </cos-accordion>
+      </cos-card>
+    </ng-template>
+
+    <cos-card class="mb-24">
+      <h2 class="header-style-16">Add Vendor Charges</h2>
+      <p class="header-style-12-shark mt-8 flex items-center">
+        <i class="fa fa-eye-slash pr-4 text-lg"></i> Available Vendor Charges
+        Are Hidden From The Customer Presentation Until They Are Added.
+      </p>
+      <hr class="my-24" />
+      <esp-presentation-product-charges-table
+        [dataSource]="state.invisibleVendorCharges"
+        (action)="toggleVisible($event)"
+        *ngIf="state.invisibleVendorCharges?.length > 0"
+      ></esp-presentation-product-charges-table>
+      <!--     
+    <button cos-button class="proj-product-detail-btn">
+      <i class="fa fa-plus"></i> Add a custom charge
+    </button> 
+  -->
+    </cos-card>
+  </ng-container>
+</div>

@@ -1,0 +1,51 @@
+@import 'cosmos/scss/settings';
+
+header {
+  border-bottom: $border-light;
+}
+
+.content-wrapper {
+  margin: 0.6rem 3rem;
+}
+
+.project-info-dialog-content {
+  input[cos-input] {
+    width: 100%;
+  }
+}
+
+.readonly-email-input {
+  border: $border-light;
+  color: $color-g-shark-54;
+}
+
+.project-info-copy {
+  color: $color-bl-atoll-75;
+}
+
+.divider {
+  margin: 1rem -4rem;
+}
+
+.date-picker {
+  max-width: 100%;
+}
+
+.dialog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-direction: row;
+  width: 100%;
+}
+
+@include narrower-than($bp-medium) {
+  .dialog-actions {
+    flex-direction: column-reverse;
+    gap: 16px;
+
+    .cos-stroked-button ~ .cos-flat-button {
+      margin-left: 0;
+    }
+  }
+}

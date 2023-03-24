@@ -1,0 +1,10 @@
+{
+  "extends": ["../../../../libs/customer-portal/.eslintrc.json"],
+  "ignorePatterns": ["!**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "extends": ["../../../../.eslintrc-overrides.json"]
+    }
+  ]
+}

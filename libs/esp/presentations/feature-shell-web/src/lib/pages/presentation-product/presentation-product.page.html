@@ -1,0 +1,425 @@
+<div
+  class="page-container"
+  *transloco="
+    let t;
+    read: 'espPresentations.presentation-product.presentation-product-page'
+  "
+>
+  <div class="presentation-product grid-layout-1">
+    <ng-template
+      [ngIfElse]="loader"
+      [ngIf]="
+        !state.isLoading &&
+        state.hasLoaded &&
+        state.product &&
+        state.presentation
+      "
+    >
+      <div class="presentation-product__back-to-presentation">
+        <a routerLink="" class="cos-flat-button" (click)="backToPresentation()"
+          ><i class="fa fa-arrow-left mr-8"></i>
+          {{ t('back-to-presentation') }}</a
+        >
+      </div>
+      <div class="presentation-product-header">
+        <div
+          class="presentation-product__pg-title flex items-end justify-between"
+        >
+          <div>
+            <h1 class="header-style-24" data-cy="edit-product-details-title">
+              {{ t('edit-product-details-title') }}
+            </h1>
+          </div>
+          <div class="mb-16">
+            <div class="presentation-product__desktop-controls">
+              <ng-template [ngTemplateOutlet]="productControls"></ng-template>
+            </div>
+
+            <button
+              [matMenuTriggerFor]="sortMenu"
+              class="presentation-product__mobile-menu"
+              cos-icon-button
+            >
+              <i class="fa fa-ellipsis-h"></i>
+              <span class="cos-accessibly-hidden">{{
+                t('product-detail-menu')
+              }}</span>
+            </button>
+
+            <mat-menu
+              #sortMenu
+              backdropClass="cos-backdrop"
+              class="cos-menu"
+              yPosition="below"
+            >
+              <div class="presentation-product__mobile-controls">
+                <ng-template
+                  [ngTemplateOutlet]="productMobileControls"
+                ></ng-template>
+              </div>
+            </mat-menu>
+
+            <ng-template #productControls>
+              <button
+                (click)="cancel()"
+                *ngIf="canSave"
+                color="warn"
+                cos-button
+                data-cy="cancel-changes-button"
+              >
+                <i class="fa fa-times mr-8"></i> {{ t('cancel-button') }}
+              </button>
+
+              <button
+                (click)="previewPresentationProduct()"
+                class="presentation-product__preview-button"
+                color="primary"
+                cos-stroked-button
+              >
+                <i class="fa fa-eye mr-8"></i>
+                {{ t('preview-button') }}
+              </button>
+
+              <button
+                (click)="saveClick()"
+                [disabled]="!canSave || productIsBeingSaved"
+                color="primary"
+                cos-flat-button
+                data-cy="save-changes-button"
+              >
+                <i class="fa fa-save mr-8"></i>
+                {{ t('save-button') }}
+              </button>
+            </ng-template>
+            <ng-template #productMobileControls>
+              <button
+                (click)="saveClick()"
+                [disabled]="!canSave || productIsBeingSaved"
+                class="cos-menu-item"
+                data-cy="save-changes-button"
+                mat-menu-item
+                size="sm"
+              >
+                <i class="fa fa-save mr-8"></i>
+                {{ t('save-button') }}
+              </button>
+
+              <button
+                (click)="previewPresentationProduct()"
+                class="cos-menu-item"
+                mat-menu-item
+                size="sm"
+              >
+                <i class="fa fa-eye mr-8"></i>
+                {{ t('preview-button') }}
+              </button>
+
+              <button
+                (click)="cancel()"
+                *ngIf="canSave"
+                class="cos-menu-item"
+                data-cy="cancel-changes-button"
+                mat-menu-item
+                size="sm"
+              >
+                <i class="fa fa-times mr-8"></i> {{ t('cancel-button') }}
+              </button>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+
+      <div
+        *ngIf="
+          state.presentation.Products.length > 1 &&
+          productIndex(state.presentation.Products, state.product.Id) !== null
+        "
+        class="presentation-product__prev-next"
+        data-cy="presentation-product__prev-next"
+      >
+        <a
+          (click)="
+            navigateToProduct(
+              state.presentation.Products[currentProductIndex! - 1]
+            )
+          "
+          [ngClass]="{ disabled: currentProductIndex === 0 }"
+          class="cos-flat-button"
+          data-cy="presentation-product__prev"
+          routerLink=""
+        >
+          <i class="fa fa-arrow-left mr-8"></i> {{ t('previous-product') }}</a
+        >
+        <a
+          (click)="
+            navigateToProduct(
+              state.presentation.Products[currentProductIndex! + 1]
+            )
+          "
+          [ngClass]="{
+            disabled:
+              currentProductIndex === state.presentation.Products.length - 1
+          }"
+          class="cos-flat-button"
+          data-cy="presentation-product__next"
+          routerLink=""
+          >{{ t('next-product') }} <i class="fa fa-arrow-right ml-8"></i
+        ></a>
+      </div>
+      <div [formGroup]="form">
+        <main class="presentation-product__pg-content">
+          <asi-product-details-title
+            [companyId]="companyId"
+            [name]="state.product.Name!"
+            [productId]="state.product.ProductId"
+            [readonly]="true"
+          ></asi-product-details-title>
+          <div class="presentation-product__pg-content-body">
+            <div>
+              <asi-product-details-image
+                (removeImage)="removeImage($event)"
+                (uploadImage)="addMedia($event)"
+                [image]="primaryImage"
+              ></asi-product-details-image>
+              <ng-template [cosIfFeatureFlags]="{ matches: ['design_studio'] }">
+                <button
+                  (click)="createVirtualSample()"
+                  *ngIf="shouldShowCreateVirtualSampleButton"
+                  class="mt-8 w-full"
+                  color="primary"
+                  cos-flat-button
+                  type="submit"
+                >
+                  <i class="fa fa-wand-magic-sparkles mr-8"></i>
+                  {{ t('create-virtual-sample') }}
+                </button>
+              </ng-template>
+              <cos-card
+                *ngIf="state.product?.Supplier?.ExternalId"
+                class="supplier-info my-16"
+              >
+                <p class="header-style-12-shark caption">
+                  <i class="fa fa-eye-slash mr-8"></i>
+                  {{ t('all-supplier-info') }}
+                </p>
+                <hr class="card-divider" />
+                <cos-supplier
+                  (click)="goToSupplier()"
+                  [showImage]="true"
+                  [showPreferredGroup]="true"
+                  [supplier]="state.supplier"
+                ></cos-supplier>
+              </cos-card>
+            </div>
+            <div>
+              <h2 class="header-style-18">{{ t('product-details-title') }}</h2>
+
+              <section>
+                <asi-product-details-images-selector
+                  [(images)]="productImages"
+                  (imageSorted)="sortProductImage($event)"
+                  (imageClick)="setPrimaryImage($event)"
+                ></asi-product-details-images-selector>
+              </section>
+              <section>
+                <cos-form-field>
+                  <cos-label data-cy="presentation-product__product-name-label"
+                    >{{ t('product-name-label') }}
+                  </cos-label>
+                  <input
+                    #productNameRef
+                    cos-input
+                    data-cy="presentation-product__product-name-input"
+                    formControlName="Name"
+                    id="productName"
+                    maxlength="60"
+                    [placeholder]="t('enter-product-name-placeholder')"
+                    required
+                  />
+                  <cos-hint align="start">
+                    {{ productNameRef.value.length || 0 }}/{{
+                      productNameRef.maxLength
+                    }}
+                  </cos-hint>
+                  <cos-error></cos-error>
+                </cos-form-field>
+
+                <cos-form-field>
+                  <cos-label data-cy="presentation-product__summary-label"
+                    >{{ t('summary-label') }}
+                  </cos-label>
+                  <textarea
+                    #productSummaryRef
+                    class="product-description w-full"
+                    cos-input
+                    data-cy="presentation-product__summary-textarea"
+                    formControlName="Summary"
+                    id="productDescription"
+                    maxlength="130"
+                    [placeholder]="t('enter-summary-placeholder')"
+                    rows="6"
+                  ></textarea>
+                  <cos-hint align="start">
+                    {{ productSummaryRef.value.length || 0 }}/{{
+                      productSummaryRef.maxLength
+                    }}
+                  </cos-hint>
+                  <cos-error></cos-error>
+                </cos-form-field>
+
+                <cos-form-field>
+                  <cos-label data-cy="presentation-product__customer-note-label"
+                    >{{ t('note-to-customer-label') }}
+                  </cos-label>
+                  <textarea
+                    #customerNote
+                    class="customer-note w-full"
+                    cos-input
+                    data-cy="presentation-product__customer-note-textarea"
+                    formControlName="Note"
+                    id="customerNote"
+                    maxlength="250"
+                    [placeholder]="t('note-to-customer-placeholder')"
+                    rows="6"
+                  ></textarea>
+                  <cos-hint align="start">
+                    {{ customerNote.value.length || 0 }}/{{
+                      customerNote.maxLength
+                    }}
+                  </cos-hint>
+                  <cos-error></cos-error>
+                </cos-form-field>
+              </section>
+
+              <hr class="my-24" />
+
+              <section class="product-variants">
+                <h2 class="header-style-18" data-cy="product-variants-title">
+                  {{ t('product-variants-title') }}
+                </h2>
+
+                <esp-presentation-product-variant
+                  (updateAttribute)="updateAttribute($event)"
+                  (updateSetting)="updateSetting('ShowProductColors', $event)"
+                  *ngIf="state.colors"
+                  [class.separator]="
+                    !state.colors || !state.product.Settings.ShowProductColors
+                  "
+                  [label]="t('product-variants-colors-toggle-label')"
+                  [showVariant]="state.product.Settings.ShowProductColors"
+                  [variant]="state.colors"
+                ></esp-presentation-product-variant>
+
+                <esp-presentation-product-variant
+                  (updateAttribute)="updateAttribute($event)"
+                  (updateSetting)="updateSetting('ShowProductSizes', $event)"
+                  *ngIf="state.sizes"
+                  [class.separator]="
+                    !state.sizes || !state.product.Settings.ShowProductSizes
+                  "
+                  [showVariant]="state.product.Settings.ShowProductSizes"
+                  [variant]="state.sizes"
+                  [label]="t('product-variants-sizes-label')"
+                ></esp-presentation-product-variant>
+
+                <esp-presentation-product-variant
+                  (updateAttribute)="updateAttribute($event)"
+                  (updateSetting)="updateSetting('ShowProductShape', $event)"
+                  *ngIf="state.shapes"
+                  [class.separator]="
+                    !state.shapes || !state.product.Settings.ShowProductShape
+                  "
+                  [showVariant]="state.product.Settings.ShowProductShape"
+                  [variant]="state.shapes"
+                  [label]="t('product-variants-shapes-label')"
+                ></esp-presentation-product-variant>
+
+                <esp-presentation-product-variant
+                  (updateAttribute)="updateAttribute($event)"
+                  (updateSetting)="updateSetting('ShowProductMaterial', $event)"
+                  *ngIf="state.materials"
+                  [class.separator]="
+                    !state.materials ||
+                    !state.product.Settings.ShowProductMaterial
+                  "
+                  [showVariant]="state.product.Settings.ShowProductMaterial"
+                  [variant]="state.materials"
+                  [label]="t('product-variants-materials-label')"
+                ></esp-presentation-product-variant>
+              </section>
+
+              <hr class="mb-24 mt-0" />
+              <section>
+                <cos-intersection-renderer [component]="productImprint">
+                  <ng-template cosIntersectionRendererSuspense>
+                    <ngx-skeleton-loader
+                      [theme]="{ height: '19.5px' }"
+                    ></ngx-skeleton-loader>
+                  </ng-template>
+                </cos-intersection-renderer>
+              </section>
+
+              <hr class="my-24" />
+
+              <section>
+                <cos-intersection-renderer [component]="productPricing">
+                  <ng-template cosIntersectionRendererSuspense>
+                    <ngx-skeleton-loader
+                      [theme]="{ height: '324.5px' }"
+                    ></ngx-skeleton-loader>
+                  </ng-template>
+                </cos-intersection-renderer>
+              </section>
+
+              <hr
+                *ngIf="!state.product!.Settings.ShowProductPricing"
+                class="my-24"
+              />
+
+              <section>
+                <cos-intersection-renderer [component]="priceRange">
+                  <ng-template cosIntersectionRendererSuspense>
+                    <ngx-skeleton-loader
+                      [theme]="{ height: '270px' }"
+                    ></ngx-skeleton-loader>
+                  </ng-template>
+                </cos-intersection-renderer>
+              </section>
+
+              <hr class="my-24" />
+
+              <section>
+                <cos-intersection-renderer [component]="clientDiscount">
+                  <ng-template cosIntersectionRendererSuspense>
+                    <ngx-skeleton-loader
+                      [theme]="{ height: '43.5px' }"
+                    ></ngx-skeleton-loader>
+                  </ng-template>
+                </cos-intersection-renderer>
+              </section>
+
+              <hr class="my-24" />
+
+              <!-- // REMOVED for MMP
+
+              <section>
+                <cos-intersection-renderer [component]="additionalCharges">
+                  <ng-template cosIntersectionRendererSuspense>
+                    <ngx-skeleton-loader
+                      [theme]="{ height: '300px' }"
+                    ></ngx-skeleton-loader>
+                  </ng-template>
+                </cos-intersection-renderer>
+              </section>
+              -->
+            </div>
+          </div>
+        </main>
+      </div>
+    </ng-template>
+  </div>
+
+  <ng-template #loader>
+    <esp-presentation-product-loader></esp-presentation-product-loader>
+  </ng-template>
+</div>

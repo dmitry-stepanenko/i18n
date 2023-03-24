@@ -1,0 +1,28 @@
+{
+  "esp-products-feature-shell-web": {
+    "product-search-filters": {
+      "labels": {
+        "color": "Colour",
+        "zipCode": "Postal Code",
+        "market": "Market"
+      }
+    },
+    "product-imprint-methods": {
+      "imprint-colors-header": "Imprint Colours",
+      "full-color-process-header": "Full Colour Process"
+    }
+  },
+  "esp-products-ui-product-form-elements": {
+    "geo-filter": {
+      "labels": {
+        "location": "Location",
+        "shippingTo": "Shipping to",
+        "distanceAway": "Distance Away"
+      },
+      "distance": {
+        "ANY_DISTANCE": "Any Distance",
+        "WITHIN_DISTANCE": "Within {{distance}} kilometers"
+      }
+    }
+  }
+}

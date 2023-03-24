@@ -1,0 +1,47 @@
+{
+  "name": "customer-portal-common-ui-pagination",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/customer-portal/common/ui-pagination/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": [
+        "{workspaceRoot}/dist/libs/customer-portal/common/ui-pagination"
+      ],
+      "options": {
+        "project": "libs/customer-portal/common/ui-pagination/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/customer-portal/common/ui-pagination/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/customer-portal/common/ui-pagination/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/customer-portal/common/ui-pagination",
+        "{workspaceRoot}/reports/libs/customer-portal/common/ui-pagination"
+      ],
+      "options": {
+        "jestConfig": "libs/customer-portal/common/ui-pagination/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/customer-portal/common/ui-pagination/**/*.ts",
+          "libs/customer-portal/common/ui-pagination/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:customer-portal", "type:ui"]
+}

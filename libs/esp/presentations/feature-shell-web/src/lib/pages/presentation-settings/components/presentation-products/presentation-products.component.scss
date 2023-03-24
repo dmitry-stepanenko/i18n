@@ -1,0 +1,43 @@
+@import 'cosmos/scss/settings';
+
+.presentation-recommended-products {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  esp-product-gallery {
+    flex-grow: 1;
+  }
+}
+
+.presentations-products-no-products {
+  esp-pres-no-products-msg {
+    height: 300px;
+    display: block;
+  }
+}
+
+.search-sort {
+  max-width: 268px;
+  margin-bottom: 0;
+}
+
+.mat-tab-group {
+  min-height: 350px;
+}
+
+.drag-section-partition {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  grid-template-columns: 1fr auto 1fr;
+  grid-gap: 8px;
+  color: $color-g-shark-54;
+
+  &::before,
+  &::after {
+    content: '';
+    height: 0;
+    border-top: 1.5px dashed $color-g-moth-41;
+  }
+}

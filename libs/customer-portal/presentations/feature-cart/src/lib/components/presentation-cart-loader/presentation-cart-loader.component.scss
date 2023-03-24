@@ -1,0 +1,69 @@
+@import 'cosmos/scss/settings';
+
+.presentation__cart {
+  &-details {
+    display: grid;
+    grid-template-columns: fit-content(309px) 50% auto;
+    grid-template-rows: minmax(35px, auto) auto max-content auto 1fr;
+    grid-template-areas:
+      'a b c'
+      'a d c'
+      'a e e'
+      'a h h'
+      'a f f';
+    grid-column-gap: 16px;
+  }
+
+  &-image {
+    grid-area: a;
+  }
+  &-heading {
+    grid-area: b;
+  }
+  &-attributes {
+    grid-area: d;
+  }
+  &-actions {
+    grid-area: c;
+  }
+  &-table {
+    grid-area: e;
+  }
+  &-comments {
+    grid-area: f;
+  }
+}
+
+@include narrower-than($bp-large) {
+  .presentation__cart {
+    &-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-actions {
+      & > div {
+        width: 100% !important;
+      }
+    }
+    &-directions {
+      flex-direction: column;
+
+      & > div {
+        width: 100%;
+      }
+      & > div:nth-child(1) {
+        margin-bottom: 8px;
+      }
+    }
+    &-image {
+      height: 200px;
+      margin-bottom: 16px;
+    }
+    &-comments {
+      & > div:nth-child(1) {
+        width: 65%;
+      }
+    }
+  }
+}

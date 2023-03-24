@@ -1,0 +1,17 @@
+<section class="presentation-product-price-grids mb-24">
+  <esp-visible-price-grids
+    [presentation]="presentation"
+    [product]="product"
+    [currencyConversion]="currencyConversion"
+    [visiblePriceGrids]="visiblePriceGrids"
+    (getOriginalPriceGrid)="getOriginalPriceGrid($event)"
+    (addCustomQuantity)="addCustomQuantity($event)"
+    (patchPriceGrid)="patchPriceGrid($event)"
+    (restoreToDefault)="restoreToDefault($event)"
+  ></esp-visible-price-grids>
+
+  <esp-invisible-price-grids
+    [product]="product"
+    [invisiblePriceGrids]="invisiblePriceGrids"
+  ></esp-invisible-price-grids>
+</section>

@@ -1,0 +1,59 @@
+<header>
+  <div>
+    <button class="cos-modal-close" mat-dialog-close>
+      <i class="fas fa-times"></i>
+      <span class="cos-accessibly-hidden">Close</span>
+    </button>
+  </div>
+  <h2 mat-dialog-title>Use products in a Presentation</h2>
+  <p class="body-style-14-shark">
+    Create a new Presentation or add products to an existing one.
+  </p>
+</header>
+
+<mat-dialog-content>
+  <div class="search-keywords mb-12">
+    <div class="cos-search-field">
+      <span class="form-field-prefix"><i class="fa fa-search"></i></span>
+      <input
+        cos-input
+        name="collectonKeywords"
+        placeholder="Search for a Collection"
+      />
+      <button class="form-field-suffix" cos-icon-button aria-label="Clear">
+        <i class="fa fa-times"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="collection-results">
+    <div class="create-box">
+      <div><i class="fa fa-plus-circle"></i></div>
+      <div>Create a new Collection</div>
+    </div>
+    <ng-container *ngIf="state.presentations?.length; else noPresentations">
+      <!-- <cos-presentation-card
+        *ngFor="let presentation of state.presentations"
+        [presentation]="presentation"
+        [size]="'small'"
+      ></cos-presentation-card> -->
+    </ng-container>
+    <ng-template #noPresentations>
+      <div class="empty-results-msg">
+        <p class="body-style-14-shark">
+          No collections found. Create a new collection now!
+        </p>
+      </div>
+    </ng-template>
+    <div
+      class="mt-12 text-center"
+      *ngIf="state.presentations?.length > presentationlimit"
+    >
+      <button cos-button (click)="showMore()">Show more</button>
+    </div>
+  </div>
+
+  <div class="show-more">
+    <button cos-flat-button>Show more</button>
+  </div>
+</mat-dialog-content>

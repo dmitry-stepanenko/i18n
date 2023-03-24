@@ -1,0 +1,87 @@
+<ng-template [ngIf]="!state.isLoading && state.hasLoaded" [ngIfElse]="loader">
+  <ng-template [ngIf]="state.cart.length" [ngIfElse]="empty">
+    <div class="presentation-cart__pg-wrapper">
+      <div class="presentation-cart__pg-intro grid-gap-8 grid grid-cols-2">
+        <div>
+          <h1 class="header-style-24">Shopping Cart</h1>
+          <p class="body-style-14-shark">
+            View, edit or remove the items in your shopping cart.
+          </p>
+        </div>
+        <div *ngIf="state.hasAnyVisibleItem" class="mb-8 self-end text-right">
+          <ng-container [ngTemplateOutlet]="reviewDetailsButton"></ng-container>
+        </div>
+      </div>
+    </div>
+
+    <section class="presentation-cart__pg-section mt-16 mb-32">
+      <esp-presentation-product-card
+        data-cy="cart-product"
+        *ngFor="let product of state.lineItemCardViewModel"
+        [product]="product"
+        [headerText]="
+          product.IsVisible
+            ? ''
+            : 'We’re sorry! This item is no longer available.'
+        "
+      >
+        <div class="action-container grid-gap-8 flex flex-col">
+          <button
+            *ngIf="product.IsVisible"
+            (click)="editProduct(product)"
+            type="button"
+            cos-stroked-button
+            color="primary"
+            class="action-button"
+            data-cy="cart-product__edit-button"
+          >
+            Edit Product
+          </button>
+          <button
+            type="button"
+            cos-stroked-button
+            color="primary"
+            class="action-button"
+            (click)="removeProduct(product)"
+          >
+            Remove
+          </button>
+        </div>
+      </esp-presentation-product-card>
+    </section>
+    <ng-container *ngIf="state.hasAnyVisibleItem">
+      <mat-divider></mat-divider>
+      <section class="presentation-cart__pg-wrapper mt-32 mb-32 text-right">
+        <p class="body-style-14-shark">
+          Review your order details on the next page.
+        </p>
+        <ng-container [ngTemplateOutlet]="reviewDetailsButton"></ng-container>
+      </section>
+    </ng-container>
+  </ng-template>
+</ng-template>
+
+<ng-template #loader>
+  <customer-portal-presentation-cart-loader
+    style="width: 100%"
+  ></customer-portal-presentation-cart-loader>
+</ng-template>
+
+<ng-template #empty>
+  <customer-portal-presentation-empty-template
+    [template]="emptyTemplate"
+  ></customer-portal-presentation-empty-template>
+</ng-template>
+
+<ng-template #reviewDetailsButton>
+  <button
+    class="review-button"
+    data-cy="review-button"
+    type="button"
+    cos-flat-button
+    color="primary"
+    routerLink="order-details"
+  >
+    Review Details <i class="fa fa-arrow-right ml-8"></i>
+  </button>
+</ng-template>

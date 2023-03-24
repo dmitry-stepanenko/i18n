@@ -1,0 +1,53 @@
+{
+  "name": "esp-presentations-ui-presentation-product-visible-grid-prices",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/esp/presentations/ui-presentation-product-visible-grid-prices/src",
+  "prefix": "esp",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/esp/presentations/ui-presentation-product-visible-grid-prices/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/esp/presentations/ui-presentation-product-visible-grid-prices/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/esp/presentations/ui-presentation-product-visible-grid-prices/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/esp/presentations/ui-presentation-product-visible-grid-prices",
+        "{workspaceRoot}/reports/libs/esp/presentations/ui-presentation-product-visible-grid-prices"
+      ],
+      "options": {
+        "jestConfig": "libs/esp/presentations/ui-presentation-product-visible-grid-prices/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/esp/presentations/ui-presentation-product-visible-grid-prices/**/*.ts",
+          "libs/esp/presentations/ui-presentation-product-visible-grid-prices/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:esp", "type:ui"]
+}

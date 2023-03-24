@@ -1,0 +1,40 @@
+@import 'cosmos/scss/settings/';
+
+.invoice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &-card {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+
+    > div {
+      width: 16.666%;
+
+      &.invoice-details {
+        min-width: 270px;
+      }
+    }
+  }
+}
+
+@include narrower-than($bp-large) {
+  .invoice-list-card {
+    flex-direction: column;
+    align-items: flex-start;
+
+    > div {
+      width: 100%;
+    }
+    button {
+      width: 100%;
+    }
+  }
+
+  .skeleton-button {
+    width: 100%;
+  }
+}

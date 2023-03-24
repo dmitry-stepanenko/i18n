@@ -1,0 +1,6 @@
+@import 'cosmos/scss/settings';
+
+.toggle-label {
+  @include type-style-header-18;
+  line-height: 16px;
+}

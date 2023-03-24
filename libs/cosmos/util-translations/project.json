@@ -1,0 +1,48 @@
+{
+  "name": "cosmos-util-translations",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/cosmos/util-translations/src",
+  "prefix": "cos",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/cosmos/util-translations"],
+      "options": {
+        "project": "libs/cosmos/util-translations/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/cosmos/util-translations/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/cosmos/util-translations/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/cosmos/util-translations",
+        "{workspaceRoot}/reports/libs/cosmos/util-translations"
+      ],
+      "options": {
+        "jestConfig": "libs/cosmos/util-translations/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/cosmos/util-translations/**/*.ts",
+          "libs/cosmos/util-translations/**/*.html",
+          "libs/cosmos/util-translations/testing/**/*.ts",
+          "libs/cosmos/util-translations/testing/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:cosmos", "type:util"]
+}

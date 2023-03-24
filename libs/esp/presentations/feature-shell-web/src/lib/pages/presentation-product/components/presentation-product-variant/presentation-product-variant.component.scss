@@ -1,0 +1,51 @@
+@import 'cosmos/scss/settings';
+
+.product-variant {
+  &-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-stack-16;
+
+    @include narrower-than($bp-medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    > li {
+      display: flex;
+      align-items: center;
+
+      > p {
+        margin: 0;
+      }
+
+      > cos-checkbox {
+        img {
+          max-width: 35px;
+          max-height: 35px;
+        }
+      }
+    }
+  }
+
+  .toggle-label {
+    @include type-style-header-18;
+    line-height: 16px;
+  }
+
+  .show-more {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: $spacing-stack-16;
+  }
+}

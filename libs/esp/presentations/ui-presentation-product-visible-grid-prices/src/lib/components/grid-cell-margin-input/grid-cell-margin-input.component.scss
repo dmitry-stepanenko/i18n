@@ -1,0 +1,13 @@
+@import 'cosmos/scss/settings';
+
+:host {
+  position: relative;
+
+  span {
+    position: absolute;
+    top: calc(50% - 9px);
+    right: 8px;
+    color: $color-g-stone-41;
+    user-select: none;
+  }
+}

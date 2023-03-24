@@ -1,0 +1,81 @@
+<ngx-skeleton-loader
+  [theme]="{ 'min-width': '15%', height: '22px', 'max-width': '60%' }"
+>
+</ngx-skeleton-loader>
+<div
+  class="presentation__cart-directions mb-16 flex justify-between"
+  style="align-items: center"
+>
+  <div style="min-width: 33%">
+    <ngx-skeleton-loader
+      class="self-center"
+      [theme]="{ height: '13px', 'margin-bottom': '0' }"
+    >
+    </ngx-skeleton-loader>
+  </div>
+  <div style="min-width: 15%">
+    <ngx-skeleton-loader
+      class="self-center"
+      [theme]="{ height: '32px', 'margin-bottom': '0' }"
+    >
+    </ngx-skeleton-loader>
+  </div>
+</div>
+
+<cos-card *ngFor="let i of [0, 1]" class="mb-16">
+  <div class="presentation__cart-details grid" style="">
+    <div class="presentation__cart-image">
+      <ngx-skeleton-loader [theme]="{ height: '100%', width: '100%' }">
+      </ngx-skeleton-loader>
+    </div>
+
+    <div class="presentation__cart-heading">
+      <ngx-skeleton-loader [theme]="{ height: '16px', width: '70%' }">
+      </ngx-skeleton-loader>
+    </div>
+
+    <div class="presentation__cart-attributes">
+      <ngx-skeleton-loader [theme]="{ height: '12px', width: '40%' }">
+      </ngx-skeleton-loader>
+    </div>
+    <div
+      class="presentation__cart-actions mb-16 mt-16 flex flex-col"
+      style="align-items: end; width: 100%"
+    >
+      <div style="width: 50%">
+        <ngx-skeleton-loader [theme]="{ height: '33px' }">
+        </ngx-skeleton-loader>
+      </div>
+      <div style="width: 50%">
+        <ngx-skeleton-loader [theme]="{ height: '33px' }">
+        </ngx-skeleton-loader>
+      </div>
+    </div>
+    <div class="presentation__cart-table">
+      <ngx-skeleton-loader [theme]="{ height: '73px' }"> </ngx-skeleton-loader>
+    </div>
+    <div class="presentation__cart-comments">
+      <div>
+        <ngx-skeleton-loader [theme]="{}"> </ngx-skeleton-loader>
+      </div>
+      <ngx-skeleton-loader [theme]="{}"> </ngx-skeleton-loader>
+    </div>
+  </div>
+</cos-card>
+
+<hr />
+<div class="presentation__cart-review-details text-right">
+  <div>
+    <ngx-skeleton-loader
+      [theme]="{
+        width: '250px',
+        height: '15px'
+      }"
+    ></ngx-skeleton-loader>
+  </div>
+  <div>
+    <ngx-skeleton-loader
+      [theme]="{ width: '150px', height: '35px' }"
+    ></ngx-skeleton-loader>
+  </div>
+</div>

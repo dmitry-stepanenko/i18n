@@ -1,0 +1,18 @@
+<ng-container *ngIf="state?.product?.Settings">
+  <ng-container
+    *transloco="
+      let t;
+      read: 'espPresentations.presentation-product.presentation-product-client-discount'
+    "
+  >
+    <cos-toggle
+      class="mb-8 block w-full"
+      data-cy="toggle-client-discount"
+      [checked]="!!(state.product?.Settings)!.ShowProductDiscount"
+      (toggleChange)="toggleShowProductDiscount()"
+    >
+      <span class="toggle-label">{{ t('client-discount-label') }}</span>
+    </cos-toggle>
+    <p class="body-style-12">{{ t('display-indicator') }}</p>
+  </ng-container>
+</ng-container>

@@ -1,0 +1,11 @@
+{
+  "feature-decorations": {
+    "decoration-card-edit-form": {
+      "imprint-color-label": "Imprint Colour",
+      "imprint-color-placeholder": "Enter Imprint Colour"
+    },
+    "company-decoration-card": {
+      "imprint-color-label": "Imprint Colour"
+    }
+  }
+}

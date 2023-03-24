@@ -1,0 +1,48 @@
+{
+  "name": "esp-presentations-feature-products",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/esp/presentations/feature-products/src",
+  "prefix": "esp",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": [
+        "{workspaceRoot}/dist/libs/esp/presentations/feature-products"
+      ],
+      "options": {
+        "project": "libs/esp/presentations/feature-products/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/esp/presentations/feature-products/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/esp/presentations/feature-products/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/esp/presentations/feature-products",
+        "{workspaceRoot}/reports/libs/esp/presentations/feature-products"
+      ],
+      "options": {
+        "jestConfig": "libs/esp/presentations/feature-products/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/esp/presentations/feature-products/src/**/*.ts",
+          "libs/esp/presentations/feature-products/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:esp", "type:feature"]
+}

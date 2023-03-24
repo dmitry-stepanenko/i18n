@@ -1,0 +1,40 @@
+{
+  "profile-page": {
+    "localization": "Localization",
+    "profile-and-login-settings": "Profile and Login Settings",
+    "basic-information": "Basic Information",
+    "password": "Password",
+    "contact-information": "Contact Information"
+  },
+  "esp-settings-feature-profile": {
+    "currency-panel-row": {
+      "asi-panel-editable-row": {
+        "save-button": "Save",
+        "row-title": "Currency"
+      }
+    },
+    "market-segment-row": {
+      "asi-panel-editable-row": {
+        "save-button": "Save",
+        "row-title": "Default Market"
+      }
+    }
+  },
+  "esp-settings-feature-company": {
+    "company-page": {
+      "company-information": "Company information",
+      "brand-information": "Brand information",
+      "asi-account-information": "ASI Account Information",
+      "contact-information": "Contact Information",
+      "currency-conversion-rate": "Currency Conversion Rate"
+    },
+    "company-currency-conversion-panel-row": {
+      "row-title": "Currency Conversion Rate",
+      "conversion-rate-toggle-button": "Automatically Update Conversion Rate",
+      "conversionRateHumanFriendly": "1 {{ sourceType }} equals {{ conversionRate }} {{ targetType }}",
+      "errors": {
+        "conversion-rate-error": "Only positive numeric values are allowed up to 2 decimal places, between 0.01 to 10.00"
+      }
+    }
+  }
+}

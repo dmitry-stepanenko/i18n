@@ -1,0 +1,287 @@
+<ng-container
+  *transloco="
+    let t;
+    read: 'espPresentations.presentation-settings-page.presentation-products'
+  "
+>
+  <section class="presentation-products">
+    <div class="flex flex-wrap items-end justify-between">
+      <div>
+        <h2 class="header-style-22">{{ t('edit-products') }}</h2>
+        <p class="body-style-14-shark">
+          {{ t('click-on-product-to-edit') }}
+        </p>
+      </div>
+      <cos-form-field
+        class="search-sort"
+        *ngIf="
+          state.presentationStatus === PresentationStatus.PreShare ||
+          !sortDisabled
+        "
+      >
+        <cos-label>{{ t('sort-by') }}</cos-label>
+        <select matNativeControl [formControl]="sort">
+          <option *ngFor="let option of sortMenuOptions" [value]="option.value">
+            {{ option.name }}
+          </option>
+        </select>
+      </cos-form-field>
+    </div>
+
+    <mat-tab-group mat-align-tabs="start" animationDuration="0ms" disableRipple>
+      <mat-tab [label]="t('all-products-tab')">
+        <ng-template matTabContent>
+          <ng-template
+            [ngIf]="state.visibleProducts?.length"
+            [ngIfElse]="noVisibleProducts"
+          >
+            <ng-component
+              [ngTemplateOutlet]="visibleProductsTemplate"
+            ></ng-component>
+          </ng-template>
+          <ng-template #noVisibleProducts>
+            <ng-component [ngTemplateOutlet]="noProducts"></ng-component>
+          </ng-template>
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab
+        [label]="t('added-to-cart-tab')"
+        *ngIf="state.addedToCartProducts?.length"
+      >
+        <ng-template matTabContent>
+          <ng-template
+            [ngTemplateOutlet]="productsTemplate"
+            [ngTemplateOutletContext]="{
+              productType: 'added-to-cart',
+              products: state.addedToCartProducts
+            }"
+          ></ng-template>
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab
+        [label]="t('disliked-products-tab')"
+        *ngIf="state.dislikedProducts?.length"
+      >
+        <ng-template matTabContent>
+          <ng-template
+            [ngTemplateOutlet]="productsTemplate"
+            [ngTemplateOutletContext]="{
+              productType: 'disliked',
+              products: state.dislikedProducts
+            }"
+          ></ng-template>
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab
+        [label]="t('seen-products-tab')"
+        *ngIf="state.seenProducts?.length"
+      >
+        <ng-template matTabContent>
+          <ng-template
+            [ngTemplateOutlet]="productsTemplate"
+            [ngTemplateOutletContext]="{
+              productType: 'seen',
+              products: state.seenProducts
+            }"
+          ></ng-template>
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab
+        [label]="t('unseen-products-tab')"
+        *ngIf="state.unseenProducts?.length"
+      >
+        <ng-template matTabContent>
+          <ng-template
+            [ngTemplateOutlet]="productsTemplate"
+            [ngTemplateOutletContext]="{
+              productType: 'unseen',
+              products: state.unseenProducts
+            }"
+          ></ng-template>
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab [label]="t('hidden-tab')" *ngIf="state.hiddenProducts?.length">
+        <ng-template matTabContent>
+          <ng-template
+            [ngTemplateOutlet]="productsTemplate"
+            [ngTemplateOutletContext]="{
+              productType: 'hidden',
+              products: state.hiddenProducts
+            }"
+          ></ng-template>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+
+    <ng-template #visibleProductsTemplate>
+      <div
+        *ngIf="
+          state.presentationStatus === PresentationStatus.PreShare ||
+          !sortDisabled
+        "
+        class="drag-section-partition body-style-12-shark mt-32"
+      >
+        {{ t('drag-to-reorder') }}
+      </div>
+      <div
+        class="presentation-products-grid grid-gap-16 cos-product-card-drag-boundary my-16 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7"
+        cdkDropListGroup
+        data-cy="visible-products"
+      >
+        <div
+          *ngFor="let product of state.visibleProducts; index as index"
+          [routerLink]="[
+            '/presentations',
+            state.presentation?.Id,
+            'product',
+            product.Id
+          ]"
+          class="cursor-pointer"
+          cdkDropList
+          cdkDropListOrientation="horizontal"
+          [cdkDropListData]="index"
+          (cdkDropListDropped)="sequenceProducts($event)"
+        >
+          <cos-product-card
+            [product]="product | presentationProductMapThrough: mapProduct"
+            [status]="product | presentationProductStatus: true | async"
+            [isDraggable]="
+              state.presentationStatus === PresentationStatus.PreShare ||
+              !sortDisabled
+            "
+            [isSelectable]="false"
+            [clientFacing]="true"
+            [productActionsTemplate]="
+              state.presentationStatus === PresentationStatus.PreShare ||
+              isEditMode
+                ? productCardActions
+                : undefined
+            "
+          >
+          </cos-product-card>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template #noProducts>
+      <esp-no-products-message></esp-no-products-message>
+    </ng-template>
+  </section>
+
+  <ng-template
+    #productsTemplate
+    let-products="products"
+    let-productType="productType"
+  >
+    <div
+      class="presentation-products-grid grid-gap-16 cos-product-card-drag-boundary my-16 grid grid-cols-2 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8"
+      attr.data-cy="{{ productType }}-products"
+    >
+      <div
+        *ngFor="let product of products"
+        [routerLink]="[
+          '/presentations',
+          state.presentation?.Id,
+          'product',
+          product.Id
+        ]"
+        class="cursor-pointer"
+      >
+        <cos-product-card
+          [product]="product | presentationProductMapThrough: mapProduct"
+          [isDraggable]="false"
+          [isSelectable]="false"
+          [clientFacing]="true"
+          [productActionsTemplate]="
+            state.presentationStatus === PresentationStatus.PreShare ||
+            isEditMode
+              ? productCardActions
+              : undefined
+          "
+        >
+        </cos-product-card>
+      </div>
+    </div>
+  </ng-template>
+
+  <!-- <section
+    class="presentations-products-no-products"
+    *ngIf="!state.presentation?.Products?.length && false"
+  >
+    <div class="presentation-recommended-products">
+      <esp-product-gallery [products]="recommendedProducts">
+        <div class="flex justify-between pb-16">
+          <span class="flex flex-wrap items-center">
+            <img class="mr-16" src="assets/images/trending_icon.svg" alt="" />
+            <h2 class="header-style-22 mb-0">Trending Products</h2>
+          </span>
+          <button cos-button>View More</button>
+        </div>
+      </esp-product-gallery>
+
+      <esp-product-gallery [products]="recommendedProducts">
+        <div class="flex justify-between pb-16">
+          <span class="flex flex-wrap items-center">
+            <img class="mr-16" src="assets/images/discounted_icon.svg" alt="" />
+            <h2 class="header-style-22 mb-0">Discounted Products</h2>
+          </span>
+          <button cos-button>View More</button>
+        </div>
+      </esp-product-gallery>
+    </div>
+  </section> -->
+
+  <ng-template #productCardActions let-product="product">
+    <!-- Add to order -->
+    <!-- <button
+      [attr.data-cy]="product.IsVisible ? 'add-to-order' : null"
+      class="cos-menu-item add-to-order"
+      mat-menu-item
+    >
+      <i class="fa fa-file-invoice"></i>
+      <span>Add to Order</span>
+    </button> -->
+    <!-- Add to order -->
+
+    <ng-template
+      [ngIf]="
+        state.presentationStatus === PresentationStatus.PreShare || isEditMode
+      "
+    >
+      <!-- Show/Hide from presentation -->
+      <button
+        [attr.data-cy]="
+          product.IsVisible ? 'hide-from-presentation' : 'show-in-presentation'
+        "
+        class="cos-menu-item add-to-presentation"
+        mat-menu-item
+        (click)="updateProductVisibility(product)"
+      >
+        <i class="fa fa-eye-slash"></i>
+        <span>{{
+          product.IsVisible
+            ? t('hide-from-presentation')
+            : t('show-in-presentation')
+        }}</span>
+      </button>
+      <!-- /Show/Hide from presentation -->
+
+      <!-- Remove from presentation -->
+      <button
+        [attr.data-cy]="product.IsVisible ? 'remove-from-presentation' : null"
+        class="cos-menu-item remove-from-presentation"
+        (click)="removeProduct(product)"
+        mat-menu-item
+      >
+        <i class="fa fa-trash-alt cos-warn"></i>
+        <span class="cos-warn">{{ t('delete-from-presentation') }}</span>
+      </button>
+      <!-- /Remove from presentation -->
+    </ng-template>
+  </ng-template>
+</ng-container>

@@ -1,0 +1,9 @@
+@import 'cosmos/scss/settings/';
+
+.container {
+  p {
+    @include wider-than($bp-large) {
+      width: 647px;
+    }
+  }
+}

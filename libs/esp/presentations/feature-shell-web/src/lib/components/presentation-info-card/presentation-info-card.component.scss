@@ -1,0 +1,46 @@
+@import 'cosmos/scss/settings';
+
+$metric-font-size: 32px;
+
+.proj-pres {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  &__metrics {
+    width: 50%;
+    h5 {
+      color: $color-g-shark-54;
+    }
+
+    @include narrower-than($bp-large) {
+      width: 100%;
+    }
+  }
+
+  &__metric {
+    @include type-work-sans();
+    font-size: $metric-font-size;
+  }
+}
+
+.presentation-info {
+  [cos-card-sidebar] {
+    flex: 0 0 40%;
+    max-width: 400px;
+  }
+}
+
+.edit-project-button {
+  margin: -0.2rem -0.2rem 0 0;
+}
+
+.cos-pill-label {
+  height: 16px;
+}
+
+@include narrower-than($bp-medium) {
+  .presentation-info [cos-card-sidebar] {
+    max-width: 100%;
+  }
+}

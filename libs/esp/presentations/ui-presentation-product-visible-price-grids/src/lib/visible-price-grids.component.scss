@@ -1,0 +1,10 @@
+@import 'cosmos/scss/settings';
+
+cos-accordion {
+  background-color: $color-g-white-00;
+
+  cos-row {
+    border-left: none;
+    border-right: none;
+  }
+}

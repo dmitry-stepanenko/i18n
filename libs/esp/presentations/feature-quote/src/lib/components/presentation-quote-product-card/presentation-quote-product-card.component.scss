@@ -1,0 +1,65 @@
+@import 'cosmos/scss/settings';
+
+$imageSize: 309px;
+$imageSizeMobile: 279px;
+$minRowHeight: 30px;
+
+.product-card-content {
+  display: grid;
+  grid-gap: 0 16px;
+  grid-template-columns: fit-content($imageSize) auto;
+  grid-auto-rows: minmax($minRowHeight, auto);
+  grid-template-areas: 'a b c' 'a d d' 'a e e';
+
+  &__image-container {
+    grid-area: a;
+  }
+
+  &__header-container {
+    grid-area: b;
+    grid-row: 1;
+  }
+
+  &__action-button-container {
+    grid-area: c;
+    text-align: right;
+  }
+
+  &__image {
+    height: $imageSize;
+    width: $imageSize;
+  }
+
+  &__variants {
+    width: 100%;
+    grid-area: d;
+  }
+
+  &__customization-comment-container {
+    grid-area: e;
+  }
+
+  &__customization-comment-content {
+    color: $color-g-shark-54;
+  }
+}
+
+@include narrower-than($bp-medium) {
+  .product-card-content {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-auto-rows: minmax(20px, auto);
+    grid-template-areas: 'b' 'a' 'd' 'c' 'e';
+
+    &__action-button-container {
+      text-align: center;
+      margin-bottom: 24px;
+      width: 100%;
+    }
+
+    &__image {
+      height: $imageSizeMobile;
+      width: $imageSizeMobile;
+    }
+  }
+}

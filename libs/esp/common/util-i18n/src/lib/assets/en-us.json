@@ -1,0 +1,83 @@
+{
+  "localization": {
+    "en-us": "English (US)",
+    "en-ca": "English (Canada)",
+    "fr-ca": "French (Canada)"
+  },
+  "market": {
+    "USAALL": "United States",
+    "CANALL": "Canada",
+    "ALL": "All"
+  },
+  "currencies": {
+    "USD": "US Dollar (USD)",
+    "CAD": "Canadian Dollar (CAD)"
+  },
+  "companies": {
+    "company-form": {
+      "company-brand-information-form": {
+        "primary-brand-color-label": "Primary Brand Color"
+      }
+    }
+  },
+  "decorations": {
+    "decoration-edit-form": {
+      "imprint-color": "Imprint Color",
+      "imprint-color-placeholder": "Enter Imprint Color"
+    },
+    "decoration-card-info": {
+      "imprint-color": "Imprint Color"
+    },
+    "decoration-edit-line": {
+      "decoration-details-card": {
+        "imprint-color": "Imprint Color"
+      }
+    }
+  },
+  "products": {
+    "product-search-filters": {
+      "labels.color": "Color"
+    },
+    "product-imprint-methods": {
+      "imprint-colors-header": "Imprint Colors",
+      "full-color-process-header": "Full Color Process"
+    }
+  },
+  "settings": {
+    "orders": {
+      "order-status-types": {
+        "manage-order.select-color-control-header": "Select Color",
+        "manage-order.select-color-control-placeholder": "Select a Color",
+        "manage-order.select-color-control-option-placeholder": "Select a Color"
+      }
+    },
+    "company": {
+      "company-brand-color-panel-row": {
+        "row-title": "Company Color"
+      }
+    }
+  },
+  "tasks": {
+    "toast-messages": {
+      "task-updated": {
+        "title": "Success!",
+        "body": "Task {{ taskName }} updated successfully."
+      }
+    }
+  },
+  "email-autocomplete": {
+    "recipients-label": "Recipients",
+    "enter-new-email": "Enter a new email address or start typing to find a saved email address",
+    "new-recipient-placeholder": "New Recipient..."
+  },
+  "change-conversion-rate-dialog": {
+    "change-conversion-date": "Change Conversion Rate",
+    "select-default-currency": "Select the default currency for Search, Orders and Presentations price totals.",
+    "show-currency": "Show Currency In:",
+    "us-dollar": "US Dollar (USD)",
+    "canadian-dollar": "Canadian Dollar (CAD)",
+    "conversion-date": "Conversion Rate",
+    "cancel": "Cancel",
+    "save": "Save"
+  }
+}

@@ -1,0 +1,111 @@
+<ng-container
+  *transloco="
+    let t;
+    read: 'espPresentations.presentation-product.presentation-product-pricing' +
+      '.presentation-product-price-visible-price-grids'
+  "
+>
+  <p *ngIf="visiblePriceGrids.length === 0" data-cy="add-a-price-grid">
+    {{ t('add-price-grid') }}
+  </p>
+
+  <h3 class="header-style-18">{{ t('price-grid') }}</h3>
+
+  <cos-card class="accordion-card mb-24" *ngIf="visiblePriceGrids.length > 0">
+    <cos-accordion
+      *ngFor="let priceGrid of visiblePriceGrids; trackBy: trackById"
+      data-cy="price-grid-accordion"
+      #cosAccordion="cosAccordion"
+    >
+      <cos-accordion-header>
+        <cos-inline-edit
+          class="header-style-16"
+          role="heading"
+          aria-level="1"
+          inputType="text"
+          data-cy="price-grid-description"
+          [required]="false"
+          [readonly]="!cosAccordion.expanded"
+          [maxLength]="300"
+          (save)="updatePriceGridDescription($event, priceGrid)"
+          >{{
+            priceGrid.Description?.length
+              ? priceGrid.Description
+              : t('price-grid')
+          }}
+        </cos-inline-edit>
+      </cos-accordion-header>
+
+      <div class="grid-gap-16 flex justify-between">
+        <p class="body-style-14-shark" data-cy="price-grid-joined-attributes">
+          {{ product | joinAttributes: priceGrid }}
+        </p>
+
+        <p class="body-style-12-shark mb-8" *ngIf="currencyConversion">
+          1 {{ currencyConversion.CurrencyCode }} =
+          {{ currencyConversion.ConversionRate }}
+          {{ presentation.CurrencyCode }}
+        </p>
+      </div>
+
+      <esp-visible-grid-prices
+        [priceGrid]="priceGrid"
+      ></esp-visible-grid-prices>
+
+      <button
+        cos-button
+        data-cy="add-custom-quantity"
+        class="pl-8 pt-0"
+        (click.silent)="addCustomQuantity.emit(priceGrid)"
+        [disabled]="priceGrid.Prices.length >= maxPricesPerPriceGrid"
+      >
+        <span class="mr-4">
+          <i class="fa fa-plus"></i>
+        </span>
+        {{ t('add-custom-quantity') }}
+      </button>
+
+      <hr />
+
+      <cos-form-field class="mb-0">
+        <cos-label>{{ t('price-includes') }}</cos-label>
+
+        <textarea
+          rows="4"
+          id="price-includes"
+          data-cy="price-includes"
+          cos-input
+          [ngModel]="priceGrid.PriceIncludes"
+          (ngModelChange)="updatePriceIncludes(priceGrid, $event)"
+        ></textarea>
+      </cos-form-field>
+
+      <div class="flex justify-end">
+        <button
+          cos-button
+          data-cy="reset-price-grid"
+          (click)="confirmRestoreToDefault(priceGrid)"
+        >
+          <span class="mr-4">
+            <i class="fa fa-sync"></i>
+          </span>
+          {{ t('reset-price-grid') }}
+        </button>
+
+        <button
+          cos-button
+          data-cy="remove-price-grid"
+          (click.silent)="hidePriceGrid(priceGrid)"
+          *ngIf="product.PriceGrids && product.PriceGrids.length > 1"
+          class="px-0"
+          color="warn"
+        >
+          <span class="mr-4">
+            <i class="fa fa-trash-alt"></i>
+          </span>
+          {{ t('remove-price-grid') }}
+        </button>
+      </div>
+    </cos-accordion>
+  </cos-card>
+</ng-container>

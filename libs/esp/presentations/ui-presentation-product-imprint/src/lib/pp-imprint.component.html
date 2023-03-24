@@ -1,0 +1,134 @@
+<div
+  class="proj-product-detail-variants mb-24"
+  *transloco="
+    let t;
+    read: 'espPresentations.presentation-product.presentation-product-imprint'
+  "
+>
+  <cos-toggle
+    class="mb-16 block w-full"
+    [checked]="state.product!.Settings.ShowProductImprintMethods"
+    (toggleChange)="toggleImprint()"
+  >
+    <span class="toggle-label">{{ t('imprint-options-label') }}</span>
+  </cos-toggle>
+
+  <cos-card
+    *ngIf="state.product!.Settings.ShowProductImprintMethods"
+    class="mb-24"
+    data-cy="product-imprint-main-card"
+  >
+    <fieldset class="cos-form-field">
+      <label
+        class="cos-form-label mb-16"
+        data-cy="vendor-imprint-methods-legend"
+      >
+        {{ t('vendor-imprint-methods-label') }}
+      </label>
+
+      <ng-container
+        *ngFor="let method of state.imprintMethod?.Values; let index = index"
+      >
+        <div *ngIf="method.Id !== 0" class="mb-16">
+          <cos-checkbox
+            class="imprint-method-checkbox"
+            data-cy="imprint-method-checkbox"
+            [id]="'vendor-imprint-method-' + index + 1"
+            [name]="'vendor-imprint-method-' + index + 1"
+            [checked]="!!method.IsVisible"
+            (change)="toggleImprintMethod(state.imprintMethod!, method)"
+          >
+            {{ method.Value }}
+          </cos-checkbox>
+        </div>
+      </ng-container>
+    </fieldset>
+
+    <form [formGroup]="form" data-cy="product-imprint-form">
+      <div
+        class="other-imprint-options mb-8"
+        *ngIf="otherImprintMethods?.length"
+      >
+        <fieldset class="cos-form-field">
+          <label class="cos-form-label mb-16">{{
+            t('other-imprint-methods-label')
+          }}</label>
+          <div class="grid-list">
+            <div
+              *ngFor="let method of otherImprintMethods; let i = index"
+              [hidden]="i > limit"
+            >
+              <cos-checkbox
+                class="imprint-option-checkbox"
+                [id]="'other-imprint-option-' + i + 1"
+                [name]="'other-imprint-option-' + i + 1"
+                (change)="toggleOtherImprintMethod($event, method)"
+                [checked]="isOtherImprintMethodSelected(method)"
+              >
+                {{ method.Name }}
+              </cos-checkbox>
+            </div>
+          </div>
+        </fieldset>
+        <div
+          class="show-more-other-imprint-options flex justify-center"
+          *ngIf="isShowMoreEnabled()"
+        >
+          <button cos-button (click)="toggleShowMore()">
+            <i class="fas fa-{{ showMore ? 'minus' : 'plus' }}"></i>
+            {{ showMore ? t('show-less') : t('show-more') }}
+          </button>
+        </div>
+      </div>
+
+      <cos-form-field>
+        <cos-label>{{ t('imprint-sizes-label') }}</cos-label>
+        <input
+          id="imprint-sizes"
+          cos-input
+          type="text"
+          name="imprintSizes"
+          [placeholder]="t('imprint-sizes-placeholder')"
+          formControlName="ImprintSizes"
+          maxlength="1500"
+          (change)="updateImprintSizes($event)"
+        />
+        <cos-error></cos-error>
+      </cos-form-field>
+
+      <cos-form-field>
+        <cos-label>{{ t('imprint-locations-label') }}</cos-label>
+        <input
+          id="imprint-locations"
+          cos-input
+          type="text"
+          name="imprintLocations"
+          [placeholder]="t('imprint-locations-placeholder')"
+          formControlName="ImprintLocations"
+          maxlength="1500"
+          (change)="updateImprintLocations($event)"
+        />
+        <cos-error></cos-error>
+      </cos-form-field>
+
+      <cos-form-field>
+        <cos-label>{{ t('imprint-colors-label') }}</cos-label>
+        <input
+          id="imprint-colors"
+          cos-input
+          type="text"
+          name="imprintColors"
+          [placeholder]="t('imprint-colors-placeholder')"
+          formControlName="ImprintColors"
+          maxlength="1500"
+          (change)="updateImprintColors($event)"
+        />
+        <cos-error></cos-error>
+      </cos-form-field>
+    </form>
+  </cos-card>
+
+  <!-- // REMOVED for MMP
+      <esp-presentation-product-imprint-charges></esp-presentation-product-imprint-charges>
+    -->
+</div>
