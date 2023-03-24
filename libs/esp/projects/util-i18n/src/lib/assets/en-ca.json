@@ -6,7 +6,7 @@
   "project-edit-dialog": {
     "edit-project-info": "Edit Project Information",
     "cancel": "Cancel",
-    "save": "Save",
+    "save": "Save Changes",
     "project-form": {
       "project-label": "Project Name",
       "presentation-label": "Presentation Name",
