@@ -133,7 +133,7 @@
     "feature-template": {
       "template-page": {
         "header": "Template",
-        "save-cta": "Save",
+        "save-cta": "Save Changes",
         "cancel-cta": "Cancel"
       },
       "selected-template-card": {
