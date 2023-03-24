@@ -43,7 +43,7 @@
     "request-changes-placeholder": "Type in your requested changes.",
     "name-label": "Name",
     "name-placeholder": "Enter Name",
-    "cancel-button": "Cancel",
-    "save-button": "Save"
+    "cancel-button": "Abandonner",
+    "save-button": "Enregistrer"
   }
 }
