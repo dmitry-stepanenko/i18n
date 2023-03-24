@@ -1,65 +1,65 @@
 {
   "components": {
     "image-upload-form": {
-      "upload": "Upload",
-      "choose-type": "Choose {{type}} to Upload",
-      "drag-drop-here": "or drag and drop here.",
-      "error": "Error:",
-      "file-under": "{{allowedTypes}}. File has to be under 5MB.",
-      "must-add-image": "You must add an image.",
-      "allowed-types": "Allowed file types are {{types}}",
+      "upload": "Charger",
+      "choose-type": "Choisissez {{type}} à télécharger",
+      "drag-drop-here": "ou faites glisser et déposez ici.",
+      "error": "Erreur:",
+      "file-under": "{{allowedTypes}}. Le fichier doit être inférieur à 5 Mo.",
+      "must-add-image": "Vous devez ajouter une image.",
+      "allowed-types": "Les types de fichiers autorisés sont {{types}}",
       "upload-type-image": "Image",
-      "upload-type-file": "File",
-      "size-error-msg": "File size exceeds {{maxFileBytes}}",
-      "dimension-error-msg": "Image size should not be less than {{minWidth}}px x {{minHeight}}px",
-      "type-error-msg": "File type not supported"
+      "upload-type-file": "Fichier",
+      "size-error-msg": "La taille du fichier dépasse {{maxFileBytes}}",
+      "dimension-error-msg": "La taille de l'image ne doit pas être inférieure à {{minWidth}}px x {{minHeight}}px",
+      "type-error-msg": "Type de fichier non pris en charge"
     },
     "form-field": {
       "encore-errors": {
-        "email": "Please provide a valid email address.",
-        "max-with-label": "Your {{label}} must be less than {{max}}.",
-        "max-no-label": "`You must enter less than {{max}}.",
-        "max-length-with-label": "Your {{label}} can be no longer than {{requiredLength}} characters.",
-        "max-length-no-label": "You must enter at most {{requiredLength}} characters.",
-        "min-length-with-label": "Your {{label}} must be at least {{requiredLength}} characters.",
-        "min-length-no-label": "You must enter at least {{requiredLength}} characters.",
-        "min-with-label": "Your {{label}} must be at least {{min}}.",
-        "min-no-label": "You must enter at least {{min}}.",
-        "required": "You must enter a value."
+        "email": "Veuillez fournir une adresse e-mail valide.",
+        "max-with-label": "Votre {{label}} doit être inférieur à {{max}}.",
+        "max-no-label": "`Vous devez entrer moins de {{max}}.",
+        "max-length-with-label": "Votre {{label}} ne peut pas contenir plus de {{requiredLength}} caractères.",
+        "max-length-no-label": "Vous devez saisir au plus {{requiredLength}} caractères.",
+        "min-length-with-label": "Votre {{label}} ne peut pas contenir plus de {{requiredLength}} caractères.",
+        "min-length-no-label": "Vous devez saisir au plus {{requiredLength}} caractères.",
+        "min-with-label": "Votre {{label}} doit être inférieur à {{min}}.",
+        "min-no-label": "Vous devez saisir au moins {{min}}.",
+        "required": "Vous devez entrer une valeur."
       },
       "customer-portal-errors": {
-        "email": "Please provide a valid email address.",
-        "max-with-label": "Your {{label}} must be less than {{max}}.",
-        "max-no-label": "`You must enter less than {{max}}.",
-        "max-length-with-label": "Your {{label}} can be no longer than {{requiredLength}} characters.",
-        "max-length-no-label": "You must enter at most {{requiredLength}} characters.",
-        "min-length-with-label": "Your {{label}} must be at least {{requiredLength}} characters.",
-        "min-length-no-label": "You must enter at least {{requiredLength}} characters.",
-        "min-with-label": "Your {{label}} must be at least {{min}}.",
-        "min-no-label": "You must enter at least {{min}}.",
-        "required": "You must enter a value."
+        "email": "Veuillez fournir une adresse e-mail valide.",
+        "max-with-label": "Votre {{label}} doit être inférieur à {{max}}.",
+        "max-no-label": "`Vous devez entrer moins de {{max}}.",
+        "max-length-with-label": "Votre {{label}} ne peut pas contenir plus de {{requiredLength}} caractères.",
+        "max-length-no-label": "Vous devez saisir au plus {{requiredLength}} caractères.",
+        "min-length-with-label": "Votre {{label}} ne peut pas contenir plus de {{requiredLength}} caractères.",
+        "min-length-no-label": "Vous devez saisir au plus {{requiredLength}} caractères.",
+        "min-with-label": "Votre {{label}} doit être inférieur à {{min}}.",
+        "min-no-label": "Vous devez saisir au moins {{min}}.",
+        "required": "Vous devez entrer une valeur."
       }
     },
     "confirmation-dialog": {
-      "default-message": "Do you want to leave without saving?",
-      "confirm": "Yes",
-      "cancel": "No"
+      "default-message": "Voulez-vous quitter sans enregistrer ?",
+      "confirm": "Oui",
+      "cancel": "Non"
     },
     "inline-edit": {
-      "required-hint": "Required",
-      "cancel-button": "Cancel",
-      "save-button": "Save",
-      "edit-button": "Edit",
-      "edit-value-required-error": "You must enter a value"
+      "required-hint": "Requis",
+      "cancel-button": "Abandonner",
+      "save-button": "Enregistrer",
+      "edit-button": "Editer",
+      "edit-value-required-error": "Vous devez entrer une valeur"
     },
     "rating": {
-      "total-reviews": "total reviews",
-      "not-rated": "Not yet rated"
+      "total-reviews": "total des avis",
+      "not-rated": "Pas encore évalué"
     }
   },
   "pipes": {
     "calculated-price-range": {
-      "no-price-grids": "No price grids selected."
+      "no-price-grids": "Aucune grille de prix sélectionnée."
     }
   }
 }
