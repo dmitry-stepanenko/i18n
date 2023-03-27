@@ -1,0 +1,176 @@
+{
+  "project-proofs-page": {
+    "title": "Preufs",
+    "add-proof": "Ajouter une preuve",
+    "select-all": "Tout sélectionner",
+    "send-proofs": "Envoyer des preuves",
+    "proofs-selected": "Preofs sélectionnés",
+    "proof-selected": "Preuve sélectionnée",
+    "empty-state": {
+      "main-text": "Vous n'avez pas encore de preuves",
+      "second-text": "Il n'y a pas encore de preuves. Vous pouvez ajouter une preuve associée à une commande, ou ajouter une preuve qui n'est pas associée à une commande."
+    },
+    "list": {
+      "other-proofs": "Autres preuves",
+      "order": "Commande n°{{itemKey}}",
+      "approved-by-date": "Date d'approbation",
+      "proof-name": "Nom de la preuve: {{name}}",
+      "order-number": "Numéro de commande:",
+      "product": "Produit :",
+      "imprint-location": "Emplacements des mentions légales:",
+      "invalid-approval-date": "Date d'approbation invalide.",
+      "send-proof": "Envoyer une preuve",
+      "item": "Élément",
+      "change-request-note": "Modifier la note de la demande :",
+      "approve-by-date": "Approuver par {{date}} pour rester à l'horaire",
+      "proof-sent-on": "Preuve envoyée le {{date}} par {{senderName}}",
+      "proof-approved": "Preuve approuvée : Approuvée le {{date}} par {{approvedBy}}",
+      "changes-requested": "Modifications demandées : {{date}} par {{customerName}}",
+      "confirmation-dialog": {
+        "message": "Êtes-vous sûr de vouloir supprimer cette preuve?",
+        "confirm": "Oui, supprimer",
+        "cancel": "Non, Annuler"
+      }
+    },
+    "menu": {
+      "edit-proof": "Modifier la preuve",
+      "mark-approved": "Marquer comme approuvé",
+      "delete-proof": "Supprimer la preuve",
+      "toast-messages": {
+        "proof-updated": {
+          "title": "Succès",
+          "body": "1 preuve a été mise à jour."
+        },
+        "proof-not-updated": {
+          "title": "Erreur",
+          "body": "1 preuve n'a pas pu être mise à jour."
+        },
+        "proof-deleted": {
+          "title": "Succès",
+          "body": "1 preuve a été supprimée de {{projectName}}."
+        },
+        "proof-not-deleted": {
+          "title": "Erreur",
+          "body": "1 épreuve n'a pas pu être supprimée."
+        },
+        "proof-marked-as-approved": {
+          "title": "Succès",
+          "body": "1 preuve a été marquée comme approuvée."
+        },
+        "proof-not-marked-as-approved": {
+          "title": "Erreur",
+          "body": "1 preuve n'a pas pu être marquée comme approuvée."
+        }
+      }
+    }
+  },
+  "add-edit-proof-dialog": {
+    "add-proof-to-order": "Ajouter une preuve à la commande",
+    "edit-proof": "Modifier la preuve",
+    "edit-proofs-here": "Modifier les preuves ici",
+    "add-new-or-previously": "Ajouter une preuve nouvelle ou précédemment téléchargée",
+    "add-proof-image": {
+      "uploaded-image": "Image téléchargée",
+      "no-images-selected": "Aucune image sélectionnée",
+      "img-expandable": {
+        "size": "Taille: {{fileSize}}"
+      },
+      "image-upload-form": {
+        "file-under": "{{allowedTypes}}. Le fichier doit être inférieur à 5 Mo.",
+        "must-add-image": "Vous devez ajouter une image."
+      }
+    },
+    "proof-name": "Preuve de Nom",
+    "proof-name-placeholder": "Entrez une preuve de nom",
+    "proof-name-error": "Vous devez saisir un nom de preuve",
+    "order-number": {
+      "label": "Numéro de commande",
+      "placeholder": "Sélectionner par numéro de commande",
+      "total-price": "Prix total: {{symbol}} {{total}}",
+      "date": "Date: {{date}}"
+    },
+    "product-name": {
+      "label": "Produit",
+      "placeholder": "Sélectionner par produit",
+      "product": "Produit #: {{number}}",
+      "totals": "{{amount}} pour {{units}} unités"
+    },
+    "imprint-location": {
+      "label": "Empreinte de l'emplacement",
+      "placeholder": "Sélectionnez un emplacement d'empreinte"
+    },
+    "select-variant": {
+      "label": "Sélectionner une variante",
+      "placeholder": "Sélectionnez un article par REF ou Attribut de Variante",
+      "sku": "- REF : {{sku}}"
+    },
+    "approval-required": {
+      "label": "Approbation requise ?",
+      "yes": "Oui",
+      "no": "Non"
+    },
+    "approve-by-date": {
+      "label": "Date d'approbation",
+      "placeholder": "Sélectionnez une date",
+      "invalid-date-error": "Date non valide."
+    },
+    "cancel": "annuler",
+    "save": "Enregistrer",
+    "add-proof": "Ajouter une preuve",
+    "confirmation-dialog": {
+      "message": "Vous avez des modifications non enregistrées. Êtes-vous sûr de vouloir annuler ?",
+      "confirm": "Oui, annuler",
+      "cancel": "Non, ne pas annuler"
+    },
+    "toast-messages": {
+      "proof-added": {
+        "title": "Preuve ajoutée avec succès",
+        "body": "1 preuve a été ajoutée à {{projectName}}."
+      },
+      "proof-not-added": {
+        "title": "La preuve d'ajout a échoué",
+        "body": "1 preuve n'a pas été ajoutée à {{projectName}}."
+      },
+      "proof-updated": {
+        "title": "Succès",
+        "body": "1 preuve a été enregistrée."
+      },
+      "proof-not-updated": {
+        "title": "Erreur",
+        "body": "1 preuve n'a pas pu être sauvegardée."
+      }
+    }
+  },
+  "share-proof-dialog": {
+    "send-proofs-to-customer": "Envoyer des preuves au client",
+    "send-email": "Envoyez un courriel ou un lien de copie à partager par vous-même.",
+    "share-via-email": "Partager par e-mail",
+    "share-via-link": "Partager via le lien",
+    "subject-label": "Ligne de sujet",
+    "subject-placeholder": "Entrez le sujet",
+    "message-label": "Message :",
+    "message-placeholder": "Entrez un message personnel que vous souhaitez voir apparaître dans votre courriel.",
+    "copy-the-proof-link": "Copiez le lien de preuve à partager avec votre client.",
+    "cancel": "Abandonner",
+    "send-to-customer": "Envoyer au client",
+    "copy-link": "Copier le lien",
+    "toast-messages": {
+      "proof-shared-by-email": {
+        "title": "Succès",
+        "body": "Votre preuve a été envoyée au client."
+      },
+      "proof-shared-by-link": {
+        "title": "Succès",
+        "body": "Votre lien de preuve a été copié dans votre presse-papiers."
+      },
+      "proof-shared-by-email-error": {
+        "title": "Erreur",
+        "body": "Votre preuve n'a pas été envoyée au client."
+      },
+      "proof-shared-by-link-error": {
+        "title": "Erreur",
+        "body": "Votre lien de preuve n'a pas été copié dans votre presse-papiers."
+      }
+    }
+  }
+}
