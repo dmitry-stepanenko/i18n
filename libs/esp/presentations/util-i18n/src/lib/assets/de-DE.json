@@ -1,0 +1,318 @@
+{
+  "presentation-product": {
+    "presentation-product-imprint": {
+      "imprint-colors-label": "Impressum Farben",
+      "imprint-colors-placeholder": "Farben eingeben",
+      "imprint-options-label": "Impressum Optionen",
+      "vendor-imprint-methods-label": "Impressum des Herstellers",
+      "other-imprint-methods-label": "Andere Impressum Methoden",
+      "show-less": "Weniger anzeigen",
+      "show-more": "Mehr anzeigen",
+      "imprint-sizes-label": "Impressum Größe",
+      "imprint-sizes-placeholder": "Größe eingeben",
+      "imprint-locations-label": "Impressum Orte",
+      "imprint-locations-placeholder": "Standorte eingeben"
+    },
+    "presentation-product-page": {
+      "back-to-presentation": "Zurück zur Präsentation",
+      "edit-product-details-title": "Produktdetails bearbeiten",
+      "product-detail-menu": "Produktdetail-Menü",
+      "cancel-button": "Abbrechen",
+      "preview-button": "Vorschau",
+      "save-button": "Speichern",
+      "previous-product": "Vorheriges Produkt",
+      "next-product": "Nächstes Produkt",
+      "create-virtual-sample": "Virtuelles Beispiel erstellen",
+      "all-supplier-info": "Alle Lieferanteninformationen sind in der Kundenpräsentation ausgeblendet.",
+      "product-details-title": "Produktdetails",
+      "product-name-label": "Produktname",
+      "enter-product-name-placeholder": "Produktnamen eingeben",
+      "summary-label": "Summary",
+      "enter-summary-placeholder": "Zusammenfassung eingeben",
+      "note-to-customer-label": "Notiz an Kunden",
+      "note-to-customer-placeholder": "Geben Sie eine Notiz an Kunden ein",
+      "product-variants-title": "Produktvarianten",
+      "product-variants-colors-toggle-label": "Farben",
+      "product-variants-sizes-label": "Größe",
+      "product-variants-shapes-label": "Formen",
+      "product-variants-materials-label": "Materialien",
+      "presentation-product-variant": {
+        "select-deselect-all": "Alle auswählen/abwählen",
+        "show-less": "Weniger anzeigen",
+        "show-more": "Mehr anzeigen"
+      },
+      "confirmation-dialog-can-deactivate": {
+        "unload-message": "Möchten Sie Ihre Änderungen vor dem Verlassen dieser Seite speichern?",
+        "discard-changes": "Änderungen verwerfen",
+        "save-changes": "Änderungen speichern"
+      },
+      "confirmation-dialog-remove-image": {
+        "message": "Bestätigen Sie die Entfernung. Dieses Bild wird aus Ihrer Präsentation entfernt. Dieses Bild kann immer wieder zur Präsentation hinzugefügt werden.",
+        "cancel": "Nein, nicht entfernen",
+        "confirm": "Remove Image"
+      },
+      "confirmation-dialog-save-click": {
+        "title": "Attribut versteckt",
+        "message": "Sie haben ein Attribut in das Preisraster eingefügt, das in Ihrer Präsentation versteckt wurde, was bedeutet, dass es Ihrem Kunden nicht angezeigt wird. {{tag}} Möchten Sie Ihre Einstellungen ändern und dieses Attribut auf der Präsentation anzeigen oder weiter speichern?",
+        "cancel": "Nein, ich möchte aktualisieren",
+        "confirm": "Speichern fortsetzen"
+      },
+      "confirmation-dialog-cancel": {
+        "message": "Sie haben Änderungen an diesem Produkt vorgenommen. Sind Sie sicher, dass Sie Ihre Arbeit nicht speichern möchten?",
+        "cancel": "Nein",
+        "confirm": "Ja"
+      },
+      "confirmation-dialog-delete": {
+        "message": "Sind Sie sicher, dass Sie dieses Produkt löschen möchten?",
+        "cancel": "Nein, nicht löschen",
+        "confirm": "Ja, dieses Produkt entfernen"
+      },
+      "confirmation-dialog-open-dialog": {
+        "message": "Möchten Sie Ihre Änderungen vor dem Öffnen der Vorschau speichern?",
+        "cancel": "Abbrechen",
+        "confirm": "Änderungen speichern"
+      },
+      "toast-messages": {
+        "product-save": {
+          "title": "Produkt {{name}} gespeichert!",
+          "body": "{{name}} wurde gespeichert!"
+        },
+        "product-update": {
+          "title": "Produkt {{name}} aktualisiert!",
+          "body": "{{name}} wurde aktualisiert!"
+        },
+        "product-not-save": {
+          "title": "Fehler!",
+          "body": "Produkt konnte nicht gespeichert werden."
+        }
+      }
+    },
+    "product-details-image": {
+      "delete-button": "Löschen",
+      "no-images-selected": "Keine Bilder ausgewählt",
+      "image-upload-requirements": "Bilder sollten mehr als 110px x 110px und weniger als 2 MB groß sein."
+    },
+    "product-details-images-selector": {
+      "product-image-title": "Produktbilder",
+      "show-hide": "Alle ein-/ausblenden",
+      "drag-to-reorder": "Ziehen um neu zu ordnen",
+      "supplier-provided-image": "{{imageUrl]} - Lieferant geliefertes Bild",
+      "hide": "Verstecken",
+      "unhide": "Unhide",
+      "show-all": "Zeige alle {{imagesLength}}",
+      "show-less": "Weniger anzeigen",
+      "adjust-order-of-images": "Um die Reihenfolge Ihrer Bilder anzupassen, klicken Sie auf Alle anzeigen und ziehen Sie dann die Bilder in Ihrer bevorzugten Reihenfolge.",
+      "upload-helper-text": "Bilder sollten über 110px x 110px und unter 2MB groß sein. Erlaubte Dateitypen sind .jpeg, .jpg, .png, .gif."
+    },
+    "presentation-product-pricing": {
+      "toggle-label": "Preis",
+      "all-price-grids": "Unten finden Sie alle Preisraster für dieses Produkt. Wir empfehlen das Hinzufügen basierend auf den obigen Attributen.",
+      "pricing-calc-adjustment-label": "Alle Preise basierend auf",
+      "price-adjustments-labels": {
+        "profit-margin": "Gewinnspanne",
+        "add-fixed-amount-to-price": "Fester Betrag zum Listenpreis hinzufügen",
+        "add-fixed-amount-to-net-cost": "Fester Betrag zu den Nettokosten hinzufügen",
+        "add-fixed-amount-to-price-from-net-cost": "Fester Betrag zu Listenpreis von den Nettokosten hinzufügen",
+        "subtract-fixed-amount-to-price": "Festbetrag zum Listenpreis abziehen",
+        "subtract-fixed-amount-to-net-cost": "Festbetrag für die Nettokosten abziehen",
+        "subtract-fixed-amount-to-price-from-net-cost": "Den festen Betrag für den Listenpreis von den Nettokosten abziehen",
+        "add-percentage-to-price-form-net-cost": "Prozentsatz der Nettokosten dem Listenpreis hinzufügen",
+        "add-percentage-to-price-from-price": "Prozentsatz des Listenpreises zum Listenpreis hinzufügen",
+        "add-percentage-to-net-cost": "Prozentsatz der Nettokosten von den Nettokosten hinzufügen",
+        "subtract-percentage-to-net-cost": "Prozentsatz der Nettokosten von den Nettokosten abziehen",
+        "subtract-percentage-to-price-from-net-cost": "Prozentsatz der Nettokosten vom Listenpreis abziehen",
+        "subtract-percentage-to-price": "Prozentsatz des Listenpreises vom Listenpreis abziehen"
+      },
+      "amount-label": "Betrag",
+      "enter-percent-placeholder": "Prozentsatz eingeben",
+      "enter-amount-placeholder": "Betrag eingeben",
+      "apply": "Anwenden",
+      "round-up-checkbox": "Runden bis zu 2 Dezimalstellen",
+      "presentation-product-price-visible-price-grids": {
+        "confirmation-dialog-restore-to-default": {
+          "message": "Sind Sie sicher, dass Sie die Preise wiederherstellen möchten?",
+          "confirm": "Ja, zum Standard wiederherstellen",
+          "cancel": "Nein, nicht wiederherstellen"
+        },
+        "add-price-grid": "Fügen Sie ein Preisraster hinzu oder passen Sie Ihre Preisspanne an.",
+        "price-grid": "Preisliste",
+        "add-custom-quantity": "Eigene Menge hinzufügen",
+        "price-includes": "Preis beinhaltet",
+        "reset-price-grid": "Preisliste zurücksetzen",
+        "remove-price-grid": "Preisliste entfernen",
+        "presentation-product-visible-price-grid-prices": {
+          "quantity-header-cell": "Menge",
+          "net-cost-header-cell": "Nettokosten",
+          "original-header-cell": "Original",
+          "margin-header-cell": "Abstand",
+          "price-header-cell": "Preis",
+          "visible-header-cell": "Sichtbar",
+          "remove-header-cell": "Entfernen",
+          "view-header-cell": "Ansicht"
+        }
+      },
+      "presentation-product-price-invisible-price-grids": {
+        "add-price-grids": "Preisraster hinzufügen",
+        "available-price-grids": "Verfügbare Preisraster werden bis zu deren Hinzufügung von der Kundenpräsentation ausgeblendet.",
+        "all-price-grids": "Alle Preislisten",
+        "description-header-cell": "Beschreibung",
+        "min-price-header-cell": "Min. Preis",
+        "add-button": "Neu",
+        "add-all-price-grids-button": "Alle Preisraster hinzufügen"
+      }
+    },
+    "presentation-product-price-range": {
+      "price-range-label": "Preisbereich",
+      "determined-by-price": "Bestimmt durch das oben ausgewählte Preisraster(e) oder Sie können wählen, um anzupassen.",
+      "displayed-price-range": "Angezeigte Preisspanne",
+      "price-from": "Preis von {{minMax}}",
+      "use-custom-price-range": "Eigene Preisspanne verwenden"
+    },
+    "presentation-product-client-discount": {
+      "client-discount-label": "Kundenrabatt",
+      "display-indicator": "Zeigt dem Kunden einen Indikator an, dass das Produkt für ihn Rabatt erhält."
+    }
+  },
+  "presentation-settings-component": {
+    "presentation-settings-toggle": {
+      "product-cpn": "Produkt CPN",
+      "product-color": "Produktfarbe",
+      "product-size": "Produktgröße",
+      "product-shape": "Produktform",
+      "product-material": "Produktmaterial",
+      "price-range": "Preisbereich",
+      "pricing": "Preis",
+      "client-discount": "Kundenrabatt",
+      "imprint-options": "Impressum Optionen"
+    }
+  },
+  "util-presentation-product-pipe": {
+    "quote-requested-tooltip": "Angebot angefordert",
+    "quote-requested-wrapper-label": "Angebot angefordert!",
+    "added-to-cart-tooltip": "In den Warenkorb gelegt",
+    "disliked-tooltip": "Ungefällt"
+  },
+  "presentation-settings-page": {
+    "header-title": "Präsentation",
+    "menu": "Menü",
+    "presentation-action-bar": {
+      "preview": "Vorschau",
+      "share-with-customer": "Mit Kunden teilen",
+      "edit": "Bearbeiten",
+      "share": "Teilen"
+    },
+    "presentation-info-card": {
+      "presentation-info-title": "Präsentationsinformationen",
+      "presentation-expired": "Abgelaufen",
+      "shared-with": "Geteilt mit {{name}} am {{sharedDate}} bei {{sharedTime}}.",
+      "presentation-not-viewed": "Die Präsentation wurde noch nicht angesehen.",
+      "link-expired": "Link abgelaufen {{date}}",
+      "link-expires": "Link läuft ab {{date}}",
+      "link-not-shared-yet": "Diese Präsentation wurde noch nicht mit dem Kunden geteilt.",
+      "customer-engagement-title": "Kundenengagement",
+      "last-viewed": "Zuletzt angesehen",
+      "not-viewed": "Nicht angezeigt",
+      "products-requested-title": "Produkte angefordert",
+      "products-disliked": "Produkte nicht gemocht",
+      "project-details": "Projektdetails",
+      "edit-tooltip": "Bearbeiten",
+      "project-created": "Projekt erstellt: {{date}}",
+      "in-hands-date": "In-Hands-Datum: {{date}}",
+      "event-date": "Ereignisdatum: {{date}}",
+      "event-type": "Ereignistyp: {{type}}",
+      "budget": "Budget: {{value}}",
+      "attendees": "Teilnehmer: {{value}}"
+    },
+    "presentation-quotes": {
+      "quote-request-received": "Angebotsanfrage empfangen",
+      "view-quote": "Angebot ansehen",
+      "changes-updated": "Änderungen in Projektdetails automatisch aktualisiert",
+      "quote-details": "Angebotsdetails"
+    },
+    "presentation-settings": "Präsentationseinstellungen",
+    "hiding-product": "Das Verstecken von Produktdetails hier gilt für alle Produkte in der Präsentation. Sie können die versteckten Informationen für bestimmte Artikel anzeigen, indem Sie das einzelne Produkt bearbeiten und die Option aktivieren.",
+    "change-conversion-date": "Konversionsrate ändern",
+    "hide-product-details": "Diese Produktdetails für alle Artikel in Ihrer Präsentation ausblenden.",
+    "product-details": "Produktdetails",
+    "sharing-options": "Freigabeoptionen",
+    "allow-customers-to-select": "Kunden erlauben, Produktvarianten auszuwählen, wenn sie ein Angebot anfordern",
+    "personal-note-label": "Persönliche Notiz",
+    "personal-note-placeholder": "Hier sind einige Produkte, die ich denke, dass Sie interessieren können!",
+    "save": "Speichern",
+    "include-signature": "Signatur einbeziehen",
+    "expiration-date": "Ablaufdatum",
+    "expiration-date-description": "Sie können ein Ablaufdatum für die Präsentation bis zu 90 Tage wählen. Die Standardeinstellung ist auf 30 Tage gesetzt.",
+    "select-date-placeholder": "Datum auswählen",
+    "invalid-expiration-date": "Ungültiges Ablaufdatum.",
+    "presentation-preview": {
+      "presentation-preview-title": "Präsentation Vorschau",
+      "product-page": "Produktseite",
+      "landing-page": "Startseite",
+      "configure-your-presentation": "Konfigurieren Sie Ihre Präsentation und fügen Sie Produkte hinzu, um eine Vorschau zu sehen."
+    },
+    "presentation-products": {
+      "edit-products": "Produkte bearbeiten",
+      "click-on-product-to-edit": "Diese Produkte werden mit den obigen Details angezeigt. Klicken Sie auf ein Produkt, um seine spezifischen Informationen zu bearbeiten.",
+      "sort-by": "Sortieren nach",
+      "all-products-tab": "Alle Produkte",
+      "added-to-cart-tab": "In den Warenkorb gelegt",
+      "disliked-products-tab": "Ungemochte Produkte",
+      "seen-products-tab": "Gesehene Produkte",
+      "unseen-products-tab": "Ungesehene Produkte",
+      "hidden-tab": "Hidden",
+      "drag-to-reorder": "Ziehen um neu zu ordnen",
+      "no-products-message": {
+        "no-products": "Es gibt keine Produkte in dieser Präsentation. Fügen Sie Produkte hinzu, indem Sie eine Suche starten."
+      },
+      "hide-from-presentation": "In Präsentation ausblenden",
+      "show-in-presentation": "In Präsentation anzeigen",
+      "delete-from-presentation": "Aus Präsentation löschen",
+      "sort": "Sortieren",
+      "newest-to-oldest": "Neueste nach Ältesten",
+      "oldest-to-newest": "Älteste bis Neueste",
+      "product-name": "Produktname",
+      "product-number": "Artikelnummer",
+      "profit": "Gewinn",
+      "price-high-to-low": "Preis (Hoch nach Niedrig)",
+      "price-low-to-high": "Preis (Niedrig zu hoch)",
+      "cost-high-to-low": "Kosten (Hoch auf Niedrig)",
+      "cost-low-to-high": "Kosten (Niedrig zu hoch)",
+      "supplier-name": "Lieferantenname",
+      "category": "Kategorie"
+    }
+  },
+  "share-presentation-dialog": {
+    "close": "Schließen",
+    "share-with-customer": "Mit Kunden teilen",
+    "send-email": "Senden Sie eine E-Mail oder kopieren Sie Link, um sie auf eigene Faust zu teilen.",
+    "subject-line-label": "Betreffzeile",
+    "enter-subject-placeholder": "Betreff eingeben",
+    "message-label": "Nachricht",
+    "enter-personal-message-placeholder": "Geben Sie eine persönliche Nachricht ein, die Sie in Ihrer E-Mail erscheinen möchten.",
+    "presentation-settings": "Präsentationseinstellungen:",
+    "signature-and-expiration-date": "Unterschrift und Ablaufdatum gelten nur für Ihre Präsentationseinstellungen und nicht für Ihre E-Mail.",
+    "include-signature": "Signatur einbeziehen",
+    "expiration-date": "Ablaufdatum",
+    "select-date-placeholder": "Datum auswählen",
+    "mat-datepicker-parse": "Ungültiges Ablaufdatum.",
+    "invalid-expiration-date": "Ablaufdatum ist in der Vergangenheit. Sie müssen ein künftiges Datum eingeben.",
+    "preview-presentation": "Vorschau der Präsentation",
+    "copy-link": "Link kopieren",
+    "share-via-email": "Per E-Mail teilen",
+    "share-via-link": "Über Link teilen"
+  },
+  "presentation-product-card": {
+    "imprint-method": "Impressum Methode: {{value}}",
+    "artwork": "Artwork:",
+    "requested-changes": "Angeforderte Änderungen:",
+    "customization-comments": "Kommentare zur Anpassung:",
+    "presentation-product-card-grid-with-charge": {
+      "item-header": "Artikel",
+      "quantity-header": "Menge",
+      "price-header": "Preis",
+      "total-price-header": "Gesamtpreis",
+      "total-units-footer": "Gesamte Einheiten",
+      "total-footer": "Gesamt"
+    }
+  }
+}
