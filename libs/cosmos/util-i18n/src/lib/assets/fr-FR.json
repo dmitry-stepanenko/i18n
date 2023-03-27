@@ -1,0 +1,65 @@
+{
+  "components": {
+    "image-upload-form": {
+      "upload": "Charger",
+      "choose-type": "Choisissez {{type}} à télécharger",
+      "drag-drop-here": "ou faites glisser et déposez ici.",
+      "error": "Erreur:",
+      "file-under": "{{allowedTypes}}. Le fichier doit être inférieur à 5 Mo.",
+      "must-add-image": "Vous devez ajouter une image.",
+      "allowed-types": "Les types de fichiers autorisés sont {{types}}",
+      "upload-type-image": "Image",
+      "upload-type-file": "Fichier",
+      "size-error-msg": "La taille du fichier dépasse {{maxFileBytes}}",
+      "dimension-error-msg": "La taille de l'image ne doit pas être inférieure à {{minWidth}}px x {{minHeight}}px",
+      "type-error-msg": "Type de fichier non pris en charge"
+    },
+    "form-field": {
+      "encore-errors": {
+        "email": "Veuillez fournir une adresse e-mail valide.",
+        "max-with-label": "Votre {{label}} doit être inférieur à {{max}}.",
+        "max-no-label": "`Vous devez entrer moins de {{max}}.",
+        "max-length-with-label": "Votre {{label}} ne peut pas contenir plus de {{requiredLength}} caractères.",
+        "max-length-no-label": "Vous devez saisir au plus {{requiredLength}} caractères.",
+        "min-length-with-label": "Votre {{label}} doit contenir au moins {{requiredLength}} caractères.",
+        "min-length-no-label": "Vous devez saisir au moins {{requiredLength}} caractères.",
+        "min-with-label": "Votre {{label}} doit être au moins {{min}}.",
+        "min-no-label": "Vous devez saisir au moins {{min}}.",
+        "required": "Vous devez entrer une valeur."
+      },
+      "customer-portal-errors": {
+        "email": "Veuillez fournir une adresse e-mail valide.",
+        "max-with-label": "Votre {{label}} doit être inférieur à {{max}}.",
+        "max-no-label": "`Vous devez entrer moins de {{max}}.",
+        "max-length-with-label": "Votre {{label}} ne peut pas contenir plus de {{requiredLength}} caractères.",
+        "max-length-no-label": "Vous devez saisir au plus {{requiredLength}} caractères.",
+        "min-length-with-label": "Votre {{label}} doit contenir au moins {{requiredLength}} caractères.",
+        "min-length-no-label": "Vous devez saisir au moins {{requiredLength}} caractères.",
+        "min-with-label": "Votre {{label}} doit être au moins {{min}}.",
+        "min-no-label": "Vous devez saisir au moins {{min}}.",
+        "required": "Vous devez entrer une valeur."
+      }
+    },
+    "confirmation-dialog": {
+      "default-message": "Voulez-vous quitter sans enregistrer ?",
+      "confirm": "Oui",
+      "cancel": "Non"
+    },
+    "inline-edit": {
+      "required-hint": "Requis",
+      "cancel-button": "Abandonner",
+      "save-button": "Enregistrer",
+      "edit-button": "Editer",
+      "edit-value-required-error": "Vous devez saisir une valeur"
+    },
+    "rating": {
+      "total-reviews": "total des avis",
+      "not-rated": "Pas encore évalué"
+    }
+  },
+  "pipes": {
+    "calculated-price-range": {
+      "no-price-grids": "Aucune grille de prix sélectionnée."
+    }
+  }
+}
