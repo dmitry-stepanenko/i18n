@@ -12,7 +12,8 @@
       "upload-type-file": "File",
       "size-error-msg": "File size exceeds {{maxFileBytes}}",
       "dimension-error-msg": "Image size should not be less than {{minWidth}}px x {{minHeight}}px",
-      "type-error-msg": "File type not supported"
+      "type-error-msg": "File type not supported",
+      "type-error-msg-2": "File type is supported"
     },
     "form-field": {
       "encore-errors": {
