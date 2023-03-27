@@ -1,0 +1,40 @@
+{
+  "profile-page": {
+    "localization": "Lokalisierung",
+    "profile-and-login-settings": "Profil- und Anmeldeeinstellungen",
+    "basic-information": "Grundlegende Informationen",
+    "password": "Passwort",
+    "contact-information": "Kontaktinformationen"
+  },
+  "esp-settings-feature-profile": {
+    "currency-panel-row": {
+      "asi-panel-editable-row": {
+        "save-button": "Speichern",
+        "row-title": "Währung"
+      }
+    },
+    "market-segment-row": {
+      "asi-panel-editable-row": {
+        "save-button": "Speichern",
+        "row-title": "Default Market"
+      }
+    }
+  },
+  "esp-settings-feature-company": {
+    "company-page": {
+      "company-information": "Unternehmensinformationen",
+      "brand-information": "Markeninformation",
+      "asi-account-information": "ASI-Kontoinformationen",
+      "contact-information": "Kontaktinformationen",
+      "currency-conversion-rate": "Währungsumrechnungskurs"
+    },
+    "company-currency-conversion-panel-row": {
+      "row-title": "Währungsumrechnungskurs",
+      "conversion-rate-toggle-button": "Konversionsrate automatisch aktualisieren",
+      "conversionRateHumanFriendly": "1 {{ sourceType }} entspricht {{ conversionRate }} {{ targetType }}",
+      "errors": {
+        "conversion-rate-error": "Nur positive numerische Werte sind erlaubt bis zu 2 Dezimalstellen, zwischen 0.01 und 10.00"
+      }
+    }
+  }
+}
