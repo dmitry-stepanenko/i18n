@@ -1,0 +1,9 @@
+{
+  "ui-order-details": {
+    "point-of-contact": "Point de contact",
+    "shipping-address": "Adresse de livraison",
+    "billing-address": "Adresse de facturation",
+    "quote-details": "Détails du devis",
+    "in-hands-date": "Date In-Hands"
+  }
+}
