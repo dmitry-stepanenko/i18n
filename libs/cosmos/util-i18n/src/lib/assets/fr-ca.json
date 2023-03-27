@@ -13,7 +13,7 @@
       "size-error-msg": "La taille du fichier dépasse {{maxFileBytes}}",
       "dimension-error-msg": "La taille de l'image ne doit pas être inférieure à {{minWidth}}px x {{minHeight}}px",
       "type-error-msg": "Type de fichier non pris en charge",
-      "type-error-msg-2": "File type is supported"
+      "type-error-msg-2": "Le type de fichier est supporté"
     },
     "form-field": {
       "encore-errors": {
