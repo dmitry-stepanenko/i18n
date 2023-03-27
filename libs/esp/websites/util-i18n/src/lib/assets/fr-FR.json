@@ -1,0 +1,152 @@
+{
+  "websites-pages": {
+    "feature-shell-web": {
+      "website-pages": {
+        "header": "Pages et navigation",
+        "add-content-library-cta": "Ajouter une bibliothèque de contenu",
+        "add-custom-page-cta": "Ajouter une page personnalisée",
+        "add-custom-collection-page-cta": "Ajouter une page de collection de produits"
+      }
+    }
+  },
+  "websites-overview": {
+    "feature-overview": {
+      "page": {
+        "header": "Aperçu des sites web"
+      },
+      "template-overview-card": {
+        "header": "Gabarit",
+        "edit-cta": "Modifier le modèle",
+        "color-palette-header": "Palette de couleurs"
+      },
+      "site-summary-card": {
+        "header": "Résumé du site",
+        "edit-cta": "Modifier les paramètres du site",
+        "site-title": "Titre du site",
+        "domain": "Domaine",
+        "new-domain": "Sélectionner un nouveau domaine",
+        "analytics": "Analyses",
+        "setup-analytics": "Configuration des Analyses",
+        "status": "Statut",
+        "last-updated": "Dernière mise à jour"
+      },
+      "products-overview-card": {
+        "header": "Produits",
+        "manage-cta": "Gérer les produits"
+      },
+      "pages-overview-card": {
+        "header": "Pages",
+        "add-cta": "Ajouter des pages",
+        "no-pages": "Il n'y a pas encore de pages créées",
+        "loading": "En cours de chargement",
+        "delete-collection": "Supprimer la collection de produits",
+        "delete-page": "Supprimer la page",
+        "edit": "Editer"
+      }
+    }
+  },
+  "websites-products": {
+    "feature-global-product-configuration": {
+      "global-product-configuration-card": {
+        "product-description": "Description du produit",
+        "product-size-variants": "Variantes de la taille du produit",
+        "available-imprint-methods": "Méthodes d'impression disponibles",
+        "prices-and-upcharges": "Prix et frais supplémentaires",
+        "product-options": "Options du produit",
+        "shipping-options": "Options de livraison",
+        "packaging-options": "Options d'emballage",
+        "customer-comment": "Boîte de commentaires du client",
+        "upload-additional-details": "Télécharger des détails supplémentaires",
+        "product-color-variants": "Variantes de couleur du produit",
+        "upload-instructions": {
+          "label": "Instructions de téléchargement",
+          "placeholder": "Entrez les instructions de téléchargement"
+        },
+        "default-sort-option": {
+          "label": "Option de tri par défaut"
+        }
+      }
+    }
+  },
+  "websites-settings": {
+    "feature-shell-web": {
+      "page": {
+        "header": "Réglages"
+      }
+    },
+    "feature-site-information": {
+      "site-information": {
+        "header": "Informations sur le site",
+        "site-title": {
+          "title": "Titre du site",
+          "label": "Titre du site",
+          "placeholder": "Entrez le titre du site",
+          "empty-text": "Aucun titre de site actuellement ajouté"
+        },
+        "site-description": {
+          "title": "Description du site",
+          "label": "Description du site",
+          "placeholder": "Entrez la description du site",
+          "empty-text": "Aucune description actuellement ajoutée"
+        },
+        "site-keywords": {
+          "title": "Mots clés du site",
+          "label": "Mots clés du site",
+          "placeholder": "Entrez les mots-clés du site",
+          "empty-text": "Aucun mot-clé ajouté actuellement",
+          "validation-messages": {
+            "maxlength": "Vous ne devez pas entrer plus de {{max}} mots-clés"
+          }
+        },
+        "media-panel": {
+          "header": "Médias",
+          "social-media-social-images": "Partage des images sur les réseaux sociaux",
+          "social-media-social-images-edit-cta": "Partage des images sur les réseaux sociaux"
+        },
+        "enable-progressive-web-app-panel": {
+          "header": "Activer l'application Web Progressive",
+          "activate": "Activer l'application Web Progressive",
+          "enable-mobile": "Activer les navigateurs mobiles pour installer le site en tant qu'application"
+        }
+      },
+      "company-information": {
+        "header": "Informations sur la société"
+      }
+    },
+    "feature-seo-and-analytics": {
+      "header": "SEO et Analytics",
+      "enabled": "Activé",
+      "disabled": "Désactivé",
+      "analytics": {
+        "title": "Google Analytics",
+        "label": "ID du compte client",
+        "placeholder": "Entrez votre ID de compte ici 'G-XXXXXXX"
+      },
+      "tag-manager": {
+        "title": "Gestionnaire de tags Google",
+        "label": "ID du conteneur",
+        "placeholder": "Entrez votre identifiant de conteneur ici 'GTM-XXXXXXX'"
+      }
+    }
+  },
+  "websites-templates": {
+    "feature-template": {
+      "template-page": {
+        "header": "Gabarit",
+        "save-cta": "Enregistrer",
+        "cancel-cta": "Abandonner"
+      },
+      "selected-template-card": {
+        "header": "Modèle sélectionné"
+      },
+      "color-palette-card": {
+        "header": "Palette de couleurs",
+        "reset-color-cta": "Réinitialiser la couleur",
+        "primary-color": "Couleur principale",
+        "secondary-color": "Couleur secondaire",
+        "tertiary-color": "Couleur tertiaire",
+        "highlight-color": "Couleur de surbrillance"
+      }
+    }
+  }
+}
