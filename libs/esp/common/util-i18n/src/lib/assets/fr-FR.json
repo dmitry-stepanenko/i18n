@@ -1,0 +1,83 @@
+{
+  "localization": {
+    "en-us": "Anglais (US)",
+    "en-ca": "Français (Canada)",
+    "fr-ca": "French (Canada)"
+  },
+  "market": {
+    "USAALL": "États-Unis",
+    "CANALL": "Le Canada",
+    "ALL": "Tous"
+  },
+  "currencies": {
+    "USD": "Dollar US (USD)",
+    "CAD": "Dollar canadien (CAD)"
+  },
+  "companies": {
+    "company-form": {
+      "company-brand-information-form": {
+        "primary-brand-color-label": "Couleur principale de la marque"
+      }
+    }
+  },
+  "decorations": {
+    "decoration-edit-form": {
+      "imprint-color": "Couleur des mentions légales",
+      "imprint-color-placeholder": "Entrer la couleur de la touche Impression"
+    },
+    "decoration-card-info": {
+      "imprint-color": "Couleur des mentions légales"
+    },
+    "decoration-edit-line": {
+      "decoration-details-card": {
+        "imprint-color": "Couleur des mentions légales"
+      }
+    }
+  },
+  "products": {
+    "product-search-filters": {
+      "labels.color": "Couleur"
+    },
+    "product-imprint-methods": {
+      "imprint-colors-header": "Couleurs d'impression",
+      "full-color-process-header": "Processus en pleine couleur"
+    }
+  },
+  "settings": {
+    "orders": {
+      "order-status-types": {
+        "manage-order.select-color-control-header": "Sélectionner une couleur",
+        "manage-order.select-color-control-placeholder": "Sélectionnez une couleur",
+        "manage-order.select-color-control-option-placeholder": "Sélectionnez une couleur"
+      }
+    },
+    "company": {
+      "company-brand-color-panel-row": {
+        "row-title": "Couleur de l'entreprise"
+      }
+    }
+  },
+  "tasks": {
+    "toast-messages": {
+      "task-updated": {
+        "title": "Réussi !",
+        "body": "Tâche {{ taskName }} mise à jour avec succès."
+      }
+    }
+  },
+  "email-autocomplete": {
+    "recipients-label": "Destinataires",
+    "enter-new-email": "Entrez une nouvelle adresse e-mail ou commencez à taper pour trouver une adresse e-mail enregistrée",
+    "new-recipient-placeholder": "Nouveau destinataire..."
+  },
+  "change-conversion-rate-dialog": {
+    "change-conversion-date": "Changer le taux de conversion",
+    "select-default-currency": "Sélectionnez la devise par défaut pour les totaux des prix de recherche, commandes et présentations.",
+    "show-currency": "Afficher la devise dans :",
+    "us-dollar": "Dollar US (USD)",
+    "canadian-dollar": "Dollar canadien (CAD)",
+    "conversion-date": "Taux de conversion",
+    "cancel": "Abandonner",
+    "save": "Enregistrer"
+  }
+}
