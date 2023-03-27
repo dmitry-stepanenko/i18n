@@ -21,7 +21,7 @@
       "attendees-placeholder": "Number of Attendees",
       "budget-max-value-error": "You must enter less than 99,999,999.99",
       "assignees-mx-value-error": "You must enter less than 99,999,999",
-      "in-hands-date-label": "In-Hands Date",
+      "in-hands-date-label": "Date en mains",
       "flexible": "Flexible",
       "firm": "Firm",
       "budget": "Budget",
