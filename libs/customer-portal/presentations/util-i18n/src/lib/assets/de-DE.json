@@ -1,0 +1,73 @@
+{
+  "feature-presentations": {
+    "presentation-products": {
+      "presentation-products-info": {
+        "reply-label": "Antwort",
+        "presentation-expires-label": "Präsentation läuft ab"
+      }
+    },
+    "presentation-product": {
+      "back-to-all-products": "Zurück zu allen Produkten",
+      "additional-note": "Zusätzliche Notiz",
+      "discount-applied": "Rabatt angewendet",
+      "dislike-tooltip": "Dislike",
+      "disabled-in-preview-tooltip": "Diese Funktion ist in der Vorschau deaktiviert",
+      "add-to-cart-button": "In den Warenkorb",
+      "quote-requested-tag": "Angebot angefordert",
+      "pricing-and-charges": "Preise und Gebühren",
+      "pricing-grid-header-quantity": "Menge",
+      "pricing-grid-header-price-per-unit": "Preis pro Einheit",
+      "price-includes": "Preis beinhaltet",
+      "colors": "Farben",
+      "show-more": "Mehr anzeigen",
+      "show-less": "Weniger anzeigen",
+      "sizes": "Größe",
+      "shapes": "Formen",
+      "materials": "Materialien",
+      "imprint-methods": "Impressum Methoden",
+      "imprint-sizes": "Impressum Größe",
+      "imprint-colors": "Impressum Farbe(n)",
+      "imprint-locations": "Impressum Standort(e)",
+      "price-from": "Preis von {{minMax}}"
+    }
+  },
+  "pending-quote": {
+    "title": "Ihre Angebotsanfrage wurde gesendet!",
+    "sub-text": "Ihre Angebotsanfrage wurde an {{ distributorName }}gesendet. Sie wird die Preise entsprechend anpassen und sie an Sie zurücksenden.",
+    "contact-information": "Kontaktinformationen",
+    "additional-files": "Zusätzliche Dateien"
+  },
+  "feature-customize-product-dialog": {
+    "subtext": "Beschreiben Sie, wie Sie Ihr Produkt anpassen oder aus verfügbaren Optionen hinzufügen möchten.",
+    "image-disclaimer": "*Beispielbild kann nicht die exakte Konfiguration darstellen.",
+    "no-image-text": "Kein Bild verfügbar",
+    "advanced-options": "Erweiterte Optionen",
+    "imprint-method": "Impressum",
+    "imprint-select-text": "Wählen Sie aus verfügbaren Impressummethoden",
+    "customization-comments": "Anpassungskommentare",
+    "customization-placeholder": "Kommentare können Größen, Farben oder alles andere enthalten, was Sie anpassen möchten.",
+    "cancel-button": "Abbrechen",
+    "save-button": "Speichern",
+    "form-components": {
+      "products-artworks": {
+        "upload-artwork-text": "Artwork oder Anpassungsdateien hochladen",
+        "show-less": "Weniger anzeigen",
+        "show-all": "Alle anzeigen ( {{length}})",
+        "image-size-limit": "Upload von maximal 10 Dateien und jede Datei muss unter 1MB liegen.",
+        "image-type-limit": "Erlaubte Dateitypen sind png, tif, tiff, jpg, dst, eps, ai, doc, docx, txt, csv, pdf, svg, xls, und/oder xlsx."
+      },
+      "product-details": {
+        "add-optional-product-config": "Optionale Produktkonfiguration hinzufügen",
+        "color": "Farbe",
+        "size": "Größe",
+        "material": "Material",
+        "shape": "Form",
+        "select-a-property": "{{property}} auswählen",
+        "quantity": "Menge",
+        "quantity-placeholder": "Menge eingeben",
+        "save-selection-button": "Auswahl speichern",
+        "item": "Artikel"
+      }
+    }
+  }
+}
