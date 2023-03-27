@@ -9,6 +9,7 @@
       "must-add-image": "Vous devez ajouter une image.",
       "allowed-types": "Les types de fichiers autorisés sont {{types}}",
       "upload-type-image": "Image",
+
       "upload-type-file": "Fichier",
       "size-error-msg": "La taille du fichier dépasse {{maxFileBytes}}",
       "dimension-error-msg": "La taille de l'image ne doit pas être inférieure à {{minWidth}}px x {{minHeight}}px",
