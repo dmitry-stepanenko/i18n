@@ -1,0 +1,11 @@
+{
+  "feature-decorations": {
+    "decoration-card-edit-form": {
+      "imprint-color-label": "Couleur des mentions légales",
+      "imprint-color-placeholder": "Entrer la couleur de la touche Impression"
+    },
+    "company-decoration-card": {
+      "imprint-color-label": "Couleur des mentions légales"
+    }
+  }
+}
