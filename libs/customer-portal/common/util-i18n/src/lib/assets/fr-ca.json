@@ -1,7 +1,7 @@
 {
   "project-details": {
-    "project-details-label": "Project Details",
-    "in-hands-date-label": "In-Hands Date",
+    "project-details-label": "Détails du projet",
+    "in-hands-date-label": "Date en mains",
     "event-date-label": "Event Date",
     "event-type-label": "Event Type",
     "budget-label": "Budget",

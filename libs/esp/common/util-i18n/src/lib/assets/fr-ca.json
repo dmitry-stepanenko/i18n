@@ -39,7 +39,7 @@
       "labels.color": "Color"
     },
     "product-imprint-methods": {
-      "imprint-colors-header": "Imprint Colors",
+      "imprint-colors-header": "TO_BE_TRANSLATED_Imprint Colors",
       "full-color-process-header": "Full Color Process"
     }
   },
@@ -77,7 +77,7 @@
     "us-dollar": "US Dollar (USD)",
     "canadian-dollar": "Canadian Dollar (CAD)",
     "conversion-date": "Conversion Rate",
-    "cancel": "Cancel",
-    "save": "Save"
+    "cancel": "Abandonner",
+    "save": "Enregistrer"
   }
 }

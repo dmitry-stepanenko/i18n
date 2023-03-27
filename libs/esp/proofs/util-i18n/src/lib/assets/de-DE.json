@@ -1,0 +1,176 @@
+{
+  "project-proofs-page": {
+    "title": "Beweise",
+    "add-proof": "Nachweis hinzufügen",
+    "select-all": "Alle auswählen",
+    "send-proofs": "Belege senden",
+    "proofs-selected": "Ausgewählte Beweise",
+    "proof-selected": "Ausgewählter Beweis",
+    "empty-state": {
+      "main-text": "Du hast noch keine Beweise",
+      "second-text": "Es gibt noch keine Beweise. Sie können einen Nachweis hinzufügen, der mit einer Bestellung verbunden ist, oder Sie können einen Nachweis hinzufügen, der nicht mit einer Bestellung verbunden ist."
+    },
+    "list": {
+      "other-proofs": "Andere Beweise",
+      "order": "Bestellung #{{itemKey}}",
+      "approved-by-date": "\"Genehmigt von\" Datum",
+      "proof-name": "Nachweis Name: {{name}}",
+      "order-number": "Bestellnummer:",
+      "product": "Produkt:",
+      "imprint-location": "Impressum Ort:",
+      "invalid-approval-date": "Ungültiges Genehmigungsdatum.",
+      "send-proof": "Nachweis senden",
+      "item": "Artikel",
+      "change-request-note": "Anfrage ändern:",
+      "approve-by-date": "Von {{date}} genehmigen, um planmäßig zu bleiben",
+      "proof-sent-on": "Nachweis gesendet am {{date}} von {{senderName}}",
+      "proof-approved": "Nachweis genehmigt: Genehmigt am {{date}} von {{approvedBy}}",
+      "changes-requested": "Angeforderte Änderungen: {{date}} von {{customerName}}",
+      "confirmation-dialog": {
+        "message": "Sind Sie sicher, dass Sie diesen Beweis löschen möchten?",
+        "confirm": "Ja, löschen",
+        "cancel": "Nein, abbrechen"
+      }
+    },
+    "menu": {
+      "edit-proof": "Nachweis bearbeiten",
+      "mark-approved": "Als genehmigt markieren",
+      "delete-proof": "Nachweis löschen",
+      "toast-messages": {
+        "proof-updated": {
+          "title": "Erfolg",
+          "body": "1 Beweis wurde aktualisiert."
+        },
+        "proof-not-updated": {
+          "title": "Fehler",
+          "body": "1 Beweis konnte nicht aktualisiert werden."
+        },
+        "proof-deleted": {
+          "title": "Erfolg",
+          "body": "1 Beweis wurde von {{projectName}} gelöscht."
+        },
+        "proof-not-deleted": {
+          "title": "Fehler",
+          "body": "1 Beweis konnte nicht gelöscht werden."
+        },
+        "proof-marked-as-approved": {
+          "title": "Erfolg",
+          "body": "1 Nachweis wurde als genehmigt markiert."
+        },
+        "proof-not-marked-as-approved": {
+          "title": "Fehler",
+          "body": "1 Nachweis konnte nicht als genehmigt gekennzeichnet werden."
+        }
+      }
+    }
+  },
+  "add-edit-proof-dialog": {
+    "add-proof-to-order": "Bestellnachweis hinzufügen",
+    "edit-proof": "Nachweis bearbeiten",
+    "edit-proofs-here": "Proofs hier bearbeiten",
+    "add-new-or-previously": "Füge einen neuen oder zuvor hochgeladenen Beweis hinzu",
+    "add-proof-image": {
+      "uploaded-image": "Hochgeladenes Bild",
+      "no-images-selected": "Keine Bilder ausgewählt",
+      "img-expandable": {
+        "size": "Größe: {{fileSize}}"
+      },
+      "image-upload-form": {
+        "file-under": "{{allowedTypes}}. Datei muss unter 5MB liegen.",
+        "must-add-image": "Sie müssen ein Bild hinzufügen."
+      }
+    },
+    "proof-name": "Nachweis Name",
+    "proof-name-placeholder": "Geben Sie einen Nachnamen ein",
+    "proof-name-error": "Sie müssen einen Beweisnamen eingeben",
+    "order-number": {
+      "label": "Bestellnummer",
+      "placeholder": "Nach Bestellnummer auswählen",
+      "total-price": "Gesamtpreis: {{symbol}} {{total}}",
+      "date": "Datum: {{date}}"
+    },
+    "product-name": {
+      "label": "Produkt",
+      "placeholder": "Nach Produkt auswählen",
+      "product": "Produkt #: {{number}}",
+      "totals": "{{amount}} für {{units}} Einheiten"
+    },
+    "imprint-location": {
+      "label": "Impressum Standort",
+      "placeholder": "Wählen Sie einen Impressum Ort"
+    },
+    "select-variant": {
+      "label": "Variante auswählen",
+      "placeholder": "Element nach SKU oder Variantenattribut auswählen",
+      "sku": "- SKU: {{sku}}"
+    },
+    "approval-required": {
+      "label": "Genehmigung erforderlich?",
+      "yes": "Ja",
+      "no": "Nein"
+    },
+    "approve-by-date": {
+      "label": "\"Genehmigt von\" Datum",
+      "placeholder": "Datum auswählen",
+      "invalid-date-error": "Ungültiges Datum."
+    },
+    "cancel": "abbrechen",
+    "save": "Speichern",
+    "add-proof": "Nachweis hinzufügen",
+    "confirmation-dialog": {
+      "message": "Sie haben ungespeicherte Änderungen. Sind Sie sicher, dass Sie abbrechen möchten?",
+      "confirm": "Ja, Abbrechen",
+      "cancel": "Nein, nicht abbrechen"
+    },
+    "toast-messages": {
+      "proof-added": {
+        "title": "Nachweis erfolgreich hinzugefügt",
+        "body": "1 Beweis wurde zu {{projectName}} hinzugefügt."
+      },
+      "proof-not-added": {
+        "title": "Fehler beim Hinzufügen",
+        "body": "1 Beweis wurde nicht zu {{projectName}} hinzugefügt."
+      },
+      "proof-updated": {
+        "title": "Erfolg",
+        "body": "1 Beweis wurde gespeichert."
+      },
+      "proof-not-updated": {
+        "title": "Fehler",
+        "body": "1 Beweis konnte nicht gespeichert werden."
+      }
+    }
+  },
+  "share-proof-dialog": {
+    "send-proofs-to-customer": "Belege an Kunden senden",
+    "send-email": "Senden Sie eine E-Mail oder kopieren Sie Link, um sie auf eigene Faust zu teilen.",
+    "share-via-email": "Per E-Mail teilen",
+    "share-via-link": "Über Link teilen",
+    "subject-label": "Betreffzeile",
+    "subject-placeholder": "Betreff eingeben",
+    "message-label": "Nachricht:",
+    "message-placeholder": "Geben Sie eine persönliche Nachricht ein, die Sie in Ihrer E-Mail erscheinen möchten.",
+    "copy-the-proof-link": "Kopieren Sie den Nachweis-Link, um ihn mit Ihrem Kunden zu teilen.",
+    "cancel": "Abbrechen",
+    "send-to-customer": "An Kunden senden",
+    "copy-link": "Link kopieren",
+    "toast-messages": {
+      "proof-shared-by-email": {
+        "title": "Erfolg",
+        "body": "Ihr Nachweis wurde an den Kunden gesendet."
+      },
+      "proof-shared-by-link": {
+        "title": "Erfolg",
+        "body": "Dein Beweislink wurde in deine Zwischenablage kopiert."
+      },
+      "proof-shared-by-email-error": {
+        "title": "Fehler",
+        "body": "Ihr Nachweis konnte nicht an den Kunden gesendet werden."
+      },
+      "proof-shared-by-link-error": {
+        "title": "Fehler",
+        "body": "Dein Beweislink konnte nicht in deine Zwischenablage kopiert werden."
+      }
+    }
+  }
+}

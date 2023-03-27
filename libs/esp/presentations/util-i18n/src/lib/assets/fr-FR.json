@@ -1,0 +1,318 @@
+{
+  "presentation-product": {
+    "presentation-product-imprint": {
+      "imprint-colors-label": "Couleurs d'impression",
+      "imprint-colors-placeholder": "Entrez les couleurs",
+      "imprint-options-label": "Options de mentions légales",
+      "vendor-imprint-methods-label": "Méthodes d'impression du fournisseur",
+      "other-imprint-methods-label": "Autres méthodes d'impression",
+      "show-less": "Afficher moins",
+      "show-more": "Afficher plus",
+      "imprint-sizes-label": "Tailles des mentions légales",
+      "imprint-sizes-placeholder": "Entrez les tailles",
+      "imprint-locations-label": "Emplacements des mentions légales",
+      "imprint-locations-placeholder": "Entrez les emplacements"
+    },
+    "presentation-product-page": {
+      "back-to-presentation": "Retour à la présentation",
+      "edit-product-details-title": "Modifier les détails du produit",
+      "product-detail-menu": "Menu Détail du produit",
+      "cancel-button": "Abandonner",
+      "preview-button": "Aperçu",
+      "save-button": "Enregistrer",
+      "previous-product": "Produit précédent",
+      "next-product": "Produit suivant",
+      "create-virtual-sample": "Créer un échantillon virtuel",
+      "all-supplier-info": "Toutes les informations du fournisseur sont cachées de la présentation du client.",
+      "product-details-title": "Détails du produit",
+      "product-name-label": "Nom du produit",
+      "enter-product-name-placeholder": "Entrez un nom de produit",
+      "summary-label": "Summary",
+      "enter-summary-placeholder": "Entrez un résumé",
+      "note-to-customer-label": "Note au client",
+      "note-to-customer-placeholder": "Entrez une note au client",
+      "product-variants-title": "Variantes de produit",
+      "product-variants-colors-toggle-label": "Couleurs",
+      "product-variants-sizes-label": "Tailles",
+      "product-variants-shapes-label": "Formes",
+      "product-variants-materials-label": "Matériaux",
+      "presentation-product-variant": {
+        "select-deselect-all": "Sélectionner/Désélectionner tout",
+        "show-less": "Afficher moins",
+        "show-more": "Afficher plus"
+      },
+      "confirmation-dialog-can-deactivate": {
+        "unload-message": "Voulez-vous enregistrer vos modifications avant de quitter cette page ?",
+        "discard-changes": "Ignorer les modifications",
+        "save-changes": "Enregistrer les modifications"
+      },
+      "confirmation-dialog-remove-image": {
+        "message": "Confirmez la suppression. Cette image sera supprimée de votre présentation. Cette image peut toujours être ajoutée à la présentation.",
+        "cancel": "Non, ne pas supprimer",
+        "confirm": "Remove Image"
+      },
+      "confirmation-dialog-save-click": {
+        "title": "Attribut masqué",
+        "message": "Vous avez inclus un attribut dans la grille de prix qui a été caché dans votre présentation, ce qui signifie qu'il ne sera pas affiché à votre client. {{tag}} Voulez-vous modifier vos paramètres et afficher cet attribut sur la présentation ou continuer à enregistrer ?",
+        "cancel": "Non, je veux mettre à jour",
+        "confirm": "Continuer l'enregistrement"
+      },
+      "confirmation-dialog-cancel": {
+        "message": "Vous avez apporté des modifications à ce produit. Êtes-vous sûr de vouloir ne pas enregistrer votre travail ?",
+        "cancel": "Non",
+        "confirm": "Oui"
+      },
+      "confirmation-dialog-delete": {
+        "message": "Êtes-vous sûr de vouloir supprimer ce produit ?",
+        "cancel": "Non, ne pas supprimer",
+        "confirm": "Oui, supprimer ce produit"
+      },
+      "confirmation-dialog-open-dialog": {
+        "message": "Voulez-vous enregistrer vos modifications avant d'ouvrir l'aperçu ?",
+        "cancel": "Abandonner",
+        "confirm": "Enregistrer les modifications"
+      },
+      "toast-messages": {
+        "product-save": {
+          "title": "Produit {{name}} enregistré !",
+          "body": "{{name}} a été enregistré !"
+        },
+        "product-update": {
+          "title": "Produit {{name}} mis à jour !",
+          "body": "{{name}} a été mis à jour !"
+        },
+        "product-not-save": {
+          "title": "Erreur!",
+          "body": "L'enregistrement du produit a échoué."
+        }
+      }
+    },
+    "product-details-image": {
+      "delete-button": "Supprimez",
+      "no-images-selected": "Aucune image sélectionnée",
+      "image-upload-requirements": "Les images devraient être de plus de 110px x 110px et de moins de 2 Mo."
+    },
+    "product-details-images-selector": {
+      "product-image-title": "Images du produit",
+      "show-hide": "Afficher/Masquer tout",
+      "drag-to-reorder": "Glisser pour réorganiser",
+      "supplier-provided-image": "{{imageUrl]} - Image fournie par le fournisseur",
+      "hide": "Cacher",
+      "unhide": "Unhide",
+      "show-all": "Afficher tous les {{imagesLength}}",
+      "show-less": "Afficher moins",
+      "adjust-order-of-images": "Pour régler l'ordre de vos images, cliquez sur Tout afficher, puis glissez et déposez les images dans votre ordre préféré.",
+      "upload-helper-text": "Les images doivent être de plus de 110px x 110px résolution et de moins de 2Mo. Les types de fichiers autorisés sont .jpeg, .jpg, .png, .gif."
+    },
+    "presentation-product-pricing": {
+      "toggle-label": "Tarification",
+      "all-price-grids": "Ci-dessous vous trouverez toutes les grilles de prix pour ce produit. Nous vous recommandons d'ajouter en fonction des attributs que vous avez sélectionnés ci-dessus.",
+      "pricing-calc-adjustment-label": "Ajuster tous les prix en fonction de",
+      "price-adjustments-labels": {
+        "profit-margin": "Marge de profit",
+        "add-fixed-amount-to-price": "Ajouter un montant fixe au prix de la liste",
+        "add-fixed-amount-to-net-cost": "Ajouter un montant fixe au coût net",
+        "add-fixed-amount-to-price-from-net-cost": "Ajouter un montant fixe au prix de la liste à partir du coût net",
+        "subtract-fixed-amount-to-price": "Soustraire le montant fixe au prix de la liste",
+        "subtract-fixed-amount-to-net-cost": "Soustraire le montant fixe au coût net",
+        "subtract-fixed-amount-to-price-from-net-cost": "Soustraire le montant fixe au prix de la liste à partir du coût net",
+        "add-percentage-to-price-form-net-cost": "Ajouter le pourcentage du coût net au prix de vente",
+        "add-percentage-to-price-from-price": "Ajouter le pourcentage du prix de la liste au prix de vente",
+        "add-percentage-to-net-cost": "Ajouter un pourcentage du coût net à partir du coût net",
+        "subtract-percentage-to-net-cost": "Soustraire le pourcentage du coût net par rapport au coût net",
+        "subtract-percentage-to-price-from-net-cost": "Soustraire le pourcentage du coût net du prix de vente",
+        "subtract-percentage-to-price": "Soustraire le pourcentage du prix de la liste du prix de vente"
+      },
+      "amount-label": "Montant",
+      "enter-percent-placeholder": "Entrez le pourcentage",
+      "enter-amount-placeholder": "Entrez le montant",
+      "apply": "Appliquer",
+      "round-up-checkbox": "Arrondir jusqu'à 2 Emplacements décimaux",
+      "presentation-product-price-visible-price-grids": {
+        "confirmation-dialog-restore-to-default": {
+          "message": "Êtes-vous sûr de vouloir restaurer les prix ?",
+          "confirm": "Oui, restaurer par défaut",
+          "cancel": "Non, ne pas restaurer"
+        },
+        "add-price-grid": "Ajoutez une grille de prix ou personnalisez votre gamme de prix.",
+        "price-grid": "Grille de prix",
+        "add-custom-quantity": "Ajouter une quantité personnalisée",
+        "price-includes": "Prix inclus",
+        "reset-price-grid": "Réinitialiser la grille de prix",
+        "remove-price-grid": "Supprimer la grille de prix",
+        "presentation-product-visible-price-grid-prices": {
+          "quantity-header-cell": "Quantité",
+          "net-cost-header-cell": "Coût net",
+          "original-header-cell": "Originale",
+          "margin-header-cell": "Marge",
+          "price-header-cell": "Prix",
+          "visible-header-cell": "Visible",
+          "remove-header-cell": "Retirer",
+          "view-header-cell": "Voir"
+        }
+      },
+      "presentation-product-price-invisible-price-grids": {
+        "add-price-grids": "Ajouter des grilles de prix",
+        "available-price-grids": "Les grilles de prix disponibles sont cachées de la présentation du client jusqu'à ce qu'elles soient ajoutées.",
+        "all-price-grids": "Toutes les grilles de prix",
+        "description-header-cell": "Libellé",
+        "min-price-header-cell": "Prix minimum",
+        "add-button": "Ajouter",
+        "add-all-price-grids-button": "Ajouter toutes les grilles de prix"
+      }
+    },
+    "presentation-product-price-range": {
+      "price-range-label": "Plage de prix",
+      "determined-by-price": "Déterminé par le(s) prix(s) sélectionné(s) ci-dessus ou vous pouvez choisir de personnaliser.",
+      "displayed-price-range": "Plage de prix affichée",
+      "price-from": "Prix à partir de {{minMax}}",
+      "use-custom-price-range": "Utiliser une plage de prix personnalisée"
+    },
+    "presentation-product-client-discount": {
+      "client-discount-label": "Remise client",
+      "display-indicator": "Affiche un indicateur indiquant au client que le produit est remis."
+    }
+  },
+  "presentation-settings-component": {
+    "presentation-settings-toggle": {
+      "product-cpn": "Produit CPN",
+      "product-color": "Couleur du produit",
+      "product-size": "Taille du produit",
+      "product-shape": "Forme du produit",
+      "product-material": "Matériel du produit",
+      "price-range": "Plage de prix",
+      "pricing": "Tarification",
+      "client-discount": "Remise client",
+      "imprint-options": "Options de mentions légales"
+    }
+  },
+  "util-presentation-product-pipe": {
+    "quote-requested-tooltip": "Devis demandé",
+    "quote-requested-wrapper-label": "Devis demandé!",
+    "added-to-cart-tooltip": "Ajouté au panier",
+    "disliked-tooltip": "Non aimé"
+  },
+  "presentation-settings-page": {
+    "header-title": "Présentation",
+    "menu": "Menu",
+    "presentation-action-bar": {
+      "preview": "Aperçu",
+      "share-with-customer": "Partager avec le client",
+      "edit": "Editer",
+      "share": "Partager"
+    },
+    "presentation-info-card": {
+      "presentation-info-title": "Information de présentation",
+      "presentation-expired": "Expiré",
+      "shared-with": "Partagé avec {{name}} le {{sharedDate}} à {{sharedTime}}.",
+      "presentation-not-viewed": "La présentation n'a pas encore été vue.",
+      "link-expired": "Le lien a expiré {{date}}",
+      "link-expires": "Le lien expire le {{date}}",
+      "link-not-shared-yet": "Cette présentation n'a pas encore été partagée avec le client.",
+      "customer-engagement-title": "Engagement du client",
+      "last-viewed": "Dernière vue",
+      "not-viewed": "Non consulté",
+      "products-requested-title": "Produits demandés",
+      "products-disliked": "Produits n'aimés pas",
+      "project-details": "Détails du projet",
+      "edit-tooltip": "Editer",
+      "project-created": "Projet créé : {{date}}",
+      "in-hands-date": "Dates In-Hands : {{date}}",
+      "event-date": "Date de l'évènement: {{date}}",
+      "event-type": "Type d’événement : {{type}}",
+      "budget": "Budget: {{value}}",
+      "attendees": "Participants : {{value}}"
+    },
+    "presentation-quotes": {
+      "quote-request-received": "Demande de devis reçue",
+      "view-quote": "Voir le devis",
+      "changes-updated": "Modifications mises à jour automatiquement dans les détails du projet",
+      "quote-details": "Détails du devis"
+    },
+    "presentation-settings": "Paramètres de présentation",
+    "hiding-product": "Cacher un détail de produit ici s'appliquera à tous les produits de la présentation. Vous pouvez choisir d'afficher les informations cachées pour des éléments spécifiques en modifiant le produit individuel et en activant l'option.",
+    "change-conversion-date": "Changer le taux de conversion",
+    "hide-product-details": "Masquer ces détails sur tous les articles de votre présentation.",
+    "product-details": "Détails du produit",
+    "sharing-options": "Options de partage",
+    "allow-customers-to-select": "Permettre aux clients de sélectionner des variantes de produit lors de la demande de devis",
+    "personal-note-label": "Note personnelle",
+    "personal-note-placeholder": "Voici quelques produits qui pourraient vous intéresser!",
+    "save": "Enregistrer",
+    "include-signature": "Inclure la signature",
+    "expiration-date": "Date d'expiration",
+    "expiration-date-description": "Vous pouvez choisir une date d'expiration de présentation jusqu'à 90 jours. La valeur par défaut est de 30 jours.",
+    "select-date-placeholder": "Sélectionnez une date",
+    "invalid-expiration-date": "Date d'expiration invalide.",
+    "presentation-preview": {
+      "presentation-preview-title": "Aperçu de la présentation",
+      "product-page": "Page produit",
+      "landing-page": "Page d'accueil",
+      "configure-your-presentation": "Configurez votre présentation et ajoutez des produits pour voir un aperçu."
+    },
+    "presentation-products": {
+      "edit-products": "Modifier les produits",
+      "click-on-product-to-edit": "Ces produits seront présentés avec les détails ci-dessus. Cliquez sur un produit pour modifier ses informations spécifiques.",
+      "sort-by": "Trier par",
+      "all-products-tab": "Tous les produits",
+      "added-to-cart-tab": "Ajouté au panier",
+      "disliked-products-tab": "Produits non aimés",
+      "seen-products-tab": "Produits vus",
+      "unseen-products-tab": "Produits invisibles",
+      "hidden-tab": "Hidden",
+      "drag-to-reorder": "Glisser pour réorganiser",
+      "no-products-message": {
+        "no-products": "Il n'y a pas de produits dans cette présentation. Ajoutez des produits en lançant une recherche."
+      },
+      "hide-from-presentation": "Cacher de la présentation",
+      "show-in-presentation": "Afficher dans la présentation",
+      "delete-from-presentation": "Supprimer de la présentation",
+      "sort": "Trier",
+      "newest-to-oldest": "Du plus récent au plus ancien",
+      "oldest-to-newest": "Du plus ancien au plus récent",
+      "product-name": "Nom du produit",
+      "product-number": "Numéro de produit",
+      "profit": "Profit",
+      "price-high-to-low": "Prix (du plus haut au plus bas)",
+      "price-low-to-high": "Prix (bas à haut)",
+      "cost-high-to-low": "Coût (du haut au bas)",
+      "cost-low-to-high": "Coût (bas à élevé)",
+      "supplier-name": "Nom du fournisseur",
+      "category": "Catégorie"
+    }
+  },
+  "share-presentation-dialog": {
+    "close": "Fermer",
+    "share-with-customer": "Partager avec le client",
+    "send-email": "Envoyez un courriel ou un lien de copie à partager par vous-même.",
+    "subject-line-label": "Ligne de sujet",
+    "enter-subject-placeholder": "Entrez le sujet",
+    "message-label": "Message",
+    "enter-personal-message-placeholder": "Entrez un message personnel que vous souhaitez voir apparaître dans votre courriel.",
+    "presentation-settings": "Paramètres de présentation :",
+    "signature-and-expiration-date": "La date de signature et la date d'expiration ne s'appliquent qu'à vos paramètres de présentation et non pas à votre courriel.",
+    "include-signature": "Inclure la signature",
+    "expiration-date": "Date d'expiration",
+    "select-date-placeholder": "Sélectionnez une date",
+    "mat-datepicker-parse": "Date d'expiration invalide.",
+    "invalid-expiration-date": "La date d'expiration est dans le passé. Vous devez saisir une date ultérieure.",
+    "preview-presentation": "Prévisualiser la présentation",
+    "copy-link": "Copier le lien",
+    "share-via-email": "Partager par e-mail",
+    "share-via-link": "Partager via le lien"
+  },
+  "presentation-product-card": {
+    "imprint-method": "Méthode d'impression : {{value}}",
+    "artwork": "Œuvre :",
+    "requested-changes": "Modifications demandées :",
+    "customization-comments": "Commentaires de personnalisation :",
+    "presentation-product-card-grid-with-charge": {
+      "item-header": "Élément",
+      "quantity-header": "Quantité",
+      "price-header": "Prix",
+      "total-price-header": "Prix total",
+      "total-units-footer": "Unités totales",
+      "total-footer": "Total"
+    }
+  }
+}

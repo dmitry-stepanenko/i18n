@@ -9,13 +9,13 @@
   "esp-settings-feature-profile": {
     "currency-panel-row": {
       "asi-panel-editable-row": {
-        "save-button": "Save",
+        "save-button": "Enregistrer",
         "row-title": "Currency"
       }
     },
     "market-segment-row": {
       "asi-panel-editable-row": {
-        "save-button": "Save",
+        "save-button": "Enregistrer",
         "row-title": "Default Market"
       }
     }

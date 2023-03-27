@@ -1,0 +1,26 @@
+{
+  "features-orders-list": {
+    "orders-title": "Bestellungen",
+    "orders-subtitle": "Dies ist Ihre Bestellseite. Sehen Sie sich unten alle Ihre Bestellungen an.",
+    "order-card-order": "Sortierung",
+    "order-card-created-date": "Erstellungsdatum",
+    "order-card-in-hands-date": "In-Hands-Datum",
+    "order-card-order-total": "Bestellsumme",
+    "order-card-view-order-button": "Bestellung anzeigen"
+  },
+  "feature-order-details": {
+    "back-to-all-orders": "Zurück zu allen Bestellungen",
+    "order-title": "Sortierung",
+    "order-subtitle": "Unten können Sie Ihren Bestellstatus, die Sendung verfolgen und den Nachweis anzeigen.",
+    "total-quantity": "Gesamtmenge",
+    "order-total": "Bestellsumme",
+    "number-of-products": "Anzahl der Produkte",
+    "order-status": "Bestellstatus",
+    "updated": "Aktualisiert",
+    "ship-to": "Versand an",
+    "shipping-method": "Versandart",
+    "subtotal": "Zwischensumme",
+    "discount": "Rabatt",
+    "sales-tax": "Umsatzsteuer"
+  }
+}

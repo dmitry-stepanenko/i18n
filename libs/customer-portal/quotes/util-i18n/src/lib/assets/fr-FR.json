@@ -1,0 +1,49 @@
+{
+  "feature-quotes-list": {
+    "quotes-title": "Devis",
+    "quotes-subtitle": "Ceci est votre page de devis. Voir tous vos devis ci-dessous.",
+    "quote-card-quote": "Devis",
+    "quote-card-created-date": "Date de création",
+    "quote-card-in-hands-date": "Date In-Hands",
+    "quote-card-quote-total": "Total du devis",
+    "quote-card-view-quote-button": "Voir le devis"
+  },
+  "feature-quote-details": {
+    "back-to-all-quotes": "Retour à tous les devis",
+    "quote-title-if-approved": "Vous avez approuvé votre devis",
+    "quote-title-if-not-approved": "Votre devis personnalisé",
+    "quote-subtitle-if-approved": "Votre devis a été envoyé à",
+    "quote-subtitle-if-not-approved": "Ce devis a été créé spécialement pour vous. Depuis ce site, vous pouvez demander des modifications à ce devis, ainsi que ajouter des fichiers supplémentaires et un message à",
+    "total-quantity": "Quantité totale",
+    "quote-total": "Total du devis",
+    "number-of-products": "Nombre de produits",
+    "quote-expires": "Le devis expire",
+    "request-changes-to-products": "Demander des modifications aux produits",
+    "request-change-info": "Les demandes de modification courantes comprennent la taille des œuvres d'art, le positionnement des œuvres d'art, les quantités de produits et les variantes de produits. Veuillez résumer les modifications que vous souhaitez voir dans un devis mis à jour.",
+    "request-change-additional-info": "Passer à la date d'entrée des mains ou à l'emplacement de livraison pourrait avoir une incidence sur les prix et les dates de livraison estimées.",
+    "products": "Produits",
+    "quote-card-edit-changes-button": "Modifier les modifications",
+    "quote-card-request-changes-button": "Demander des modifications",
+    "subtotal": "Sous-total",
+    "discount": "Remise",
+    "sales-tax": "Taxe de vente",
+    "additional-files": "Fichiers supplémentaires",
+    "contact-information": "Coordonnées",
+    "prices-subject-to-change": "Les prix peuvent être modifiés.",
+    "send-requested-changes-button": "Envoyer les modifications demandées",
+    "approve-quote-button": "Approuver le devis"
+  },
+  "request-changes-dialog": {
+    "title": "Demander des modifications",
+    "sub-title": "Veuillez détailler les modifications demandées.",
+    "image-disclaimer": "*L'exemple d'image peut ne pas représenter la configuration exacte sélectionnée.",
+    "imprint-method": "Méthode d'empreinte",
+    "artwork": "Œuvre",
+    "request-changes-label": "Demander des modifications",
+    "request-changes-placeholder": "Tapez les modifications demandées.",
+    "name-label": "Nom",
+    "name-placeholder": "Entrez le nom",
+    "cancel-button": "Abandonner",
+    "save-button": "Enregistrer"
+  }
+}

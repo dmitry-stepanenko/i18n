@@ -1,0 +1,109 @@
+{
+  "project-product-details": {
+    "product-variants.colors-toggle": "Couleurs",
+    "imprint-options.imprint-colors-header": "Couleurs d'impression"
+  },
+  "project-edit-dialog": {
+    "edit-project-info": "Modifier les informations du projet",
+    "cancel": "Abandonner",
+    "save": "Enregistrer",
+    "project-form": {
+      "project-label": "Nom du projet",
+      "presentation-label": "Nom de la présentation",
+      "project-placeholder": "Entrez un nom de projet",
+      "presentation-placeholder": "Entrez un nom de présentation",
+      "event-info": "Informations sur l'événement",
+      "event-type-label": "Type d'événement",
+      "select-event-type-placeholder": "Sélectionnez un type d'événement",
+      "event-date-label": "Date de l'événement",
+      "select-date-placeholder": "Sélectionnez une date",
+      "attendees-label": "Participants",
+      "attendees-placeholder": "Nombre de participants",
+      "budget-max-value-error": "Vous devez saisir moins de 99 999 999.99",
+      "assignees-mx-value-error": "Vous devez saisir moins de 99 999 999",
+      "in-hands-date-label": "Date In-Hands",
+      "flexible": "Flexible",
+      "firm": "Entreprise",
+      "budget": "Budget",
+      "event-types": {
+        "advertising": "Publicité",
+        "awards-recognition": "Récompenses et reconnaissance",
+        "party": "Soirée",
+        "charity-non-profits": "Organisme caritatif/sans but lucratif",
+        "customer-appreciation": "Appréciation du client",
+        "self-promotions": "Auto-Promotions",
+        "corporate-event": "Événement d'entreprise",
+        "festival": "Cérémonie",
+        "fitness": "Entraînement physique",
+        "fundraiser": "Collecte de fonds",
+        "gifts": "Cadeaux",
+        "government": "Gouvernement",
+        "graduation": "Diplôme",
+        "mailer": "Courrier",
+        "pharmaceutical": "Pharmaceutique",
+        "product-launch": "Lancement du produit",
+        "other": "Autres",
+        "retreat": "Retirer",
+        "team-building": "Bâtiment d'équipe",
+        "tradeshows": "Salons de salon",
+        "religious": "Religieux",
+        "sporting-event": "Événement sportif",
+        "technology": "Technologie"
+      }
+    }
+  },
+  "toast-messages": {
+    "company-not-created": {
+      "title": "Échec : La société n'a pas été créée !",
+      "body": "Impossible de créer la société."
+    },
+    "contact-not-created": {
+      "title": "Échec : le contact ne peut pas être créé !",
+      "body": "Impossible de créer le contact."
+    },
+    "project-not-created": {
+      "title": "Échec : Le projet ne peut pas être créé !",
+      "body": "Impossible de créer le projet."
+    },
+    "project-for-company-updated": {
+      "title": "Projet mis à jour avec succès",
+      "body": "Le projet {{projectName}} a été mis à jour pour {{companyName}}."
+    },
+    "project-updated": {
+      "title": "Projet mis à jour avec succès",
+      "body": "Le projet {{projectName}} a été mis à jour."
+    },
+    "project-not-updated": {
+      "title": "Le projet ne peut pas être mis à jour",
+      "body": "Impossible de mettre à jour le projet."
+    },
+    "project-transferred": {
+      "title": "Propriété transférée !",
+      "body": "La propriété a été transférée à {{name}}"
+    },
+    "project-not-transferred": {
+      "title": "Erreur: Propriété non transférée !",
+      "body": "La propriété de {{name}} n'a pas pu être transférée !"
+    },
+    "project-closed": {
+      "title": "Le projet {{name}} est fermé!",
+      "body": "{{name}} a été fermé."
+    },
+    "project-not-closed": {
+      "title": "Le projet {{name}} ne peut pas être mis à jour vers la fermeture !",
+      "body": "{{name}} ne peut pas être fermé."
+    },
+    "project-reopened": {
+      "title": "Le projet {{name}} est rouvert !",
+      "body": "{{name}} a été rouvert."
+    },
+    "project-not-reopened": {
+      "title": "Le projet {{name}} ne peut pas être mis à jour pour être rouvert !",
+      "body": "{{name}} ne peut pas être rouvert."
+    },
+    "alert-not-dismissed": {
+      "title": "Erreur!",
+      "body": "Impossible de supprimer l'alerte"
+    }
+  }
+}

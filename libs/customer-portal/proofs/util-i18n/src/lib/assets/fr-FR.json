@@ -1,0 +1,43 @@
+{
+  "feature-proofs": {
+    "presentation-proofs": {
+      "all-proofs-title": "Toutes les preuves",
+      "all-proofs-desc": "Examinez vos preuves pour les éléments suivants : taille de votre design, couleurs utilisées, placement de votre design sur vos articles, grammaire et orthographe.",
+      "pending-approval-title": "En attente d'approbation",
+      "pending-approval-desc": "Examinez vos preuves pour les éléments suivants : taille de votre design, couleurs utilisées, placement de votre design sur vos articles, grammaire et orthographe.",
+      "requested-changes-title": "Modifications demandées",
+      "requested-changes-desc": "Voir ici les preuves que vous avez demandées des modifications.",
+      "approved-title": "Approuvé",
+      "approved-desc": "Consultez vos preuves approuvées ici."
+    },
+    "presentation-proof-card": {
+      "proof-name-label": "Preuve de Nom",
+      "order-number-label": "Numéro de commande",
+      "product-label": "Produit",
+      "imprint-location-label": "Empreinte de l'emplacement",
+      "change-request-note-label": "Votre note de modification pour le distributeur",
+      "approve-proof-button-label": "Approuver la preuve",
+      "request-changes-button-label": "Demander des modifications"
+    },
+    "request-proof-change": {
+      "dialog-title": "Demander des modifications",
+      "dialog-subtext": "Veuillez détailler les modifications demandées",
+      "image-helper-text": "*L'exemple d'image peut ne pas représenter la configuration exacte sélectionnée.",
+      "proof-name-label": "Preuve de Nom",
+      "order-number-label": "Numéro de commande",
+      "product-label": "Produit",
+      "imprint-location-label": "Empreinte de l'emplacement",
+      "request-changes-label": "Demander des modifications",
+      "request-changes-helper-text": "Veuillez détailler les modifications demandées.",
+      "request-changes-placeholder": "Demander des modifications",
+      "request-changes-send-distributor": "Demander des modifications et envoyer au distributeur",
+      "request-changes-send-distributor-helper-text": "Veuillez entrer votre nom. Nous utiliserons ceci pour garder une trace des demandes de changement et pour nous assurer que seuls les groupes autorisés demandent des modifications.",
+      "name-label": "Nom",
+      "name-placeholder": "Entrez le nom",
+      "cancel-button-label": "Abandonner",
+      "request-changes-button-label": "Demander des modifications",
+      "change-request-validation": "Vous devez entrer vos demandes de modification",
+      "name-validation": "Vous devez entrer votre nom"
+    }
+  }
+}

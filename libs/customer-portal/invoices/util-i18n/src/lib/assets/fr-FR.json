@@ -1,0 +1,20 @@
+{
+  "feature-invoices": {
+    "invoices-title": "Factures",
+    "invoices-subtext": "Ceci est votre page de factures. Voir toutes vos factures ci-dessous.",
+    "invoice-card-invoice": "Facture",
+    "invoice-card-customer-po": "PO du client",
+    "invoice-card-order": "Commandes",
+    "invoice-card-bill-to": "Facturer à",
+    "invoice-card-issue-date": "Date d'émission",
+    "invoice-card-due-date": "Date de fin",
+    "invoice-card-amount-due": "Montant dû",
+    "invoice-card-button": "Voir la facture"
+  },
+  "feature-invoice-details": {
+    "back-to-all-invoices": "Retour à toutes les factures",
+    "invoice-title": "Facture",
+    "download-invoice-button": "Télécharger la facture",
+    "print-button": "Imprimer"
+  }
+}

@@ -115,7 +115,7 @@
       "invalid-date-error": "Invalid date."
     },
     "cancel": "cancel",
-    "save": "Save",
+    "save": "Save Changes",
     "add-proof": "Add Proof",
     "confirmation-dialog": {
       "message": "You have unsaved changes. Are you sure you want to cancel?",

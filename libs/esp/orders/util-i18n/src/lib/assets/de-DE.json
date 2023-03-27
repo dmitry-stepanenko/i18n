@@ -1,0 +1,9 @@
+{
+  "ui-order-details": {
+    "point-of-contact": "Ansprechpartner",
+    "shipping-address": "Lieferadresse",
+    "billing-address": "Rechnungsadresse",
+    "quote-details": "Angebotsdetails",
+    "in-hands-date": "In-Hands-Datum"
+  }
+}

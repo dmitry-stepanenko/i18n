@@ -1,0 +1,152 @@
+{
+  "websites-pages": {
+    "feature-shell-web": {
+      "website-pages": {
+        "header": "Seiten und Navigation",
+        "add-content-library-cta": "Inhaltsbibliothek hinzufügen",
+        "add-custom-page-cta": "Eigene Seite hinzufügen",
+        "add-custom-collection-page-cta": "Produkt-Sammlungsseite hinzufügen"
+      }
+    }
+  },
+  "websites-overview": {
+    "feature-overview": {
+      "page": {
+        "header": "Webseiten-Übersicht"
+      },
+      "template-overview-card": {
+        "header": "Vorlage",
+        "edit-cta": "Vorlage bearbeiten",
+        "color-palette-header": "Farbpalette"
+      },
+      "site-summary-card": {
+        "header": "Seitenübersicht",
+        "edit-cta": "Site-Einstellungen bearbeiten",
+        "site-title": "Seitentitel",
+        "domain": "Domäne",
+        "new-domain": "Neue Domain auswählen",
+        "analytics": "Analytik",
+        "setup-analytics": "Setup-Analytik",
+        "status": "Status",
+        "last-updated": "Zuletzt aktualisiert"
+      },
+      "products-overview-card": {
+        "header": "Produkte",
+        "manage-cta": "Produkte verwalten"
+      },
+      "pages-overview-card": {
+        "header": "Seiten",
+        "add-cta": "Seiten hinzufügen",
+        "no-pages": "Es wurden noch keine Seiten erstellt",
+        "loading": "Lädt",
+        "delete-collection": "Produkt-Sammlung löschen",
+        "delete-page": "Seite löschen",
+        "edit": "Bearbeiten"
+      }
+    }
+  },
+  "websites-products": {
+    "feature-global-product-configuration": {
+      "global-product-configuration-card": {
+        "product-description": "Produktbeschreibung",
+        "product-size-variants": "Varianten der Produktgröße",
+        "available-imprint-methods": "Verfügbare Impressum Methoden",
+        "prices-and-upcharges": "Preise und Aufladungen",
+        "product-options": "Produktoptionen",
+        "shipping-options": "Versandoptionen",
+        "packaging-options": "Verpackungsoptionen",
+        "customer-comment": "Kundenkommentar",
+        "upload-additional-details": "Weitere Details hochladen",
+        "product-color-variants": "Produktfarbenvarianten",
+        "upload-instructions": {
+          "label": "Anleitung hochladen",
+          "placeholder": "Upload-Anweisungen eingeben"
+        },
+        "default-sort-option": {
+          "label": "Standard-Sortieroption"
+        }
+      }
+    }
+  },
+  "websites-settings": {
+    "feature-shell-web": {
+      "page": {
+        "header": "Einstellungen"
+      }
+    },
+    "feature-site-information": {
+      "site-information": {
+        "header": "Site-Informationen",
+        "site-title": {
+          "title": "Seitentitel",
+          "label": "Seitentitel",
+          "placeholder": "Seitentitel eingeben",
+          "empty-text": "Kein Seitentitel hinzugefügt"
+        },
+        "site-description": {
+          "title": "Seitenbeschreibung",
+          "label": "Seitenbeschreibung",
+          "placeholder": "Seitenbeschreibung eingeben",
+          "empty-text": "Keine Beschreibung hinzugefügt"
+        },
+        "site-keywords": {
+          "title": "Website-Schlüsselwörter",
+          "label": "Website-Schlüsselwörter",
+          "placeholder": "Site-Schlüsselwörter eingeben",
+          "empty-text": "Derzeit keine Stichwörter hinzugefügt",
+          "validation-messages": {
+            "maxlength": "Sie dürfen nicht mehr als {{max}} Stichwörter eingeben"
+          }
+        },
+        "media-panel": {
+          "header": "Medien",
+          "social-media-social-images": "Bilder zum Teilen von sozialen Medien",
+          "social-media-social-images-edit-cta": "Bilder zum Teilen von sozialen Medien"
+        },
+        "enable-progressive-web-app-panel": {
+          "header": "Progressive Web-App aktivieren",
+          "activate": "Progressive Web-App aktivieren",
+          "enable-mobile": "Mobilen Browsern erlauben, die Site als App zu installieren"
+        }
+      },
+      "company-information": {
+        "header": "Unternehmensinformationen"
+      }
+    },
+    "feature-seo-and-analytics": {
+      "header": "SEO und Analytik",
+      "enabled": "Aktiviert",
+      "disabled": "Deaktiviert",
+      "analytics": {
+        "title": "Google Analytics",
+        "label": "Konto-ID",
+        "placeholder": "Gib hier deine Konto-ID 'G-XXXXXXX ein"
+      },
+      "tag-manager": {
+        "title": "Google Tag Manager",
+        "label": "Container-ID",
+        "placeholder": "Geben Sie Ihre Container-ID hier 'GTM-XXXXXXX ein"
+      }
+    }
+  },
+  "websites-templates": {
+    "feature-template": {
+      "template-page": {
+        "header": "Vorlage",
+        "save-cta": "Speichern",
+        "cancel-cta": "Abbrechen"
+      },
+      "selected-template-card": {
+        "header": "Ausgewählte Vorlage"
+      },
+      "color-palette-card": {
+        "header": "Farbpalette",
+        "reset-color-cta": "Farbe zurücksetzen",
+        "primary-color": "Primäre Farbe",
+        "secondary-color": "Sekundärfarbe",
+        "tertiary-color": "Tertiäre Farbe",
+        "highlight-color": "Hervorhebungsfarbe"
+      }
+    }
+  }
+}

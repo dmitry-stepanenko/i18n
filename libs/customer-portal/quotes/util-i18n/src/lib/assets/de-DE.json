@@ -1,0 +1,49 @@
+{
+  "feature-quotes-list": {
+    "quotes-title": "Zitate",
+    "quotes-subtitle": "Dies ist Ihre Angebotsseite. Sehen Sie sich unten alle Ihre Angebote an.",
+    "quote-card-quote": "Zitat",
+    "quote-card-created-date": "Erstellungsdatum",
+    "quote-card-in-hands-date": "In-Hands-Datum",
+    "quote-card-quote-total": "Angebotssumme",
+    "quote-card-view-quote-button": "Angebot ansehen"
+  },
+  "feature-quote-details": {
+    "back-to-all-quotes": "Zurück zu allen Angeboten",
+    "quote-title-if-approved": "Sie haben Ihr Angebot genehmigt",
+    "quote-title-if-not-approved": "Ihr individuelles Angebot",
+    "quote-subtitle-if-approved": "Ihre Angebotsfreigabe wurde gesendet an",
+    "quote-subtitle-if-not-approved": "Dieses Angebot wurde speziell für Sie erstellt. Auf dieser Seite können Sie Änderungen an diesem Angebot anfordern, sowie zusätzliche Dateien und eine Nachricht hinzufügen an",
+    "total-quantity": "Gesamtmenge",
+    "quote-total": "Angebotssumme",
+    "number-of-products": "Anzahl der Produkte",
+    "quote-expires": "Angebot läuft ab",
+    "request-changes-to-products": "Änderungen an Produkten anfordern",
+    "request-change-info": "Häufige Änderungsanfragen umfassen die Größe der Zeichnungen, die Positionierung von Zeichnungen, Produktmengen und Produktvarianten. Bitte fassen Sie die Änderungen, die Sie in einem aktualisierten Angebot sehen möchten, zusammen.",
+    "request-change-additional-info": "Änderung des In-Hands-Datums oder des Versandortes kann sich auf die Preisgestaltung und die voraussichtlichen Liefertermine auswirken.",
+    "products": "Produkte",
+    "quote-card-edit-changes-button": "Änderungen bearbeiten",
+    "quote-card-request-changes-button": "Änderungen anfordern",
+    "subtotal": "Zwischensumme",
+    "discount": "Rabatt",
+    "sales-tax": "Umsatzsteuer",
+    "additional-files": "Zusätzliche Dateien",
+    "contact-information": "Kontaktinformationen",
+    "prices-subject-to-change": "Die Preise sind freibleibend.",
+    "send-requested-changes-button": "Angeforderte Änderungen senden",
+    "approve-quote-button": "Angebot genehmigen"
+  },
+  "request-changes-dialog": {
+    "title": "Änderungen anfordern",
+    "sub-title": "Bitte beschreiben Sie die angeforderten Änderungen.",
+    "image-disclaimer": "*Beispielbild kann nicht die exakte Konfiguration darstellen.",
+    "imprint-method": "Impressum",
+    "artwork": "Kunstwerk",
+    "request-changes-label": "Änderungen anfordern",
+    "request-changes-placeholder": "Geben Sie Ihre angeforderten Änderungen ein.",
+    "name-label": "Name",
+    "name-placeholder": "Name eingeben",
+    "cancel-button": "Abbrechen",
+    "save-button": "Speichern"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "feature-proofs": {
+    "presentation-proofs": {
+      "all-proofs-title": "Alle Beweise",
+      "all-proofs-desc": "Überprüfen Sie Ihre Beweise auf die folgende Größe: Größe Ihres Designs, Farben verwendet, Platzierung Ihres Designs auf Ihre Gegenstände, Grammatik und Rechtschreibung.",
+      "pending-approval-title": "Ausstehende Genehmigung",
+      "pending-approval-desc": "Überprüfen Sie Ihre Beweise auf die folgende Größe: Größe Ihres Designs, Farben verwendet, Platzierung Ihres Designs auf Ihre Gegenstände, Grammatik und Rechtschreibung.",
+      "requested-changes-title": "Angeforderte Änderungen",
+      "requested-changes-desc": "Sehen Sie sich die Beweise an, für die Sie Änderungen angefordert haben.",
+      "approved-title": "Genehmigt",
+      "approved-desc": "Sehen Sie sich hier Ihre bestätigten Beweise an."
+    },
+    "presentation-proof-card": {
+      "proof-name-label": "Nachweis Name",
+      "order-number-label": "Bestellnummer",
+      "product-label": "Produkt",
+      "imprint-location-label": "Impressum Standort",
+      "change-request-note-label": "Ihre Änderungsanfragenotiz für den Distributor",
+      "approve-proof-button-label": "Beweis genehmigen",
+      "request-changes-button-label": "Änderungen anfordern"
+    },
+    "request-proof-change": {
+      "dialog-title": "Änderungen anfordern",
+      "dialog-subtext": "Bitte beschreiben Sie die angeforderten Änderungen",
+      "image-helper-text": "*Beispielbild kann nicht die exakte Konfiguration darstellen.",
+      "proof-name-label": "Nachweis Name",
+      "order-number-label": "Bestellnummer",
+      "product-label": "Produkt",
+      "imprint-location-label": "Impressum Standort",
+      "request-changes-label": "Änderungen anfordern",
+      "request-changes-helper-text": "Bitte beschreiben Sie die angeforderten Änderungen.",
+      "request-changes-placeholder": "Änderungen anfordern",
+      "request-changes-send-distributor": "Änderungen anfordern und an Distributor senden",
+      "request-changes-send-distributor-helper-text": "Bitte geben Sie Ihren Namen ein. Wir werden dies nutzen, um Änderungswünsche zu verfolgen und sicherzustellen, dass nur zugelassene Parteien Änderungen anfordern.",
+      "name-label": "Name",
+      "name-placeholder": "Name eingeben",
+      "cancel-button-label": "Abbrechen",
+      "request-changes-button-label": "Änderungen anfordern",
+      "change-request-validation": "Sie müssen Ihre Änderungsanfragen eingeben",
+      "name-validation": "Sie müssen Ihren Namen eingeben"
+    }
+  }
+}

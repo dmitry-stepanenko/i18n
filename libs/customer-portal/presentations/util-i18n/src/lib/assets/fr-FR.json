@@ -1,0 +1,73 @@
+{
+  "feature-presentations": {
+    "presentation-products": {
+      "presentation-products-info": {
+        "reply-label": "Répondre",
+        "presentation-expires-label": "Expiration de la présentation"
+      }
+    },
+    "presentation-product": {
+      "back-to-all-products": "Retour à tous les produits",
+      "additional-note": "Note supplémentaire",
+      "discount-applied": "Remise appliquée",
+      "dislike-tooltip": "Dislike",
+      "disabled-in-preview-tooltip": "Cette fonctionnalité est désactivée dans l'aperçu",
+      "add-to-cart-button": "Ajouter au panier",
+      "quote-requested-tag": "Devis demandé",
+      "pricing-and-charges": "Prix et frais",
+      "pricing-grid-header-quantity": "Quantité",
+      "pricing-grid-header-price-per-unit": "Prix par unité",
+      "price-includes": "Prix inclus",
+      "colors": "Couleurs",
+      "show-more": "Afficher plus",
+      "show-less": "Afficher moins",
+      "sizes": "Tailles",
+      "shapes": "Formes",
+      "materials": "Matériaux",
+      "imprint-methods": "Méthodes d'impression",
+      "imprint-sizes": "Tailles des mentions légales",
+      "imprint-colors": "Couleur(s) de marquage",
+      "imprint-locations": "Empreinte des Empreintes",
+      "price-from": "Prix à partir de {{minMax}}"
+    }
+  },
+  "pending-quote": {
+    "title": "Votre demande de devis a été envoyée !",
+    "sub-text": "Votre demande de devis a été envoyée à {{ distributorName }}. Elle ajustera le prix en conséquence et vous le renvoyera.",
+    "contact-information": "Coordonnées",
+    "additional-files": "Fichiers supplémentaires"
+  },
+  "feature-customize-product-dialog": {
+    "subtext": "Décrivez comment vous souhaitez que votre produit soit personnalisé ou ajouté à partir des options disponibles.",
+    "image-disclaimer": "*L'exemple d'image peut ne pas représenter la configuration exacte sélectionnée.",
+    "no-image-text": "Aucune image disponible",
+    "advanced-options": "Options avancées",
+    "imprint-method": "Méthode d'empreinte",
+    "imprint-select-text": "Sélectionner à partir des méthodes d'impression disponibles",
+    "customization-comments": "Commentaires de personnalisation",
+    "customization-placeholder": "Les commentaires peuvent inclure des tailles, des couleurs ou tout autre élément que vous souhaitez personnaliser.",
+    "cancel-button": "Abandonner",
+    "save-button": "Enregistrer",
+    "form-components": {
+      "products-artworks": {
+        "upload-artwork-text": "Télécharger des fichiers d'illustration ou de personnalisation",
+        "show-less": "Afficher moins",
+        "show-all": "Tout afficher ( {{length}})",
+        "image-size-limit": "Télécharger un maximum de 10 fichiers et chaque fichier doit être inférieur à 1Mo.",
+        "image-type-limit": "Les types de fichiers autorisés sont png, tif, tiff, jpg, dst, eps, ai, doc, docx, txt, csv, pdf, svg, xls et/ou xlsx."
+      },
+      "product-details": {
+        "add-optional-product-config": "Ajouter une configuration optionnelle de produit",
+        "color": "Couleur",
+        "size": "Taille",
+        "material": "Matériel",
+        "shape": "Forme",
+        "select-a-property": "Sélectionnez un {{property}}",
+        "quantity": "Quantité",
+        "quantity-placeholder": "Entrez une quantité",
+        "save-selection-button": "Enregistrer la sélection",
+        "item": "Élément"
+      }
+    }
+  }
+}

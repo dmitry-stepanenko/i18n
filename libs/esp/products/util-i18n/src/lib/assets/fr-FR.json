@@ -1,0 +1,28 @@
+{
+  "esp-products-feature-shell-web": {
+    "product-search-filters": {
+      "labels": {
+        "color": "Couleur",
+        "zipCode": "Code postal",
+        "market": "Marché"
+      }
+    },
+    "product-imprint-methods": {
+      "imprint-colors-header": "Couleurs d'impression",
+      "full-color-process-header": "Processus en pleine couleur"
+    }
+  },
+  "esp-products-ui-product-form-elements": {
+    "geo-filter": {
+      "labels": {
+        "location": "Localisation",
+        "shippingTo": "Expédition vers",
+        "distanceAway": "Distance Absent"
+      },
+      "distance": {
+        "ANY_DISTANCE": "N'importe quelle distance",
+        "WITHIN_DISTANCE": "Dans un rayon de {{distance}} miles"
+      }
+    }
+  }
+}

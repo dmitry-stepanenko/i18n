@@ -1,0 +1,66 @@
+{
+  "components": {
+    "image-upload-form": {
+      "upload": "Hochladen",
+      "choose-type": "Wähle {{type}} zum Hochladen",
+      "drag-drop-here": "oder ziehen Sie und ziehen Sie hierher.",
+      "error": "Fehler:",
+      "file-under": "{{allowedTypes}}. Datei muss unter 5MB liegen.",
+      "must-add-image": "Sie müssen ein Bild hinzufügen.",
+      "allowed-types": "Erlaubte Dateitypen sind {{types}}",
+      "upload-type-image": "Bild",
+      "upload-type-file": "Datei",
+      "size-error-msg": "Dateigröße überschreitet {{maxFileBytes}}",
+      "dimension-error-msg": "Bildgröße darf nicht kleiner als {{minWidth}}px {{minHeight}}px sein",
+      "type-error-msg": "Dateityp wird nicht unterstützt",
+      "type-error-msg-2": "File type is supported"
+    },
+    "form-field": {
+      "encore-errors": {
+        "email": "Bitte geben Sie eine gültige E-Mail-Adresse an.",
+        "max-with-label": "Ihre {{label}} muss kleiner als {{max}} sein.",
+        "max-no-label": "`Sie müssen weniger als {{max}} eingeben.",
+        "max-length-with-label": "Dein {{label}} darf nicht länger als {{requiredLength}} Zeichen sein.",
+        "max-length-no-label": "Sie müssen höchstens {{requiredLength}} Zeichen eingeben.",
+        "min-length-with-label": "Deine {{label}} muss mindestens {{requiredLength}} Zeichen lang sein.",
+        "min-length-no-label": "Sie müssen mindestens {{requiredLength}} Zeichen eingeben.",
+        "min-with-label": "Ihr {{label}} muss mindestens {{min}} sein.",
+        "min-no-label": "Sie müssen mindestens {{min}} eingeben.",
+        "required": "Sie müssen einen Wert eingeben."
+      },
+      "customer-portal-errors": {
+        "email": "Bitte geben Sie eine gültige E-Mail-Adresse an.",
+        "max-with-label": "Ihre {{label}} muss kleiner als {{max}} sein.",
+        "max-no-label": "`Sie müssen weniger als {{max}} eingeben.",
+        "max-length-with-label": "Dein {{label}} darf nicht länger als {{requiredLength}} Zeichen sein.",
+        "max-length-no-label": "Sie müssen höchstens {{requiredLength}} Zeichen eingeben.",
+        "min-length-with-label": "Deine {{label}} muss mindestens {{requiredLength}} Zeichen lang sein.",
+        "min-length-no-label": "Sie müssen mindestens {{requiredLength}} Zeichen eingeben.",
+        "min-with-label": "Ihr {{label}} muss mindestens {{min}} sein.",
+        "min-no-label": "Sie müssen mindestens {{min}} eingeben.",
+        "required": "Sie müssen einen Wert eingeben."
+      }
+    },
+    "confirmation-dialog": {
+      "default-message": "Möchtest du ohne Speichern verlassen?",
+      "confirm": "Ja",
+      "cancel": "Nein"
+    },
+    "inline-edit": {
+      "required-hint": "Benötigt",
+      "cancel-button": "Abbrechen",
+      "save-button": "Speichern",
+      "edit-button": "Bearbeiten",
+      "edit-value-required-error": "Sie müssen einen Wert eingeben"
+    },
+    "rating": {
+      "total-reviews": "insgesamt Bewertungen",
+      "not-rated": "Noch nicht bewertet"
+    }
+  },
+  "pipes": {
+    "calculated-price-range": {
+      "no-price-grids": "Keine Preisraster ausgewählt."
+    }
+  }
+}

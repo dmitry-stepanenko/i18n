@@ -42,7 +42,7 @@
           "body": "1 proof has been updated."
         },
         "proof-not-updated": {
-          "title": "Error",
+          "title": "Erreur",
           "body": "1 proof failed to update."
         },
         "proof-deleted": {
@@ -50,7 +50,7 @@
           "body": "1 proof has been deleted from {{projectName}}."
         },
         "proof-not-deleted": {
-          "title": "Error",
+          "title": "Erreur",
           "body": "1 proof failed to delete."
         },
         "proof-marked-as-approved": {
@@ -58,7 +58,7 @@
           "body": "1 proof has marked as approved."
         },
         "proof-not-marked-as-approved": {
-          "title": "Error",
+          "title": "Erreur",
           "body": "1 proof could not be marked as approved."
         }
       }
@@ -76,8 +76,8 @@
         "size": "Size: {{fileSize}}"
       },
       "image-upload-form": {
-        "file-under": "{{allowedTypes}}. File has to be under 5MB.",
-        "must-add-image": "You must add an image."
+        "file-under": "{{allowedTypes}}. Le fichier doit être inférieur à 5 Mo.",
+        "must-add-image": "Vous devez ajouter une image."
       }
     },
     "proof-name": "Proof Name",
@@ -106,16 +106,16 @@
     },
     "approval-required": {
       "label": "Approval Required?",
-      "yes": "Yes",
-      "no": "No"
+      "yes": "Oui",
+      "no": "Non"
     },
     "approve-by-date": {
       "label": "\"Approve By\" Date",
       "placeholder": "Select a Date",
       "invalid-date-error": "Invalid date."
     },
-    "cancel": "cancel",
-    "save": "Save",
+    "cancel": "abandonner",
+    "save": "Enregistrer",
     "add-proof": "Add Proof",
     "confirmation-dialog": {
       "message": "You have unsaved changes. Are you sure you want to cancel?",
@@ -136,7 +136,7 @@
         "body": "1 proof has been saved."
       },
       "proof-not-updated": {
-        "title": "Error",
+        "title": "Erreur",
         "body": "1 proof failed to save."
       }
     }
@@ -151,7 +151,7 @@
     "message-label": "Message:",
     "message-placeholder": "Enter a personal message that you would like to appear in your email.",
     "copy-the-proof-link": "Copy the proof link to share with your customer.",
-    "cancel": "Cancel",
+    "cancel": "Abandonner",
     "send-to-customer": "Send to Customer",
     "copy-link": "Copy Link",
     "toast-messages": {
@@ -164,11 +164,11 @@
         "body": "Your proof link has been copied to your clipboard."
       },
       "proof-shared-by-email-error": {
-        "title": "Error",
+        "title": "Erreur",
         "body": "Your proof failed to be sent to the customer."
       },
       "proof-shared-by-link-error": {
-        "title": "Error",
+        "title": "Erreur",
         "body": "Your proof link failed to be copied to your clipboard."
       }
     }

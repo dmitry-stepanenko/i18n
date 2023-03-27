@@ -34,7 +34,7 @@
       "request-changes-send-distributor-helper-text": "Please enter your name. We’ll use this to keep track of change requests and to ensure that only allowed parties are requesting changes.",
       "name-label": "Name",
       "name-placeholder": "Enter Name",
-      "cancel-button-label": "Cancel",
+      "cancel-button-label": "Abandonner",
       "request-changes-button-label": "Request Changes",
       "change-request-validation": "You must enter your change requests",
       "name-validation": "You must enter your name"

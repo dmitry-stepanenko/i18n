@@ -15,11 +15,10 @@
       "add-to-cart-button": "Add to cart",
       "quote-requested-tag": "Quote Requested",
       "pricing-and-charges": "Pricing and Charges",
-      "price-from": "Price From {{minMax}}",
       "pricing-grid-header-quantity": "Quantity",
       "pricing-grid-header-price-per-unit": "Price Per Unit",
       "price-includes": "Price Includes",
-      "colors": "Colors",
+      "colors": "Colours",
       "show-more": "Show more",
       "show-less": "Show less",
       "sizes": "Sizes",
@@ -28,7 +27,8 @@
       "imprint-methods": "Imprint Methods",
       "imprint-sizes": "Imprint Sizes",
       "imprint-colors": "Imprint Color(s)",
-      "imprint-locations": "Imprint Location(s)"
+      "imprint-locations": "Imprint Location(s)",
+      "price-from": "Price From {{minMax}}"
     }
   },
   "pending-quote": {
@@ -47,7 +47,7 @@
     "customization-comments": "Customization Comments",
     "customization-placeholder": "Comments can include sizes, colors, or anything else you'd like to customize.",
     "cancel-button": "Cancel",
-    "save-button": "Save",
+    "save-button": "Save Changes",
     "form-components": {
       "products-artworks": {
         "upload-artwork-text": "Upload Artwork or Customization Files",
@@ -58,7 +58,7 @@
       },
       "product-details": {
         "add-optional-product-config": "Add Optional Product Configuration",
-        "color": "Color",
+        "color": "Colour",
         "size": "Size",
         "material": "Material",
         "shape": "Shape",

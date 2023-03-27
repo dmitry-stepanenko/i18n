@@ -1,0 +1,19 @@
+{
+  "project-details": {
+    "project-details-label": "Projektdetails",
+    "in-hands-date-label": "In-Hands-Datum",
+    "event-date-label": "Event-Datum",
+    "event-type-label": "Ereignistyp",
+    "budget-label": "Budget",
+    "attendees-label": "Teilnehmer"
+  },
+  "feature-header": {
+    "products-label": "Produkte",
+    "cart-label": "Warenkorb",
+    "pending-quote-label": "Angebot ausstehend",
+    "quotes-label": "Zitate",
+    "orders-label": "Bestellungen",
+    "proofs-label": "Beweise",
+    "invoices-label": "Rechnungen"
+  }
+}

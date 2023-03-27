@@ -41,7 +41,7 @@
         "loading": "Loading",
         "delete-collection": "Delete Product Collection",
         "delete-page": "Delete Page",
-        "edit": "Edit"
+        "edit": "Editer"
       }
     }
   },
@@ -133,8 +133,8 @@
     "feature-template": {
       "template-page": {
         "header": "Template",
-        "save-cta": "Save",
-        "cancel-cta": "Cancel"
+        "save-cta": "Enregistrer",
+        "cancel-cta": "Abandonner"
       },
       "selected-template-card": {
         "header": "Selected Template"

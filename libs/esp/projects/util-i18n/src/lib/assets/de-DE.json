@@ -1,0 +1,109 @@
+{
+  "project-product-details": {
+    "product-variants.colors-toggle": "Farben",
+    "imprint-options.imprint-colors-header": "Impressum Farben"
+  },
+  "project-edit-dialog": {
+    "edit-project-info": "Projektinformationen bearbeiten",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "project-form": {
+      "project-label": "Projektname",
+      "presentation-label": "Präsentationsname",
+      "project-placeholder": "Gib einen Projektnamen ein",
+      "presentation-placeholder": "Geben Sie einen Präsentationsnamen ein",
+      "event-info": "Ereignisinformation",
+      "event-type-label": "Ereignistyp",
+      "select-event-type-placeholder": "Ereignistyp auswählen",
+      "event-date-label": "Event-Datum",
+      "select-date-placeholder": "Datum auswählen",
+      "attendees-label": "Teilnehmer",
+      "attendees-placeholder": "Anzahl der Teilnehmer",
+      "budget-max-value-error": "Sie müssen weniger als 99,999,999,999,99 eingeben",
+      "assignees-mx-value-error": "Sie müssen weniger als 99,999,999 eingeben",
+      "in-hands-date-label": "In-Hands-Datum",
+      "flexible": "Flexibl",
+      "firm": "Firma",
+      "budget": "Budget",
+      "event-types": {
+        "advertising": "Werbung",
+        "awards-recognition": "Auszeichnungen & Anerkennung",
+        "party": "Gruppe",
+        "charity-non-profits": "Wohltätigkeit/Nichtgewinnung",
+        "customer-appreciation": "Kunden-Wertschätzung",
+        "self-promotions": "Self-Promotions",
+        "corporate-event": "Firmenereignis",
+        "festival": "Festival",
+        "fitness": "Fitness",
+        "fundraiser": "Fundraiser",
+        "gifts": "Geschenke",
+        "government": "Regierung",
+        "graduation": "Graduierung",
+        "mailer": "Mailer",
+        "pharmaceutical": "Pharmazeutisch",
+        "product-launch": "Produkt-Start",
+        "other": "Andere",
+        "retreat": "Rückzug",
+        "team-building": "Team-Aufbau",
+        "tradeshows": "Tradeshows",
+        "religious": "Religiös",
+        "sporting-event": "Sportereignis",
+        "technology": "Technik"
+      }
+    }
+  },
+  "toast-messages": {
+    "company-not-created": {
+      "title": "Fehler: Unternehmen nicht erstellt!",
+      "body": "Firma konnte nicht erstellt werden."
+    },
+    "contact-not-created": {
+      "title": "Fehler: Kontakt kann nicht erstellt werden!",
+      "body": "Kontakt konnte nicht erstellt werden."
+    },
+    "project-not-created": {
+      "title": "Fehler: Projekt kann nicht erstellt werden!",
+      "body": "Projekt kann nicht erstellt werden."
+    },
+    "project-for-company-updated": {
+      "title": "Projekt erfolgreich aktualisiert",
+      "body": "Das {{projectName}} Projekt wurde für {{companyName}} aktualisiert."
+    },
+    "project-updated": {
+      "title": "Projekt erfolgreich aktualisiert",
+      "body": "Das {{projectName}} Projekt wurde aktualisiert."
+    },
+    "project-not-updated": {
+      "title": "Projekt kann nicht aktualisiert werden",
+      "body": "Projekt kann nicht aktualisiert werden."
+    },
+    "project-transferred": {
+      "title": "Eigentum übertragen!",
+      "body": "Eigentum wurde an {{name}} übertragen"
+    },
+    "project-not-transferred": {
+      "title": "Fehler: Eigentum nicht übertragen!",
+      "body": "Das Eigentum von {{name}} konnte nicht übertragen werden!"
+    },
+    "project-closed": {
+      "title": "Projekt {{name}} ist geschlossen!",
+      "body": "{{name}} wurde geschlossen."
+    },
+    "project-not-closed": {
+      "title": "Projekt {{name}} kann nicht zu schließen aktualisiert werden!",
+      "body": "{{name}} kann nicht geschlossen werden."
+    },
+    "project-reopened": {
+      "title": "Projekt {{name}} ist wieder geöffnet!",
+      "body": "{{name}} wurde wieder geöffnet."
+    },
+    "project-not-reopened": {
+      "title": "Projekt {{name}} kann nicht aktualisiert werden!",
+      "body": "{{name}} kann nicht wieder geöffnet werden."
+    },
+    "alert-not-dismissed": {
+      "title": "Fehler!",
+      "body": "Alarm kann nicht gelöscht werden"
+    }
+  }
+}

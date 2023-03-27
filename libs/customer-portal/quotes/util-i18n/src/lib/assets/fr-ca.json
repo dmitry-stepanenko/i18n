@@ -4,7 +4,7 @@
     "quotes-subtitle": "This is your quotes page. View all of your quotes below.",
     "quote-card-quote": "Quote",
     "quote-card-created-date": "Created Date",
-    "quote-card-in-hands-date": "In-Hands Date",
+    "quote-card-in-hands-date": "Date en mains",
     "quote-card-quote-total": "Quote Total",
     "quote-card-view-quote-button": "View Quote"
   },
@@ -43,7 +43,7 @@
     "request-changes-placeholder": "Type in your requested changes.",
     "name-label": "Name",
     "name-placeholder": "Enter Name",
-    "cancel-button": "Cancel",
-    "save-button": "Save"
+    "cancel-button": "Abandonner",
+    "save-button": "Enregistrer"
   }
 }

@@ -1,12 +1,12 @@
 {
   "project-product-details": {
-    "product-variants.colors-toggle": "Colors",
-    "imprint-options.imprint-colors-header": "Imprint Colors"
+    "product-variants.colors-toggle": "TO_BE_TRANSLATED_Colors",
+    "imprint-options.imprint-colors-header": "TO_BE_TRANSLATED_Imprint Colors"
   },
   "project-edit-dialog": {
     "edit-project-info": "Edit Project Information",
-    "cancel": "Cancel",
-    "save": "Save",
+    "cancel": "Abandonner",
+    "save": "Enregistrer",
     "project-form": {
       "project-label": "Project Name",
       "presentation-label": "Presentation Name",
@@ -21,7 +21,7 @@
       "attendees-placeholder": "Number of Attendees",
       "budget-max-value-error": "You must enter less than 99,999,999.99",
       "assignees-mx-value-error": "You must enter less than 99,999,999",
-      "in-hands-date-label": "In-Hands Date",
+      "in-hands-date-label": "Date en mains",
       "flexible": "Flexible",
       "firm": "Firm",
       "budget": "Budget",
@@ -102,7 +102,7 @@
       "body": "{{name}} cannot be reopened."
     },
     "alert-not-dismissed": {
-      "title": "Error!",
+      "title": "Erreur!",
       "body": "Cannot Delete Alert"
     }
   }
