@@ -1,0 +1,3 @@
+files:
+  - source: /libs/**/util-i18n/src/lib/assets/en-us.json
+    translation: /libs/**/util-i18n/src/lib/assets/%locale%.json
