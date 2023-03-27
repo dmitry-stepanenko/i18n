@@ -1,0 +1,83 @@
+{
+  "localization": {
+    "en-us": "Englisch (USA)",
+    "en-ca": "Englisch (Kanada)",
+    "fr-ca": "French (Canada)"
+  },
+  "market": {
+    "USAALL": "Vereinigte Staaten",
+    "CANALL": "Kanada",
+    "ALL": "Alle"
+  },
+  "currencies": {
+    "USD": "US Dollar (USD)",
+    "CAD": "Kanadischer Dollar (CAD)"
+  },
+  "companies": {
+    "company-form": {
+      "company-brand-information-form": {
+        "primary-brand-color-label": "Primäre Markenfarbe"
+      }
+    }
+  },
+  "decorations": {
+    "decoration-edit-form": {
+      "imprint-color": "Impressum Farbe",
+      "imprint-color-placeholder": "Impressum Farbe eingeben"
+    },
+    "decoration-card-info": {
+      "imprint-color": "Impressum Farbe"
+    },
+    "decoration-edit-line": {
+      "decoration-details-card": {
+        "imprint-color": "Impressum Farbe"
+      }
+    }
+  },
+  "products": {
+    "product-search-filters": {
+      "labels.color": "Farbe"
+    },
+    "product-imprint-methods": {
+      "imprint-colors-header": "Impressum Farben",
+      "full-color-process-header": "Vollfarb-Prozess"
+    }
+  },
+  "settings": {
+    "orders": {
+      "order-status-types": {
+        "manage-order.select-color-control-header": "Farbe auswählen",
+        "manage-order.select-color-control-placeholder": "Farbe auswählen",
+        "manage-order.select-color-control-option-placeholder": "Farbe auswählen"
+      }
+    },
+    "company": {
+      "company-brand-color-panel-row": {
+        "row-title": "Firmenfarbe"
+      }
+    }
+  },
+  "tasks": {
+    "toast-messages": {
+      "task-updated": {
+        "title": "Erfolgreich!",
+        "body": "Aufgabe {{ taskName }} erfolgreich aktualisiert."
+      }
+    }
+  },
+  "email-autocomplete": {
+    "recipients-label": "Empfänger",
+    "enter-new-email": "Geben Sie eine neue E-Mail-Adresse ein oder beginnen Sie zu tippen, um eine gespeicherte E-Mail-Adresse zu finden",
+    "new-recipient-placeholder": "Neuer Empfänger..."
+  },
+  "change-conversion-rate-dialog": {
+    "change-conversion-date": "Konversionsrate ändern",
+    "select-default-currency": "Wählen Sie die Standardwährung für Suche, Bestellungen und Präsentationspreise aus.",
+    "show-currency": "Zeige Währung in:",
+    "us-dollar": "US Dollar (USD)",
+    "canadian-dollar": "Kanadischer Dollar (CAD)",
+    "conversion-date": "Konversionsrate",
+    "cancel": "Abbrechen",
+    "save": "Speichern"
+  }
+}
