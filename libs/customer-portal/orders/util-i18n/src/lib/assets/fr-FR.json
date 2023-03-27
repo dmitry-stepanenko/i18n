@@ -1,0 +1,26 @@
+{
+  "features-orders-list": {
+    "orders-title": "Commandes",
+    "orders-subtitle": "Ceci est votre page de commandes. Voir toutes vos commandes ci-dessous.",
+    "order-card-order": "Commandes",
+    "order-card-created-date": "Date de création",
+    "order-card-in-hands-date": "Date In-Hands",
+    "order-card-order-total": "Total de la commande",
+    "order-card-view-order-button": "Voir la commande"
+  },
+  "feature-order-details": {
+    "back-to-all-orders": "Retour à toutes les commandes",
+    "order-title": "Commandes",
+    "order-subtitle": "Ci-dessous vous pouvez vérifier l'état de votre commande, suivre vos envois et voir les preuves.",
+    "total-quantity": "Quantité totale",
+    "order-total": "Total de la commande",
+    "number-of-products": "Nombre de produits",
+    "order-status": "Statut de la commande",
+    "updated": "Mis à jour",
+    "ship-to": "Expédier à",
+    "shipping-method": "Mode de livraison",
+    "subtotal": "Sous-total",
+    "discount": "Remise",
+    "sales-tax": "Taxe de vente"
+  }
+}
