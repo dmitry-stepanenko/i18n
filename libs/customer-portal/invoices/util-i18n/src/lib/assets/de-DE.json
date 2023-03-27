@@ -1,0 +1,20 @@
+{
+  "feature-invoices": {
+    "invoices-title": "Rechnungen",
+    "invoices-subtext": "Dies ist Ihre Rechnungsseite. Sehen Sie sich alle Ihre Rechnungen unten an.",
+    "invoice-card-invoice": "Rechnung",
+    "invoice-card-customer-po": "Kunden-PO",
+    "invoice-card-order": "Sortierung",
+    "invoice-card-bill-to": "Rechnung an",
+    "invoice-card-issue-date": "Ausstellungsdatum",
+    "invoice-card-due-date": "Fälligkeitsdatum",
+    "invoice-card-amount-due": "Fälliger Betrag",
+    "invoice-card-button": "Rechnung anzeigen"
+  },
+  "feature-invoice-details": {
+    "back-to-all-invoices": "Zurück zu allen Rechnungen",
+    "invoice-title": "Rechnung",
+    "download-invoice-button": "Rechnung herunterladen",
+    "print-button": "Drucken"
+  }
+}
