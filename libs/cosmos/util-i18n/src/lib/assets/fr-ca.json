@@ -9,15 +9,14 @@
       "must-add-image": "Vous devez ajouter une image.",
       "allowed-types": "Les types de fichiers autorisés sont {{types}}",
       "upload-type-image": "Image",
-
       "upload-type-file": "Fichier",
       "size-error-msg": "La taille du fichier dépasse {{maxFileBytes}}",
-      "dimension-error-msg": "La taille de l'image ne doit pas être inférieure à {{minWidth}}px x {{minHeight}}px",
+      "type-error-msg": "Type de fichier non pris en charge",
       "type-error-msg-2": "Le type de fichier est supporté"
     },
     "form-field": {
       "encore-errors": {
-        "type-error-msg": "Type de fichier non pris en charge",
+        "dimension-error-msg": "La taille de l'image ne doit pas être inférieure à {{minWidth}}px x {{minHeight}}px2",
         "email": "Veuillez fournir une adresse e-mail valide.",
         "max-with-label": "Votre {{label}} doit être inférieur à {{max}}.",
         "max-no-label": "`Vous devez entrer moins de {{max}}.",
